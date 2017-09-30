@@ -1,0 +1,49 @@
+{
+  "name": "creed",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "react-scripts build",
+    "flow": "flow ./src",
+    "lint": "eslint ./src",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "dependencies": {
+    "apollo-client": "1.9.3",
+    "glamor": "2.20.40",
+    "glamorous": "4.9.7",
+    "graphql-tag": "2.4.2",
+    "ramda": "0.24.1",
+    "react": "16.0.0",
+    "react-apollo": "1.4.16",
+    "react-dom": "16.0.0",
+    "react-modal": "2.3.2",
+    "react-motion": "0.5.1",
+    "react-router-dom": "4.2.2",
+    "react-router-transition": "1.1.0",
+    "react-timeago": "3.4.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "8.0.1",
+    "babel-preset-flow": "6.23.0",
+    "eslint": "4.8.0",
+    "eslint-config-mkitt": "2.1.0",
+    "flow-bin": "0.52.0",
+    "react-addons-test-utils": "15.6.2",
+    "react-scripts": "1.0.14"
+  },
+  "babel": {
+    "presets": [
+      "flow"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "Firefox ESR"
+  ],
+  "eslintConfig": {
+    "extends": "mkitt"
+  }
+}

@@ -1,0 +1,8 @@
+.DS_Store
+.env
+*.log
+*.map
+build
+coverage
+node_modules
+project.graphcool
