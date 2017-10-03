@@ -1,5 +1,6 @@
 // @flow
 import React from 'react'
+import { memoize } from 'ramda'
 import { withRouter } from 'react-router-dom'
 import { AnimatedSwitch, spring } from 'react-router-transition'
 import { css } from 'glamor'
@@ -31,6 +32,8 @@ const motionLeftToRight = {
   atLeave: { offset: glide(100) },
 }
 
+const getPathnameLength = memoize(pathname => pathname.split('/').length)
+
 type Props = {
   children: React.Element<*>,
   location: LocationType,
@@ -48,13 +51,13 @@ type State = {
 class RouteSwitch extends React.PureComponent {
   props: Props
   state: State = {
-    locationLength: 0,
+    locationLength: getPathnameLength(this.props.location.pathname),
     motion: motionRightToLeft,
   }
 
   componentWillReceiveProps(nextProps) {
     const { locationLength: prevLocationLength } = this.state
-    const locationLength = nextProps.location.pathname.split('/').length
+    const locationLength = getPathnameLength(nextProps.location.pathname)
     const motion = locationLength < prevLocationLength ? motionLeftToRight : motionRightToLeft
     this.setState(() => ({ motion, locationLength }))
   }

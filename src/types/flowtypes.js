@@ -11,6 +11,10 @@ export type ApplicantType = {
   lastName: string,
   referredBy: string,
   resume: string,
+  scoreLogicEvaluation: number,
+  scoreOnlineLogicTest: number,
+  scoreValuesEvaluation: number,
+  startDate: string,
   updatedAt: string,
 }
 
@@ -23,4 +27,8 @@ export type HistoryType = {
 export type LocationType = {
   key: string,
   pathname: string,
+}
+
+export type MatchType = {
+  url: string,
 }

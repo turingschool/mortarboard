@@ -1,5 +1,4 @@
 // @flow
-/* eslint-disable react/jsx-closing-bracket-location */
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { ApolloProvider, createNetworkInterface, ApolloClient } from 'react-apollo'
@@ -7,6 +6,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import RouteSwitch from './pages/RouteSwitch'
 import Layout from './pages/Layout'
 import ApplicantDetail from './pages/ApplicantDetail'
+import ApplicantValuesEvaluation from './pages/ApplicantValuesEvaluation'
+import ApplicantLogicEvaluation from './pages/ApplicantLogicEvaluation'
 import Applicants from './pages/Applicants'
 import NotFound from './pages/NotFound'
 import PostCreate from './pages/PostCreate'
@@ -26,6 +27,8 @@ ReactDOM.render(
         <RouteSwitch>
           <Route exact path="/" component={Applicants} />
           <Route exact path="/applicants" component={Applicants} />
+          <Route path="/applicant/:id/logic-evaluation" component={ApplicantLogicEvaluation} />
+          <Route path="/applicant/:id/values-evaluation" component={ApplicantValuesEvaluation} />
           <Route path="/applicant/:id" component={ApplicantDetail} />
           <Route exact path="/posts" component={Posts} />
           <Route path="/post/create" component={PostCreate} />

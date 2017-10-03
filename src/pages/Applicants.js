@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { Div } from 'glamorous'
-import ApplicantCards from '../containers/ApplicantCards'
+import ApplicantCards from '../containers/ApplicantCardsContainer'
 
 export default() => (
   <Div width="100%">

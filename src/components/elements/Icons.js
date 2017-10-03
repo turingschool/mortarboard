@@ -2,6 +2,8 @@
 import React from 'react'
 import { Svg } from 'glamorous'
 
+// -------------------------------------
+
 export const RocketIcon = ({ ...props }: any) => (
   <Svg viewBox="0 0 24 24" {...props}>
     <g fill="currentColor">
@@ -11,9 +13,11 @@ export const RocketIcon = ({ ...props }: any) => (
 )
 
 RocketIcon.defaultProps = {
-  width: 24,
-  height: 24,
+  width: 32,
+  height: 32,
 }
+
+// -------------------------------------
 
 export const ChevronIcon = ({ ...props }: any) => (
   <Svg viewBox="0 0 17 32" {...props}>
@@ -33,6 +37,8 @@ ChevronIcon.defaultProps = {
   height: 32,
 }
 
+// -------------------------------------
+
 export const ChevronIconThin = ({ ...props }: any) => (
   <Svg viewBox="0 0 16 30" {...props}>
     <g
@@ -49,8 +55,8 @@ export const ChevronIconThin = ({ ...props }: any) => (
 )
 
 ChevronIconThin.defaultProps = {
-  width: 16,
-  height: 30,
+  width: 12,
+  height: 24,
 }
 
 // -------------------------------------

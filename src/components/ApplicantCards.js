@@ -1,19 +1,10 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
-import ApplicantCard from '../containers/ApplicantCard'
-import AppMaxWidth from '../components/AppMaxWidth'
-import Loader from '../components/Loader'
+import ApplicantCard from '../containers/ApplicantCardContainer'
+import Loader from '../components/blocks/Loader'
+import AppContainment from './elements/AppContainment'
 import type { ApplicantType, LocationType } from '../types/flowtypes'
-
-const Cards = glamorous.section({
-  display: 'flex',
-  padding: 16,
-  marginLeft: -16,
-  '& > *': {
-    marginLeft: 16,
-  },
-})
 
 type Props = {
   children: React.Element<*>,
@@ -45,7 +36,7 @@ export default class extends React.PureComponent {
     }
 
     return (
-      <AppMaxWidth>
+      <AppContainment>
         <Cards>
           {allApplicants && allApplicants.map(applicant => (
             <ApplicantCard
@@ -56,7 +47,18 @@ export default class extends React.PureComponent {
           ))}
         </Cards>
         {this.props.children}
-      </AppMaxWidth>
+      </AppContainment>
     )
   }
 }
+
+// -------------------------------------
+
+const Cards = glamorous.section({
+  display: 'flex',
+  marginLeft: -16,
+  padding: 16,
+  '& > *': {
+    marginLeft: 16,
+  },
+})

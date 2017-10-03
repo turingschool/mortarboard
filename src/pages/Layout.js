@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
-import NavBar from '../containers/NavBar'
+import NavBar from '../containers/NavBarContainer'
 
 const Main = glamorous.main({
   position: 'relative',

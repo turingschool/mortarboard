@@ -1,10 +1,10 @@
 // @flow
 import React from 'react'
 import { Div } from 'glamorous'
-import ApplicantHeader from '../containers/ApplicantHeader'
+import ApplicantDashboard from '../containers/ApplicantDashboardContainer'
 
 export default() => (
   <Div width="100%">
-    <ApplicantHeader />
+    <ApplicantDashboard />
   </Div>
 )

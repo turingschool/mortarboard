@@ -1,5 +1,5 @@
 {
-  "name": "creed",
+  "name": "apply-webapp",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -22,7 +22,8 @@
     "react-motion": "0.5.1",
     "react-router-dom": "4.2.2",
     "react-router-transition": "1.1.0",
-    "react-timeago": "3.4.3"
+    "react-timeago": "3.4.3",
+    "recompose": "0.25.1"
   },
   "devDependencies": {
     "babel-eslint": "8.0.1",
