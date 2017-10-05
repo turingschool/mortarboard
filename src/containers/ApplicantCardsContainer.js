@@ -1,7 +1,10 @@
 // @flow
 import { gql, graphql } from 'react-apollo'
 import { withRouter } from 'react-router-dom'
-import ApplicantCards from '../components/ApplicantCards'
+import { pick } from 'ramda'
+import { branch, compose, mapProps, renderComponent } from 'recompose'
+import ApplicantCards, { ComponentLoader } from '../components/ApplicantCards'
+// import withLog from './withLog'
 
 const ApplicantsQuery = gql`
   query allApplicants {
@@ -17,11 +20,29 @@ const ApplicantsQuery = gql`
   }
 `
 
-const ApplicantCardsWithData = graphql(ApplicantsQuery, {
-  // $FlowFixMe
-  options: {
-    fetchPolicy: 'network-only',
-  },
-})(ApplicantCards)
+const withData = graphql(ApplicantsQuery, {
+  props: ({ data: { allApplicants, loading, refetch } }) => ({
+    logName: 'CardsContainer',
+    allApplicants: allApplicants || null,
+    isLoading: loading,
+    refetch,
+  }),
+})
 
-export default withRouter(ApplicantCardsWithData)
+const propsWhitelist = ['allApplicants', 'isLoading', 'location', 'refetch']
+const withProps = mapProps(props => ({
+  ...pick(propsWhitelist, props),
+}))
+
+const withLoader = branch(
+  props => props.isLoading,
+  renderComponent(ComponentLoader),
+)
+
+export default compose(
+  withRouter,
+  withData,
+  withProps,
+  withLoader,
+  // withLog,
+)(ApplicantCards)

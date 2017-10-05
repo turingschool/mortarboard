@@ -9,7 +9,7 @@ type Props = {
   to?: string,
 }
 
-const Component = ({ children, href, to, ...props }: Props) => (
+const LinkComponent = ({ children, href, to, ...props }: Props) => (
   to != null && (to.charAt(0) === '/' || to.charAt(0) === '#') ?
     <RouterLink to={to} {...props}>
       {children}
@@ -20,12 +20,12 @@ const Component = ({ children, href, to, ...props }: Props) => (
     </ExternalLink>
 )
 
-Component.defaultProps = {
+LinkComponent.defaultProps = {
   href: null,
   to: null,
 }
 
-export default Component
+export default LinkComponent
 
 // -------------------------------------
 

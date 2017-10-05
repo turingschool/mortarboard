@@ -1,18 +1,15 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
-import ApplicantCard from '../containers/ApplicantCardContainer'
-import Loader from '../components/blocks/Loader'
+import ApplicantCard from './ApplicantCard'
+import Loader from './blocks/Loader'
 import AppContainment from './elements/AppContainment'
 import type { ApplicantType, LocationType } from '../types/flowtypes'
 
 type Props = {
   children: React.Element<*>,
-  data: {
-    allApplicants: Array<ApplicantType>,
-    loading: boolean,
-    refetch: Function,
-  },
+  allApplicants: Array<ApplicantType>,
+  refetch: Function,
   location: LocationType,
 }
 
@@ -21,20 +18,12 @@ export default class extends React.PureComponent {
 
   componentWillReceiveProps(nextProps: Props) {
     if (this.props.location.key !== nextProps.location.key) {
-      this.props.data.refetch()
+      this.props.refetch()
     }
   }
 
   render() {
-    const { allApplicants, loading, refetch } = this.props.data
-    if (loading && !allApplicants) {
-      return (
-        <Loader>
-          Loading Applicants...
-        </Loader>
-      )
-    }
-
+    const { allApplicants, children, refetch } = this.props
     return (
       <AppContainment>
         <Cards>
@@ -46,11 +35,15 @@ export default class extends React.PureComponent {
             />
           ))}
         </Cards>
-        {this.props.children}
+        {children}
       </AppContainment>
     )
   }
 }
+
+export const ComponentLoader = () => (
+  <Loader>Loading Applicants...</Loader>
+)
 
 // -------------------------------------
 

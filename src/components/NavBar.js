@@ -3,19 +3,17 @@ import React from 'react'
 import glamorous from 'glamorous'
 import { Link } from 'react-router-dom'
 import { ChevronIconThin } from './elements/Icons'
-import type { HistoryType, LocationType } from '../types/flowtypes'
 
 type Props = {
-  history: HistoryType,
-  location: LocationType,
+  goBack: Function,
 }
 
 export default (props: Props) => (
   <View>
     <Nav>
       <Pulled>
-        { props.location.pathname !== '/' &&
-          <BackButton onClick={props.history.goBack} role="button">
+        { props.goBack &&
+          <BackButton onClick={props.goBack} role="button">
             <ChevronIconThin />
           </BackButton>
         }

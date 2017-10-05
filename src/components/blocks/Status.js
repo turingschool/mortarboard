@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
-import Dd from '../elements/Dd'
+import glamorous from 'glamorous'
+import DdBase from '../elements/Dd'
 import Dl from '../elements/Dl'
 import Dt from '../elements/Dt'
 import TextLink from '../elements/TextLink'
@@ -14,13 +15,7 @@ type Props = {
 const Status = ({ children, to, ...props }: Props) => (
   <Dl {...props}>
     <Dt color="#999">Application Status</Dt>
-    <Dd
-      marginTop={16}
-      fontSize={18}
-      fontWeight={400}
-      textTransform="uppercase"
-      color="#333"
-    >
+    <Dd>
       <RocketIcon marginRight={16} />
       {children}
     </Dd>
@@ -37,3 +32,13 @@ Status.defaultProps = {
 }
 
 export default Status
+
+// -------------------------------------
+
+const Dd = glamorous(DdBase)({
+  marginTop: 16,
+  fontSize: 18,
+  fontWeight: 400,
+  textTransform: 'uppercase',
+  color: '#333',
+})

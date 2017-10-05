@@ -1,49 +1,26 @@
 // @flow
-import { gql, graphql } from 'react-apollo'
+import { graphql } from 'react-apollo'
 import { withRouter } from 'react-router-dom'
 import { pick } from 'ramda'
-import { branch, compose, mapProps, onlyUpdateForKeys, renderComponent } from 'recompose'
+import {
+  branch,
+  compose,
+  mapProps,
+  onlyUpdateForKeys,
+  renderComponent,
+  withHandlers,
+} from 'recompose'
 import deleteApplicant from '../mutations/deleteApplicant'
-import ApplicantDashboard, { ComponentLoader } from '../components/ApplicantDashboard'
+import ApplicantComponent, { ComponentLoader } from '../components/ApplicantComponent'
+import withApplicant from './withApplicant'
 // import withLog from './withLog'
-
-const ApplicantQuery = gql`
-  query post($id: ID!) {
-    Applicant(id: $id) {
-      applyAction
-      applyStatus
-      birthdate
-      createdAt
-      email
-      firstName
-      github
-      id
-      lastName
-      referredBy
-      resume
-      scoreLogicEvaluation
-      scoreOnlineLogicTest
-      scoreValuesEvaluation
-      startDate
-    }
-  }
-`
-
-const withData = graphql(ApplicantQuery, {
-  options: ({ match }) => ({
-    variables: {
-      id: match.params.id,
-    },
-  }),
-  props: ({ data: { Applicant, loading } }) => ({
-    applicant: Applicant || null,
-    isLoading: loading,
-  }),
-})
 
 const propsWhitelist = ['applicant', 'isLoading', 'match']
 const withProps = mapProps(props => ({
   ...pick(propsWhitelist, props),
+  isApplicantEditable: true,
+  isEvaluatable: true,
+  replace: props.history.replace,
 }))
 
 const keyWhitelist = ['isLoading', 'applicant']
@@ -52,9 +29,17 @@ const withUpdateForKeys = component => compose(
 )(component)
 
 const withMutations = component => compose(
-  graphql(deleteApplicant, { name: 'deleteApplicant' }),
+  graphql(deleteApplicant, { name: 'deleteApplicantMutation' }),
 )(component)
 
+const withEventHandlers = withHandlers({
+  handleDelete: props => async () => {
+    await setTimeout(() => { console.log('Yo! handleDelete is not wired up', props) }, 1000)
+    // const { applicant, deleteApplicantMutation, replace } = props
+    // await deleteApplicant({ variables: { id: applicant.id } })
+    // replace('/')
+  },
+})
 const withLoader = branch(
   props => props.isLoading,
   renderComponent(ComponentLoader),
@@ -62,10 +47,11 @@ const withLoader = branch(
 
 export default compose(
   withRouter,
-  withData,
+  withApplicant,
   withProps,
   withUpdateForKeys,
   withMutations,
+  withEventHandlers,
   // withLog,
   withLoader,
-)(ApplicantDashboard)
+)(ApplicantComponent)

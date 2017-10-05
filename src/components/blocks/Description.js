@@ -4,7 +4,7 @@ import Dd from '../elements/Dd'
 import Dl from '../elements/Dl'
 import Dt from '../elements/Dt'
 
-const rowRule = {
+const rowDlRule = {
   display: 'flex',
   flexFlow: 'row nowrap',
 }
@@ -20,7 +20,7 @@ type Props = {
 }
 
 const Description = ({ children, isRow, term, ...props }: Props) => (
-  <Dl {...(isRow === true ? rowRule : {})} {...props}>
+  <Dl {...(isRow === true ? rowDlRule : {})} {...props}>
     <Dt {...(isRow === true ? rowDtRule : {})} >{term}</Dt>
     <Dd>{children}</Dd>
   </Dl>

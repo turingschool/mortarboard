@@ -11,7 +11,7 @@ const rules = {
   paddingLeft: 16,
 }
 
-export default glamorous.section(
+export default glamorous.div(
   rules,
   ({ children, ...props }) => ({ ...props }),
 )

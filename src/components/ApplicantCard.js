@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
+import { pure } from 'recompose'
 import DescriptionBase from './blocks/Description'
 import Status from './blocks/Status'
 import StatusActionLabel from './blocks/StatusActionLabel'
@@ -8,57 +9,42 @@ import Heading from './elements/Heading'
 import HitLink from './elements/HitLink'
 import StatusBar from './elements/StatusBar'
 import TextLink from './elements/TextLink'
-import type { ApplicantType, HistoryType } from '../types/flowtypes'
+import type { ApplicantType } from '../types/flowtypes'
 
 type Props = {
   applicant: ApplicantType,
-  history: HistoryType,
-  mutate: Function,
 }
 
-export default class extends React.PureComponent {
-  props: Props
-
-  handleDelete = async () => {
-    const { applicant, history, mutate } = this.props
-    await mutate({ variables: { id: applicant.id } })
-    history.replace('/')
-  }
-
-  render() {
-    const { applicant } = this.props
-    return (
-      <Card>
-        <StatusBar />
-        <Header>
-          <Heading marginTop="auto">
-            <span>{applicant.firstName} </span>
-            <span>{applicant.lastName}</span>
-          </Heading>
-          {applicant.applyAction &&
-            <StatusActionLabel position="absolute" top={16} right={16}>
-              {applicant.applyAction}
-            </StatusActionLabel>
-          }
-        </Header>
-        <Descriptions>
-          <Description term="Email Address">
-            <TextLink href={`mailto:${applicant.email}`}>{applicant.email}</TextLink>
-          </Description>
-          <Description term="GitHub">
-            <TextLink href={`https://github.com/${applicant.github}`}>
-              {`github.com/${applicant.github}`}
-            </TextLink>
-          </Description>
-          <Status marginTop={24}>
-            {applicant.applyStatus}
-          </Status>
-        </Descriptions>
-        <HitLink to={`/applicant/${applicant.id}`} />
-      </Card>
-    )
-  }
-}
+export default pure(({ applicant }: Props) => (
+  <Card>
+    <StatusBar />
+    <Header>
+      <Heading marginTop="auto">
+        <span>{applicant.firstName} </span>
+        <span>{applicant.lastName}</span>
+      </Heading>
+      {applicant.applyAction &&
+        <StatusActionLabel position="absolute" top={16} right={16}>
+          {applicant.applyAction}
+        </StatusActionLabel>
+      }
+    </Header>
+    <Descriptions>
+      <Description term="Email Address">
+        <TextLink href={`mailto:${applicant.email}`}>{applicant.email}</TextLink>
+      </Description>
+      <Description term="GitHub">
+        <TextLink href={`https://github.com/${applicant.github}`}>
+          {`github.com/${applicant.github}`}
+        </TextLink>
+      </Description>
+      <Status marginTop={24}>
+        {applicant.applyStatus}
+      </Status>
+    </Descriptions>
+    <HitLink to={`/applicant/${applicant.id}`} />
+  </Card>
+))
 
 // -------------------------------------
 
