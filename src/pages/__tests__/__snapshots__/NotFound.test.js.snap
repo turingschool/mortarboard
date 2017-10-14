@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/404 shows the correct snapshot tree for the /404 page 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  position: relative;
+  max-width: 1392px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  font-weight: 600;
+}
+
+<div
+  className="glamor-1"
+>
+  <div
+    className="glamor-0"
+  >
+    Not Found
+  </div>
+</div>
+`;

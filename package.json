@@ -31,8 +31,10 @@
     "eslint": "4.9.0",
     "eslint-config-mkitt": "2.1.0",
     "flow-bin": "0.52.0",
+    "jest-glamor-react": "3.1.2",
     "react-addons-test-utils": "15.6.2",
     "react-scripts": "1.0.14",
+    "react-test-renderer": "16.0.0"
   },
   "babel": {
     "presets": [
@@ -46,5 +48,10 @@
   ],
   "eslintConfig": {
     "extends": "mkitt"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "jest-glamor-react"
+    ]
   }
 }
