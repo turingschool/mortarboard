@@ -33,7 +33,11 @@ const withMutations = component => compose(
 
 const withEventHandlers = withHandlers({
   handleDelete: props => async () => {
-    await setTimeout(() => { console.log('Yo! handleDelete is not wired up', props) }, 1000)
+    await setTimeout(() => {
+      // console.log('Yo! handleDelete is not wired up', props)
+      if (props) return props
+      return null
+    }, 1000)
     // const { applicant, deleteApplicantMutation, replace } = props
     // await deleteApplicant({ variables: { id: applicant.id } })
     // replace('/')

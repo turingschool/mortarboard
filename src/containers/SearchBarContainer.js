@@ -11,12 +11,13 @@ const withProps = mapProps(props => ({
 
 const withEventHandlers = withHandlers({
   handleChange: props => (e) => {
-    console.log('Yo! Search form was changed!', props)
+    // console.log('Yo! Search form was changed!', props)
     props.setValue(e.target.value)
   },
   handleSubmit: props => (e) => {
     e.preventDefault()
-    console.log('Yo! Search form was submitted!', props)
+    return props
+    // console.log('Yo! Search form was submitted!', props)
   },
 })
 
