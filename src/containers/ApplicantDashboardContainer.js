@@ -13,7 +13,6 @@ import {
 import deleteApplicant from '../mutations/deleteApplicant'
 import ApplicantComponent, { ComponentLoader } from '../components/ApplicantComponent'
 import withApplicant from './withApplicant'
-// import withLog from './withLog'
 
 const propsWhitelist = ['applicant', 'isLoading', 'match']
 const withProps = mapProps(props => ({
@@ -40,6 +39,7 @@ const withEventHandlers = withHandlers({
     // replace('/')
   },
 })
+
 const withLoader = branch(
   props => props.isLoading,
   renderComponent(ComponentLoader),
@@ -52,6 +52,5 @@ export default compose(
   withUpdateForKeys,
   withMutations,
   withEventHandlers,
-  // withLog,
   withLoader,
 )(ApplicantComponent)

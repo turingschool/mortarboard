@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom'
 import { pick } from 'ramda'
 import { branch, compose, mapProps, renderComponent } from 'recompose'
 import ApplicantCards, { ComponentLoader } from '../components/ApplicantCards'
-// import withLog from './withLog'
 
 const ApplicantsQuery = gql`
   query allApplicants {
@@ -44,5 +43,4 @@ export default compose(
   withData,
   withProps,
   withLoader,
-  // withLog,
 )(ApplicantCards)
