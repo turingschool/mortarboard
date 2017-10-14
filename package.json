@@ -2,6 +2,7 @@
   "name": "apply-webapp",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mkitt.github.io/apply-webapp/",
   "scripts": {
     "build": "react-scripts build",
     "flow": "flow ./src",
