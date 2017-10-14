@@ -61,18 +61,22 @@ ChevronIconThin.defaultProps = {
 
 // -------------------------------------
 
-type Props = {
-  kind: string,
-}
+export const MagGlassIcon = ({ ...props }: any) => (
+  <Svg viewBox="0 0 28 28" {...props} >
+    <g stroke="currentColor" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1">
+      <g transform="translate(-40.000000, -119.000000)">
+        <g transform="translate(19.000000, 104.000000)">
+          <g transform="translate(23.000000, 17.000000)">
+            <path d="M17.7401739,8.86956522 C17.7401739,3.97147826 13.7681739,0 8.86956522,0 C3.972,0 0,3.97147826 0,8.86956522 C0,13.7676522 3.972,17.7391304 8.86956522,17.7391304 C13.7681739,17.7391304 17.7401739,13.7676522 17.7401739,8.86956522 Z" />
+            <path d="M15.2007652,15.1997217 L23.9998957,23.9998957" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </Svg>
+)
 
-export default ({ kind, ...props }: Props) => {
-  switch (kind) {
-    case 'ChevronIcon':
-      return <ChevronIcon {...props} />
-    case 'ChevronIconThin':
-      return <ChevronIconThin {...props} />
-    case 'RocketIcon':
-    default:
-      return <RocketIcon {...props} />
-  }
+MagGlassIcon.defaultProps = {
+  width: 32,
+  height: 32,
 }
