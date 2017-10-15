@@ -12,14 +12,13 @@ import SectionContainment from './elements/SectionContainment'
 import StatusBar from './elements/StatusBar'
 import EditLink from './elements/EditLink'
 import TextLink from './elements/TextLink'
-import type { ApplicantType, MatchType } from '../types/flowtypes'
+import type { ApplicantType } from '../types/flowtypes'
 
 type Props = {
   applicant: ApplicantType,
   handleDelete: Function,
   isApplicantEditable: boolean,
   isEvaluatable: boolean,
-  match: MatchType,
 }
 
 export default ({
@@ -27,7 +26,6 @@ export default ({
   handleDelete,
   isApplicantEditable,
   isEvaluatable,
-  match,
 }: Props) => (
   <div>
     { applicant.applyStatus &&
@@ -95,12 +93,12 @@ export default ({
         <EvaluationSummary
           score={applicant.scoreLogicEvaluation}
           term="Logic Evaluation"
-          to={`${match.url}/logic-evaluation`}
+          to={`/applicant/${applicant.id}/logic-evaluation`}
         />
         <EvaluationSummary
           score={applicant.scoreValuesEvaluation}
           term="Values Evaluation"
-          to={`${match.url}/values-evaluation`}
+          to={`/applicant/${applicant.id}/logic-evaluation`}
         />
       </SectionContainment>
     }
