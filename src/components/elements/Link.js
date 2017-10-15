@@ -2,6 +2,7 @@
 import React from 'react'
 import glamorous from 'glamorous'
 import { Link } from 'react-router-dom'
+import { BASE_URL } from '../../constants/networking'
 
 type Props = {
   children: React.Element<*>,
@@ -11,7 +12,7 @@ type Props = {
 
 const LinkComponent = ({ children, href, to, ...props }: Props) => (
   to != null && (to.charAt(0) === '/' || to.charAt(0) === '#') ?
-    <RouterLink to={to} {...props}>
+    <RouterLink to={`${BASE_URL}${to}`} {...props}>
       {children}
     </RouterLink>
     :

@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { gql, graphql } from 'react-apollo'
+import Link from './elements/Link'
 
 type Props = {
   // eslint-disable-next-line

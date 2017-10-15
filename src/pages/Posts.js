@@ -1,8 +1,8 @@
 // @flow
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { gql, graphql } from 'react-apollo'
 import Post from '../components/Post'
+import Link from '../components/elements/Link'
 
 type Props = {
   children: React.Element<*>,
