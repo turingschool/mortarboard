@@ -23,9 +23,7 @@ const withProps = mapProps(props => ({
 
 const keyWhitelist = ['applicant', 'isLoading']
 
-const withUpdateForKeys = component => compose(
-  onlyUpdateForKeys(keyWhitelist),
-)(component)
+const withUpdateForKeys = component => compose(onlyUpdateForKeys(keyWhitelist))(component)
 
 // const withMutations = component => compose(
 // )(component)

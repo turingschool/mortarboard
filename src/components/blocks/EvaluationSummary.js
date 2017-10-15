@@ -6,7 +6,7 @@ import TextLink from '../elements/TextLink'
 type Props = {
   score?: number | null,
   term: string,
-  to?: string,
+  to?: string | null,
 }
 
 const EvaluationSummary = ({ score, term, to, ...props }: Props) => (
@@ -18,9 +18,9 @@ const EvaluationSummary = ({ score, term, to, ...props }: Props) => (
       }
     </Heading>
     { to != null &&
-      <Link to={to}>
+      <ScoreLink to={to}>
         {`${score != null ? 'Re-' : ''}Score Evaluation`}
-      </Link>
+      </ScoreLink>
     }
   </View>
 )
@@ -61,6 +61,6 @@ const ScoreText = glamorous.span({
   },
 })
 
-const Link = glamorous(TextLink)({
+const ScoreLink = glamorous(TextLink)({
   fontSize: 18,
 })

@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, { type Node } from 'react'
 import glamorous from 'glamorous'
 import DdBase from '../elements/Dd'
 import Dl from '../elements/Dl'
@@ -8,8 +8,8 @@ import TextLink from '../elements/TextLink'
 import { RocketIcon } from '../elements/Icons'
 
 type Props = {
-  children: React.Element<*>,
-  to?: string,
+  children: Node,
+  to?: string | null,
 }
 
 const Status = ({ children, to, ...props }: Props) => (

@@ -1,14 +1,14 @@
 // @flow
-import React from 'react'
+import React, { type Node } from 'react'
 import glamorous from 'glamorous'
 import { isNil } from 'ramda'
 import { Link } from 'react-router-dom'
 import { BASE_URL } from '../../constants/networking'
 
 type Props = {
-  children: React.Element<*>,
-  href?: string,
-  to?: string,
+  children: Node,
+  href?: string | null,
+  to?: string | null,
 }
 
 // TODO: Does not handle #hastag links correctly
@@ -37,10 +37,6 @@ export default LinkComponent
 
 // -------------------------------------
 
-const RouterLink = glamorous(Link)(
-  ({ children, ...props }) => ({ ...props }),
-)
+const RouterLink = glamorous(Link)(({ children, ...props }) => ({ ...props }))
 
-const ExternalLink = glamorous.a(
-  ({ children, ...props }) => ({ ...props }),
-)
+const ExternalLink = glamorous.a(({ children, ...props }) => ({ ...props }))

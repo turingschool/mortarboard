@@ -17,8 +17,7 @@ type State = {
   imageUrl: string,
 }
 
-class CreatePage extends React.Component {
-  props: Props
+class CreatePage extends React.Component<Props, State> {
   state: State = {
     description: '',
     imageUrl: '',

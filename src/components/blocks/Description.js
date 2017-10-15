@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, { type Node } from 'react'
 import Dd from '../elements/Dd'
 import Dl from '../elements/Dl'
 import Dt from '../elements/Dt'
@@ -14,7 +14,7 @@ const rowDtRule = {
 }
 
 type Props = {
-  children: React.Element<*>,
+  children: Node,
   isRow?: boolean,
   term: string,
 }

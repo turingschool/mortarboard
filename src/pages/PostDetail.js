@@ -6,11 +6,9 @@ import Modal from 'react-modal'
 import { modalStyle } from '../constants/style'
 
 type Props = {
-  // eslint-disable-next-line
   mutate: any,
   history: {
     goBack: Function,
-    // eslint-disable-next-line
     replace: Function,
   },
   data: any,
@@ -24,9 +22,7 @@ const detailModalStyle = {
   },
 }
 
-class DetailPage extends React.Component {
-  props: Props
-
+class DetailPage extends React.Component<Props> {
   handleDelete = async () => {
     await this.props.mutate({ variables: { id: this.props.data.Post.id } })
     // post is gone, so remove it from history stack

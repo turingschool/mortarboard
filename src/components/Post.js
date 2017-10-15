@@ -1,13 +1,11 @@
 // @flow
 import React from 'react'
 import { gql, graphql } from 'react-apollo'
-import Link from './elements/Link'
+import PostLink from './elements/Link'
 
 type Props = {
-  // eslint-disable-next-line
   mutate: Function,
   history: {
-    // eslint-disable-next-line
     replace: Function,
   },
   post: {
@@ -17,9 +15,7 @@ type Props = {
   },
 }
 
-class Post extends React.Component {
-  props: Props
-
+class Post extends React.Component<Props> {
   // not currently used.
   handleDelete = async () => {
     await this.props.mutate({ variables: { id: this.props.post.id } })
@@ -28,7 +24,7 @@ class Post extends React.Component {
 
   render() {
     return (
-      <Link
+      <PostLink
         className="bg-white ma3 box post flex flex-column no-underline br2"
         to={`/post/${this.props.post.id}`}
       >
@@ -45,7 +41,7 @@ class Post extends React.Component {
         <div className="flex items-center black-80 fw3 description">
           {this.props.post.description}
         </div>
-      </Link>
+      </PostLink>
     )
   }
   // <span className='red f6 pointer dim' onClick={this.handleDelete}>Delete</span>

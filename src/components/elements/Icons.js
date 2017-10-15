@@ -2,9 +2,14 @@
 import React from 'react'
 import { Svg } from 'glamorous'
 
+type Props = {
+  width?: number,
+  height?: number,
+}
+
 // -------------------------------------
 
-export const RocketIcon = ({ ...props }: any) => (
+export const RocketIcon = ({ ...props }: Props) => (
   <Svg viewBox="0 0 24 24" {...props}>
     <g fill="currentColor">
       <path d="M24,0 C24,0 23.4836048,9.80252996 16.4820958,15.2719707 L16.4128111,19.0346251 L11.4820194,24 L11.4746834,20.2882431 L9.63105705,18.6292449 C8.29671435,22.7691304 1.26439406,22.7691304 1.26439406,22.7691304 C1.26439406,22.7691304 1.26439406,16.3396736 5.58319762,14.4450082 L3.94220876,12.6079505 L-2.84217094e-14,12.6079505 L5.07440302,7.66843342 L8.7285621,7.58627726 C14.4472436,0.671411685 24,0 24,0 Z M16.425,10.1644246 C17.8333261,10.1644246 18.975,9.01830529 18.975,7.60449544 C18.975,6.19068562 17.8333261,5.0445663 16.425,5.0445663 C15.0166739,5.0445663 13.875,6.19068562 13.875,7.60449544 C13.875,9.01830529 15.0166739,10.1644246 16.425,10.1644246 Z" />
@@ -19,7 +24,7 @@ RocketIcon.defaultProps = {
 
 // -------------------------------------
 
-export const ChevronIcon = ({ ...props }: any) => (
+export const ChevronIcon = ({ ...props }: Props) => (
   <Svg viewBox="0 0 17 32" {...props}>
     <g
       fill="currentColor"
@@ -39,7 +44,7 @@ ChevronIcon.defaultProps = {
 
 // -------------------------------------
 
-export const ChevronIconThin = ({ ...props }: any) => (
+export const ChevronIconThin = ({ ...props }: Props) => (
   <Svg viewBox="0 0 16 30" {...props}>
     <g
       fill="none"
@@ -61,7 +66,7 @@ ChevronIconThin.defaultProps = {
 
 // -------------------------------------
 
-export const MagGlassIcon = ({ ...props }: any) => (
+export const MagGlassIcon = ({ ...props }: Props) => (
   <Svg viewBox="0 0 28 28" {...props} >
     <g stroke="currentColor" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1">
       <g transform="translate(-40.000000, -119.000000)">

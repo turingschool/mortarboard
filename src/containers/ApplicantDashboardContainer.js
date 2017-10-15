@@ -23,13 +23,9 @@ const withProps = mapProps(props => ({
 }))
 
 const keyWhitelist = ['isLoading', 'applicant']
-const withUpdateForKeys = component => compose(
-  onlyUpdateForKeys(keyWhitelist),
-)(component)
+const withUpdateForKeys = component => compose(onlyUpdateForKeys(keyWhitelist))(component)
 
-const withMutations = component => compose(
-  graphql(deleteApplicant, { name: 'deleteApplicantMutation' }),
-)(component)
+const withMutations = component => compose(graphql(deleteApplicant, { name: 'deleteApplicantMutation' }))(component)
 
 const withEventHandlers = withHandlers({
   handleDelete: props => async () => {

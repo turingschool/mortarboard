@@ -1,11 +1,14 @@
 // @flow
-import React from 'react'
+import React, { type Node } from 'react'
 import { gql, graphql } from 'react-apollo'
 import Post from '../components/Post'
-import Link from '../components/elements/Link'
+import PostLink from '../components/elements/Link'
 
 type Props = {
-  children: React.Element<*>,
+  children: Node,
+  location: {
+    key: any,
+  },
   data: {
     allPosts: Array<{
       id: string,
@@ -16,14 +19,9 @@ type Props = {
     loading: boolean,
     refetch: Function,
   },
-  location: {
-    key: any,
-  },
 }
 
-class ListPage extends React.Component {
-  props: Props
-
+class ListPage extends React.Component<Props> {
   componentWillReceiveProps(nextProps: Props) {
     if (this.props.location.key !== nextProps.location.key) {
       this.props.data.refetch()
@@ -44,9 +42,9 @@ class ListPage extends React.Component {
     return (
       <div>
         <div className="w-100 flex flex-wrap" style={{ maxWidth: 1150 }}>
-          <Link to="/create">
+          <PostLink to="/create">
             <div>+ New Post</div>
-          </Link>
+          </PostLink>
           {this.props.data.allPosts && this.props.data.allPosts.map(post => (
             <Post
               key={post.id}
@@ -73,7 +71,6 @@ const FeedQuery = gql`
 `
 
 const ListPageWithData = graphql(FeedQuery, {
-  // $FlowFixMe
   options: {
     fetchPolicy: 'network-only',
   },

@@ -1,10 +1,10 @@
 // @flow
-import React from 'react'
+import React, { type Node } from 'react'
 import glamorous from 'glamorous'
 import { RocketIcon } from '../elements/Icons'
 
 type Props = {
-  children: React.Element<*>,
+  children: Node,
 }
 
 export default ({ children, ...props }: Props) => (

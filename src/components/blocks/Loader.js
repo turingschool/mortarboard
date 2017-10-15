@@ -1,10 +1,10 @@
 // @flow
-import React from 'react'
+import React, { type Node } from 'react'
 import glamorous from 'glamorous'
 import { animateRotate, easeInOutCubic } from '../../constants/style'
 
 type Props = {
-  children: React.Element<*>,
+  children: Node,
 }
 
 export default ({ children, ...props }: Props) => (

@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, { type Node } from 'react'
 import glamorous from 'glamorous'
 import NavBar from '../containers/NavBarContainer'
 
@@ -8,7 +8,7 @@ const Main = glamorous.main({
 })
 
 type Props = {
-  children: React.Element<*>,
+  children: Node,
 }
 
 export default (props: Props) => (

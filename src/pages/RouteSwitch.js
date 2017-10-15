@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, { type Node } from 'react'
 import { memoize } from 'ramda'
 import { withRouter } from 'react-router-dom'
 import { AnimatedSwitch, spring } from 'react-router-transition'
@@ -35,7 +35,7 @@ const motionLeftToRight = {
 const getPathnameLength = memoize(pathname => pathname.split('/').length)
 
 type Props = {
-  children: React.Element<*>,
+  children: Node,
   location: LocationType,
 }
 
@@ -48,8 +48,7 @@ type State = {
   },
 }
 
-class RouteSwitch extends React.PureComponent {
-  props: Props
+class RouteSwitch extends React.PureComponent<Props, State> {
   state: State = {
     locationLength: getPathnameLength(this.props.location.pathname),
     motion: motionRightToLeft,

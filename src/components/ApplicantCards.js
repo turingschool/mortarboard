@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, { type Node } from 'react'
 import glamorous from 'glamorous'
 import ApplicantCard from './ApplicantCard'
 import Loader from './blocks/Loader'
@@ -7,15 +7,13 @@ import AppContainment from './elements/AppContainment'
 import type { ApplicantType, LocationType } from '../types/flowtypes'
 
 type Props = {
-  children: React.Element<*>,
+  children: Node,
   allApplicants: Array<ApplicantType>,
   refetch: Function,
   location: LocationType,
 }
 
-export default class extends React.PureComponent {
-  props: Props
-
+export default class extends React.PureComponent<Props> {
   componentWillReceiveProps(nextProps: Props) {
     if (this.props.location.key !== nextProps.location.key) {
       this.props.refetch()
