@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
+import { isNil } from 'ramda'
 import { Link } from 'react-router-dom'
 import { BASE_URL } from '../../constants/networking'
 
@@ -10,16 +11,22 @@ type Props = {
   to?: string,
 }
 
-const LinkComponent = ({ children, href, to, ...props }: Props) => (
-  to != null && (to.charAt(0) === '/' || to.charAt(0) === '#') ?
-    <RouterLink to={`${BASE_URL}${to}`} {...props}>
-      {children}
-    </RouterLink>
-    :
+// TODO: Does not handle #hastag links correctly
+const LinkComponent = ({ children, href, to, ...props }: Props) => {
+  if (!isNil(to)) {
+    const url = (to || '').includes(BASE_URL) ? to : `${BASE_URL}${(to || '')}`
+    return (
+      <RouterLink to={url} {...props}>
+        {children}
+      </RouterLink>
+    )
+  }
+  return (
     <ExternalLink href={href} target="_blank" rel="noopener noreferrer" {...props}>
       {children}
     </ExternalLink>
-)
+  )
+}
 
 LinkComponent.defaultProps = {
   href: null,
