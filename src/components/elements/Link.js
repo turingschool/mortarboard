@@ -37,6 +37,6 @@ export default LinkComponent
 
 // -------------------------------------
 
-const RouterLink = glamorous(Link)(({ children, ...props }) => ({ ...props }))
+const RouterLink = glamorous(Link)()
 
-const ExternalLink = glamorous.a(({ children, ...props }) => ({ ...props }))
+const ExternalLink = glamorous.a()

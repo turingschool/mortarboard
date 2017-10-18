@@ -3,7 +3,7 @@ import React, { type Node } from 'react'
 import glamorous from 'glamorous'
 import DdBase from '../elements/Dd'
 import Dl from '../elements/Dl'
-import Dt from '../elements/Dt'
+import DtBase from '../elements/Dt'
 import TextLink from '../elements/TextLink'
 import { RocketIcon } from '../elements/Icons'
 
@@ -14,13 +14,13 @@ type Props = {
 
 const Status = ({ children, to, ...props }: Props) => (
   <Dl {...props}>
-    <Dt color="#999">Application Status</Dt>
+    <Dt>Application Status</Dt>
     <Dd>
       <RocketIcon marginRight={16} />
       {children}
     </Dd>
     { to != null &&
-      <Dd marginTop={16}>
+      <Dd>
         <TextLink to={to}>Change Status</TextLink>
       </Dd>
     }
@@ -41,4 +41,8 @@ const Dd = glamorous(DdBase)({
   fontWeight: 400,
   textTransform: 'uppercase',
   color: '#333',
+})
+
+const Dt = glamorous(DtBase)({
+  color: '#999',
 })

@@ -5,7 +5,7 @@ import TimeAgo from 'react-timeago'
 import Loader from './blocks/Loader'
 import DescriptionBase from './blocks/Description'
 import EvaluationSummary from './blocks/EvaluationSummary'
-import Status from './blocks/Status'
+import StatusBase from './blocks/Status'
 import StatusActionLabel from './blocks/StatusActionLabel'
 import Heading from './elements/Heading'
 import SectionContainment from './elements/SectionContainment'
@@ -33,13 +33,13 @@ export default ({
     { applicant.applyStatus &&
       <StatusBar />
     }
-    <SectionContainment marginTop={32}>
+    <SectionContainment>
       <Header>
         <Heading>
           {`${applicant.firstName} ${applicant.lastName}`}
         </Heading>
         { applicant.applyStatus &&
-          <Status alignItems="flex-end" to="/">
+          <Status to="/">
             {applicant.applyStatus}
           </Status>
         }
@@ -87,7 +87,7 @@ export default ({
       applicant.scoreOnlineLogicTest ||
       applicant.scoreLogicEvaluation ||
       applicant.scoreValuesEvaluation) &&
-      <SectionContainment marginTop={80}>
+      <ScoreContainment>
         <EvaluationSummary
           score={applicant.scoreOnlineLogicTest}
           term="Online Logic Test"
@@ -102,14 +102,14 @@ export default ({
           term="Values Evaluation"
           to={`${match.url}/values-evaluation`}
         />
-      </SectionContainment>
+      </ScoreContainment>
     }
     {applicant.applyAction &&
-      <SectionContainment marginTop={80}>
+      <ScoreContainment>
         <StatusActionLabel>
           {applicant.applyAction}
         </StatusActionLabel>
-      </SectionContainment>
+      </ScoreContainment>
     }
   </div>
 )
@@ -129,4 +129,12 @@ const Header = glamorous.header({
   justifyContent: 'space-between',
   alignItems: 'center',
   minHeight: 128,
+})
+
+const Status = glamorous(StatusBase)({
+  alignItems: 'flex-end',
+})
+
+const ScoreContainment = glamorous(SectionContainment)({
+  marginTop: 80,
 })

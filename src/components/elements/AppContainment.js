@@ -1,7 +1,7 @@
 // @flow
 import glamorous from 'glamorous'
 
-const rules = {
+export default glamorous.div({
   position: 'relative',
   maxWidth: 1392,
   marginRight: 'auto',
@@ -9,9 +9,4 @@ const rules = {
   paddingRight: 16,
   paddingBottom: 16,
   paddingLeft: 16,
-}
-
-export default glamorous.div(
-  rules,
-  ({ children, ...props }) => ({ ...props }),
-)
+})

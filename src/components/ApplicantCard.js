@@ -3,9 +3,9 @@ import React from 'react'
 import glamorous from 'glamorous'
 import { pure } from 'recompose'
 import DescriptionBase from './blocks/Description'
-import Status from './blocks/Status'
-import StatusActionLabel from './blocks/StatusActionLabel'
-import Heading from './elements/Heading'
+import StatusBase from './blocks/Status'
+import StatusActionLabelBase from './blocks/StatusActionLabel'
+import HeadingBase from './elements/Heading'
 import HitLink from './elements/HitLink'
 import StatusBar from './elements/StatusBar'
 import TextLink from './elements/TextLink'
@@ -19,12 +19,12 @@ export default pure(({ applicant }: Props) => (
   <Card>
     <StatusBar />
     <Header>
-      <Heading marginTop="auto">
+      <Heading>
         <span>{applicant.firstName} </span>
         <span>{applicant.lastName}</span>
       </Heading>
       {applicant.applyAction &&
-        <StatusActionLabel position="absolute" top={16} right={16}>
+        <StatusActionLabel>
           {applicant.applyAction}
         </StatusActionLabel>
       }
@@ -38,7 +38,7 @@ export default pure(({ applicant }: Props) => (
           {`github.com/${applicant.github}`}
         </TextLink>
       </Description>
-      <Status marginTop={24}>
+      <Status>
         {applicant.applyStatus}
       </Status>
     </Descriptions>
@@ -66,12 +66,26 @@ const Header = glamorous.header({
   backgroundColor: '#e5e5e5',
 })
 
+const Heading = glamorous(HeadingBase)({
+  marginTop: 'auto',
+})
+
+const StatusActionLabel = glamorous(StatusActionLabelBase)({
+  position: 'absolute',
+  top: 16,
+  right: 16,
+})
+
 const Descriptions = glamorous.div({
   marginTop: 24,
   paddingRight: 24,
   paddingLeft: 24,
 })
 
-const Description = props => (
-  <DescriptionBase color="#999" {...props} />
-)
+const Description = glamorous(DescriptionBase)({
+  color: '#999',
+})
+
+const Status = glamorous(StatusBase)({
+  marginTop: 24,
+})

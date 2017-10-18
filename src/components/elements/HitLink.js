@@ -2,7 +2,7 @@
 import glamorous from 'glamorous'
 import Link from './Link'
 
-const rules = {
+export default glamorous(Link)({
   position: 'absolute',
   top: 0,
   right: 0,
@@ -10,9 +10,4 @@ const rules = {
   left: 0,
   zIndex: 1,
   backgroundColor: 'rgba(0, 0, 0, 0)',
-}
-
-export default glamorous(Link)(
-  rules,
-  ({ children, ...props }) => ({ ...props }),
-)
+})

@@ -16,15 +16,10 @@ export default ({ children, ...props }: Props) => (
 
 // -------------------------------------
 
-const rules = {
+const View = glamorous.div({
   display: 'flex',
   flexDirection: 'row',
-}
-
-const View = glamorous.div(
-  rules,
-  ({ children, ...props }) => ({ ...props }),
-)
+})
 
 const Text = glamorous.span({
   fontSize: 14,

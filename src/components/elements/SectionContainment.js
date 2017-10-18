@@ -1,14 +1,9 @@
 // @flow
 import glamorous from 'glamorous'
 
-const rules = {
+export default glamorous.section({
   position: 'relative',
   maxWidth: 960,
   marginRight: 'auto',
   marginLeft: 'auto',
-}
-
-export default glamorous.section(
-  rules,
-  ({ children, ...props }) => ({ ...props }),
-)
+})
