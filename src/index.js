@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { BASE_URL, GRAPHQL_ENDPOINT } from './constants/networking'
 import RouteSwitch from './pages/RouteSwitch'
 import Layout from './pages/Layout'
+import ApplicantCreate from './pages/ApplicantCreate'
 import ApplicantDetail from './pages/ApplicantDetail'
 import ApplicantValuesEvaluation from './pages/ApplicantValuesEvaluation'
 import ApplicantLogicEvaluation from './pages/ApplicantLogicEvaluation'
@@ -30,6 +31,7 @@ if (rootElement) {
           <RouteSwitch>
             <Route exact path={`${BASE_URL}/`} component={Applicants} />
             <Route exact path={`${BASE_URL}/applicants`} component={Applicants} />
+            <Route path={`${BASE_URL}/applicant/create`} component={ApplicantCreate} />
             <Route path={`${BASE_URL}/applicant/:id/logic-evaluation`} component={ApplicantLogicEvaluation} />
             <Route path={`${BASE_URL}/applicant/:id/values-evaluation`} component={ApplicantValuesEvaluation} />
             <Route path={`${BASE_URL}/applicant/:id`} component={ApplicantDetail} />
