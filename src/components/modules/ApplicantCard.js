@@ -2,14 +2,14 @@
 import React from 'react'
 import glamorous from 'glamorous'
 import { pure } from 'recompose'
-import DescriptionBase from './blocks/Description'
-import StatusBase from './blocks/Status'
-import StatusActionLabelBase from './blocks/StatusActionLabel'
-import HeadingBase from './elements/Heading'
-import HitLink from './elements/HitLink'
-import StatusBar from './elements/StatusBar'
-import TextLink from './elements/TextLink'
-import type { ApplicantType } from '../types/flowtypes'
+import DescriptionBase from '../blocks/Description'
+import StatusBase from '../blocks/Status'
+import StatusActionLabelBase from '../blocks/StatusActionLabel'
+import HeadingBase from '../elements/Heading'
+import HitLink from '../elements/HitLink'
+import StatusBar from '../elements/StatusBar'
+import TextLink from '../elements/TextLink'
+import type { ApplicantType } from '../../types/flowtypes'
 
 type Props = {
   applicant: ApplicantType,

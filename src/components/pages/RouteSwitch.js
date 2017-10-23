@@ -4,7 +4,7 @@ import { memoize } from 'ramda'
 import { withRouter } from 'react-router-dom'
 import { AnimatedSwitch, spring } from 'react-router-transition'
 import { css } from 'glamor'
-import type { LocationType } from '../types/flowtypes'
+import type { LocationType } from '../../types/flowtypes'
 
 const glide = val => spring(val, { stiffness: 175, damping: 25 })
 

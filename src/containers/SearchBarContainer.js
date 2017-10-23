@@ -1,8 +1,8 @@
 // @flow
 import { withRouter } from 'react-router-dom'
 import { compose, mapProps, pure, withHandlers, withState } from 'recompose'
-import SearchBar from '../components/SearchBar'
-import withLog from './withLog'
+import SearchBar from '../components/modules/SearchBar'
+// import withLog from '../lib/withLog'
 
 const withProps = mapProps(props => ({
   forId: 'SearchBar',
@@ -27,5 +27,5 @@ export default compose(
   withState('value', 'setValue', ''),
   withEventHandlers,
   pure,
-  withLog,
+  // withLog,
 )(SearchBar)

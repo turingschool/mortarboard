@@ -8,7 +8,7 @@ import {
   onlyUpdateForKeys,
   renderComponent,
 } from 'recompose'
-import ApplicantComponent, { ComponentLoader } from '../components/ApplicantComponent'
+import ApplicantModule, { ComponentLoader } from '../components/modules/ApplicantModule'
 import withApplicant from './withApplicant'
 
 const propsWhitelist = ['applicant', 'isLoading', 'match']
@@ -32,4 +32,4 @@ export default compose(
   withProps,
   withUpdateForKeys,
   withLoader,
-)(ApplicantComponent)
+)(ApplicantModule)

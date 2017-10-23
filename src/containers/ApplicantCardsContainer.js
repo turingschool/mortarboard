@@ -3,7 +3,7 @@ import { gql, graphql } from 'react-apollo'
 import { withRouter } from 'react-router-dom'
 import { pick } from 'ramda'
 import { branch, compose, mapProps, renderComponent } from 'recompose'
-import ApplicantCards, { ComponentLoader } from '../components/ApplicantCards'
+import ApplicantCards, { ComponentLoader } from '../components/modules/ApplicantCards'
 
 const ApplicantsQuery = gql`
   query allApplicants {

@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
-import AppContainment from '../components/elements/AppContainment'
+import AppContainment from '../elements/AppContainment'
 
 export default () => (
   <AppContainment>

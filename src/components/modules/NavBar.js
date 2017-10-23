@@ -1,10 +1,10 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
-import { BASE_URL } from '../constants/networking'
-import ImageLink from './elements/Link'
-import TextLink from './elements/TextLink'
-import { ChevronIconThin } from './elements/Icons'
+import { BASE_URL } from '../../constants/networking'
+import ImageLink from '../elements/Link'
+import TextLink from '../elements/TextLink'
+import { ChevronIconThin } from '../elements/Icons'
 
 type Props = {
   goBack: Function,

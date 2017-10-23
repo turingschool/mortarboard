@@ -2,9 +2,9 @@
 import React, { type Node } from 'react'
 import glamorous from 'glamorous'
 import ApplicantCard from './ApplicantCard'
-import Loader from './blocks/Loader'
-import AppContainment from './elements/AppContainment'
-import type { ApplicantType, LocationType } from '../types/flowtypes'
+import Loader from '../blocks/Loader'
+import AppContainment from '../elements/AppContainment'
+import type { ApplicantType, LocationType } from '../../types/flowtypes'
 
 type Props = {
   children: Node,

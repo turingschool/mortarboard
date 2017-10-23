@@ -1,8 +1,8 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
-import AppContainmentBase from './elements/AppContainment'
-import { MagGlassIcon } from './elements/Icons'
+import AppContainmentBase from '../elements/AppContainment'
+import { MagGlassIcon } from '../elements/Icons'
 
 type Props = {
   action: string,
