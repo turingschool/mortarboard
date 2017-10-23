@@ -10,22 +10,17 @@ import StatusActionLabel from './blocks/StatusActionLabel'
 import Heading from './elements/Heading'
 import SectionContainment from './elements/SectionContainment'
 import StatusBar from './elements/StatusBar'
-import EditLink from './elements/EditLink'
 import TextLink from './elements/TextLink'
 import type { ApplicantType, MatchType } from '../types/flowtypes'
 
 type Props = {
   applicant: ApplicantType,
-  handleDelete: Function,
-  isApplicantEditable: boolean,
   isEvaluatable: boolean,
   match: MatchType,
 }
 
 export default ({
   applicant,
-  handleDelete,
-  isApplicantEditable,
   isEvaluatable,
   match,
 }: Props) => (
@@ -44,14 +39,6 @@ export default ({
           </Status>
         }
       </Header>
-      { isApplicantEditable &&
-        <EditLink to="/">Edit Applicant Info</EditLink>
-      }
-      { handleDelete &&
-        <glamorous.Div textAlign="right" color="#ff4136">
-          <button onClick={handleDelete}>Delete Applicant</button>
-        </glamorous.Div>
-      }
       { applicant.email &&
         <Description term="Email Address">
           <TextLink href={`mailto:${applicant.email}`}>{applicant.email}</TextLink>

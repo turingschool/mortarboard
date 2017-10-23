@@ -27,7 +27,6 @@ export default (props: Props) => (
             <span> / </span>
             <TextLink to="/">Logout</TextLink>
             <span> / </span>
-            <TextLink to="/applicant/create">Create Applicant</TextLink>
           </User>
           <ImageLink to="/">
             <img
