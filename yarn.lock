@@ -146,20 +146,6 @@ anymatch@^1.3.0:
     micromatch "^2.1.5"
     normalize-path "^2.0.0"
 
-apollo-client@1.9.3:
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-1.9.3.tgz#37000b3c801f4571b7b089739e696a158896aeab"
-  dependencies:
-    apollo-link-core "^0.5.0"
-    graphql "^0.10.0"
-    graphql-anywhere "^3.0.1"
-    graphql-tag "^2.0.0"
-    redux "^3.4.0"
-    symbol-observable "^1.0.2"
-    whatwg-fetch "^2.0.0"
-  optionalDependencies:
-    "@types/graphql" "0.10.2"
-
 apollo-client@^1.4.0:
   version "1.9.2"
   resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-1.9.2.tgz#a95b38ca846e881bba1b59b0e3fbf82abfd7f23d"
@@ -2322,27 +2308,17 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-airbnb-base@^12.0.2:
-  version "12.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-12.0.2.tgz#45fea317d71b8f1da323c730f3a8471988757793"
+eslint-config-airbnb-base@^12.1.0:
+  version "12.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-12.1.0.tgz#386441e54a12ccd957b0a92564a4bafebd747944"
   dependencies:
     eslint-restricted-globals "^0.1.1"
 
-eslint-config-airbnb@16.0.0:
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-16.0.0.tgz#21e81476ab7f5f27c1a900ff415cac9e1e12f3ed"
+eslint-config-airbnb@16.1.0:
+  version "16.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-16.1.0.tgz#2546bfb02cc9fe92284bf1723ccf2e87bc45ca46"
   dependencies:
-    eslint-config-airbnb-base "^12.0.2"
-
-eslint-config-mkitt@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-mkitt/-/eslint-config-mkitt-3.0.0.tgz#bab0445c2463fe6de4782fdd04c962ae09b748ed"
-  dependencies:
-    eslint-config-airbnb "16.0.0"
-    eslint-plugin-flowtype "2.39.1"
-    eslint-plugin-import "2.7.0"
-    eslint-plugin-jsx-a11y "6.0.2"
-    eslint-plugin-react "7.4.0"
+    eslint-config-airbnb-base "^12.1.0"
 
 eslint-config-react-app@^2.0.1:
   version "2.0.1"
@@ -2387,6 +2363,21 @@ eslint-plugin-flowtype@2.39.1:
 eslint-plugin-import@2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.7.0.tgz#21de33380b9efb55f5ef6d2e210ec0e07e7fa69f"
+  dependencies:
+    builtin-modules "^1.1.1"
+    contains-path "^0.1.0"
+    debug "^2.6.8"
+    doctrine "1.5.0"
+    eslint-import-resolver-node "^0.3.1"
+    eslint-module-utils "^2.1.1"
+    has "^1.0.1"
+    lodash.cond "^4.3.0"
+    minimatch "^3.0.3"
+    read-pkg-up "^2.0.0"
+
+eslint-plugin-import@2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.8.0.tgz#fa1b6ef31fcb3c501c09859c1b86f1fc5b986894"
   dependencies:
     builtin-modules "^1.1.1"
     contains-path "^0.1.0"
@@ -2451,6 +2442,48 @@ eslint-scope@^3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
+eslint@4.10.0:
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.10.0.tgz#f25d0d7955c81968c2309aa5c9a229e045176bb7"
+  dependencies:
+    ajv "^5.2.0"
+    babel-code-frame "^6.22.0"
+    chalk "^2.1.0"
+    concat-stream "^1.6.0"
+    cross-spawn "^5.1.0"
+    debug "^3.0.1"
+    doctrine "^2.0.0"
+    eslint-scope "^3.7.1"
+    espree "^3.5.1"
+    esquery "^1.0.0"
+    estraverse "^4.2.0"
+    esutils "^2.0.2"
+    file-entry-cache "^2.0.0"
+    functional-red-black-tree "^1.0.1"
+    glob "^7.1.2"
+    globals "^9.17.0"
+    ignore "^3.3.3"
+    imurmurhash "^0.1.4"
+    inquirer "^3.0.6"
+    is-resolvable "^1.0.0"
+    js-yaml "^3.9.1"
+    json-stable-stringify "^1.0.1"
+    levn "^0.3.0"
+    lodash "^4.17.4"
+    minimatch "^3.0.2"
+    mkdirp "^0.5.1"
+    natural-compare "^1.4.0"
+    optionator "^0.8.2"
+    path-is-inside "^1.0.2"
+    pluralize "^7.0.0"
+    progress "^2.0.0"
+    require-uncached "^1.0.3"
+    semver "^5.3.0"
+    strip-ansi "^4.0.0"
+    strip-json-comments "~2.0.1"
+    table "^4.0.1"
+    text-table "~0.2.0"
+
 eslint@4.4.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.4.1.tgz#99cd7eafcffca2ff99a5c8f5f2a474d6364b4bd3"
@@ -2488,48 +2521,6 @@ eslint@4.4.1:
     progress "^2.0.0"
     require-uncached "^1.0.3"
     semver "^5.3.0"
-    strip-json-comments "~2.0.1"
-    table "^4.0.1"
-    text-table "~0.2.0"
-
-eslint@4.9.0:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.9.0.tgz#76879d274068261b191fe0f2f56c74c2f4208e8b"
-  dependencies:
-    ajv "^5.2.0"
-    babel-code-frame "^6.22.0"
-    chalk "^2.1.0"
-    concat-stream "^1.6.0"
-    cross-spawn "^5.1.0"
-    debug "^3.0.1"
-    doctrine "^2.0.0"
-    eslint-scope "^3.7.1"
-    espree "^3.5.1"
-    esquery "^1.0.0"
-    estraverse "^4.2.0"
-    esutils "^2.0.2"
-    file-entry-cache "^2.0.0"
-    functional-red-black-tree "^1.0.1"
-    glob "^7.1.2"
-    globals "^9.17.0"
-    ignore "^3.3.3"
-    imurmurhash "^0.1.4"
-    inquirer "^3.0.6"
-    is-resolvable "^1.0.0"
-    js-yaml "^3.9.1"
-    json-stable-stringify "^1.0.1"
-    levn "^0.3.0"
-    lodash "^4.17.4"
-    minimatch "^3.0.2"
-    mkdirp "^0.5.1"
-    natural-compare "^1.4.0"
-    optionator "^0.8.2"
-    path-is-inside "^1.0.2"
-    pluralize "^7.0.0"
-    progress "^2.0.0"
-    require-uncached "^1.0.3"
-    semver "^5.3.0"
-    strip-ansi "^4.0.0"
     strip-json-comments "~2.0.1"
     table "^4.0.1"
     text-table "~0.2.0"
@@ -2907,9 +2898,9 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
-flow-bin@0.57.2:
-  version "0.57.2"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.57.2.tgz#0b5ed4dd38a1991047e9bee71d62a763ae61b6b7"
+flow-bin@0.57.3:
+  version "0.57.3"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.57.3.tgz#843fb80a821b6d0c5847f7bb3f42365ffe53b27b"
 
 for-in@^1.0.1:
   version "1.0.2"
@@ -3040,9 +3031,9 @@ glamor@2.20.40:
     prop-types "^15.5.10"
     through "^2.3.8"
 
-glamorous@4.9.7:
-  version "4.9.7"
-  resolved "https://registry.yarnpkg.com/glamorous/-/glamorous-4.9.7.tgz#78bb008d1404b5bd91ad4d043ec0dc6430ad2653"
+glamorous@4.11.0:
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/glamorous/-/glamorous-4.11.0.tgz#cb846dda1450c895c59a34060fb19e3251ed619f"
   dependencies:
     brcast "^3.0.0"
     fast-memoize "^2.2.7"
@@ -3151,7 +3142,7 @@ graphql-anywhere@^3.0.1:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/graphql-anywhere/-/graphql-anywhere-3.1.0.tgz#3ea0d8e8646b5cee68035016a9a7557c15c21e96"
 
-graphql-tag@2.4.2, graphql-tag@^2.0.0, graphql-tag@^2.4.2:
+graphql-tag@^2.0.0, graphql-tag@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.4.2.tgz#6a63297d8522d03a2b72d26f1b239aab343840cd"
 
@@ -5650,9 +5641,9 @@ react-html-attributes@^1.3.0:
   dependencies:
     html-element-attributes "^1.0.0"
 
-react-modal@3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.0.3.tgz#276580ccf3d48edab0e34df682e1e1c74856dc8f"
+react-modal@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.1.0.tgz#ce594f88f9ab7338ee265cfec4be3cc5253f5baa"
   dependencies:
     exenv "^1.2.0"
     prop-types "^15.5.10"
@@ -6685,6 +6676,10 @@ to-fast-properties@^1.0.3:
 to-fast-properties@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
+
+toolkitt@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/toolkitt/-/toolkitt-1.0.0.tgz#ded9750bb56ae5107be299ed0c761734d0484b38"
 
 toposort@^1.0.0:
   version "1.0.3"
