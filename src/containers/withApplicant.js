@@ -1,30 +1,9 @@
 // @flow
-import { gql, graphql } from 'react-apollo'
+import { graphql } from 'react-apollo'
+import ApplicantQuery from '../graphql/ApplicantQuery'
 
-const ApplicantQuery = gql`
-  query post($id: ID!) {
-    Applicant(id: $id) {
-      applyAction
-      applyStatus
-      birthdate
-      createdAt
-      email
-      firstName
-      github
-      id
-      lastName
-      referredBy
-      resume
-      scoreLogicEvaluation
-      scoreOnlineLogicTest
-      scoreValuesEvaluation
-      startDate
-    }
-  }
-`
-
+// Yo! Needs to be wrapped with RR...
 export default graphql(ApplicantQuery, {
-  // Yo! Needs to be wrapped with RR... :(
   options: ({ match }) => ({
     variables: {
       id: match.params.id,

@@ -1,25 +1,12 @@
 // @flow
-import { gql, graphql } from 'react-apollo'
+import { graphql } from 'react-apollo'
 import { withRouter } from 'react-router-dom'
 import { pick } from 'ramda'
 import { branch, compose, mapProps, renderComponent } from 'recompose'
+import allApplicantsQuery from '../graphql/allApplicants'
 import ApplicantCards, { ComponentLoader } from '../components/modules/ApplicantCards'
 
-const ApplicantsQuery = gql`
-  query allApplicants {
-    allApplicants(orderBy: createdAt_ASC) {
-      applyAction
-      applyStatus
-      email
-      firstName
-      github
-      id
-      lastName
-    }
-  }
-`
-
-const withData = graphql(ApplicantsQuery, {
+const withData = graphql(allApplicantsQuery, {
   props: ({ data: { allApplicants, loading, refetch } }) => ({
     logName: 'CardsContainer',
     allApplicants: allApplicants || null,
