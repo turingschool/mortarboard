@@ -11,27 +11,30 @@
     "test": "react-scripts test --env=jsdom"
   },
   "dependencies": {
-    "apollo-client": "1.9.3",
     "glamor": "2.20.40",
-    "glamorous": "4.9.7",
-    "graphql-tag": "2.4.2",
+    "glamorous": "4.11.0",
     "ramda": "0.25.0",
     "react": "16.0.0",
     "react-apollo": "1.4.16",
     "react-dom": "16.0.0",
-    "react-modal": "3.0.3",
+    "react-modal": "3.1.0",
     "react-motion": "0.5.2",
     "react-router-dom": "4.2.2",
     "react-router-transition": "1.1.1",
     "react-timeago": "3.4.3",
-    "recompose": "0.26.0"
+    "recompose": "0.26.0",
+    "toolkitt": "1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "8.0.1",
     "babel-preset-flow": "6.23.0",
-    "eslint": "4.9.0",
-    "eslint-config-mkitt": "3.0.0",
-    "flow-bin": "0.57.2",
+    "eslint": "4.10.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-flowtype": "2.39.1",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jsx-a11y": "6.0.2",
+    "eslint-plugin-react": "7.4.0",
+    "flow-bin": "0.57.3",
     "jest-glamor-react": "3.1.2",
     "react-addons-test-utils": "15.6.2",
     "react-scripts": "1.0.14",
@@ -48,7 +51,22 @@
     "Firefox ESR"
   ],
   "eslintConfig": {
-    "extends": "mkitt"
+    "extends": [
+      "airbnb",
+      "plugin:flowtype/recommended"
+    ],
+    "plugins": [
+      "flowtype"
+    ],
+    "env": {
+      "browser": "true",
+      "jest": "true"
+    },
+    "rules": {
+      "object-curly-newline": "off",
+      "react/jsx-filename-extension": "off",
+      "semi": ["error", "never"]
+    }
   },
   "jest": {
     "snapshotSerializers": [

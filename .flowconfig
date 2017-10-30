@@ -1,12 +1,10 @@
 [ignore]
-.*/node_modules/graphql/.*
 .*/node_modules/react-apollo/react-apollo.umd.js.flow
 .*/node_modules/react-timeago/lib/index.js.flow
 
 [include]
 
 [libs]
-<PROJECT_ROOT>/src/types
 
 [lints]
 all=warn
