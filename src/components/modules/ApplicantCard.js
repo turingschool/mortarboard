@@ -2,6 +2,7 @@
 import React from 'react'
 import glamorous from 'glamorous'
 import { pure } from 'recompose'
+import { COLORS } from '../../constants/theme'
 import DescriptionBase from '../blocks/Description'
 import StatusBase from '../blocks/Status'
 import StatusActionLabelBase from '../blocks/StatusActionLabel'
@@ -63,7 +64,7 @@ const Header = glamorous.header({
   paddingRight: 24,
   paddingBottom: 16,
   paddingLeft: 24,
-  backgroundColor: '#e5e5e5',
+  backgroundColor: COLORS.GREY_E,
 })
 
 const Heading = glamorous(HeadingBase)({
@@ -83,7 +84,7 @@ const Descriptions = glamorous.div({
 })
 
 const Description = glamorous(DescriptionBase)({
-  color: '#999',
+  color: COLORS.GREY_9,
 })
 
 const Status = glamorous(StatusBase)({

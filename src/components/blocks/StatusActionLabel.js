@@ -2,6 +2,7 @@
 import React, { type Node } from 'react'
 import glamorous from 'glamorous'
 import { RocketIcon } from '../elements/Icons'
+import { COLORS } from '../../constants/theme'
 
 type Props = {
   children: Node,
@@ -25,5 +26,5 @@ const Text = glamorous.span({
   fontSize: 14,
   fontWeight: 600,
   textTransform: 'uppercase',
-  color: '#666',
+  color: COLORS.GREY_6,
 })

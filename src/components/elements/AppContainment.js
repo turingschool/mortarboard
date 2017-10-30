@@ -6,7 +6,7 @@ export default glamorous.div({
   maxWidth: 1392,
   marginRight: 'auto',
   marginLeft: 'auto',
-  paddingRight: 16,
+  paddingRight: 8,
   paddingBottom: 16,
-  paddingLeft: 16,
+  paddingLeft: 8,
 })

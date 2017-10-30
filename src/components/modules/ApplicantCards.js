@@ -48,7 +48,7 @@ export const ComponentLoader = () => (
 const Cards = glamorous.section({
   display: 'flex',
   marginLeft: -16,
-  padding: 16,
+  padding: '24px 16px',
   '& > *': {
     marginLeft: 16,
   },

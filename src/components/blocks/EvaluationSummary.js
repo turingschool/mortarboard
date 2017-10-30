@@ -2,6 +2,7 @@
 import React from 'react'
 import glamorous from 'glamorous'
 import TextLink from '../elements/TextLink'
+import { COLORS } from '../../constants/theme'
 
 type Props = {
   score?: number | null,
@@ -38,8 +39,8 @@ const View = glamorous.div({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  marginTop: 48,
-  borderBottom: '1px solid #ccc',
+  marginTop: 44,
+  borderBottom: `1px solid ${COLORS.GREY_C}`,
 })
 
 const Heading = glamorous.h2({
@@ -47,17 +48,17 @@ const Heading = glamorous.h2({
   flexFlow: 'row nowrap',
   fontSize: 28,
   fontWeight: 300,
-  color: '#808080',
+  color: COLORS.GREY_8,
 })
 
 const TermText = glamorous.span()
 
 const ScoreText = glamorous.span({
-  color: '#8ad30e',
+  color: COLORS.LIGHT_GREEN,
   marginLeft: 8,
   '&::before': {
     content: ' : ',
-    color: '#808080',
+    color: COLORS.GREY_8,
   },
 })
 

@@ -1,7 +1,7 @@
 // @flow
 import React, { type Node } from 'react'
 import glamorous from 'glamorous'
-import { animateRotate, easeInOutCubic } from '../../constants/style'
+import { ANIMATE_ROTATE, COLORS, EASE } from '../../constants/theme'
 
 type Props = {
   children: Node,
@@ -30,6 +30,6 @@ const Busy = glamorous.div({
   borderRadius: '50%',
   borderWidth: 2,
   borderStyle: 'dashed',
-  borderColor: '#333',
-  animation: `${animateRotate} 1.03333s infinite ${easeInOutCubic}`,
+  borderColor: COLORS.GREY_4,
+  animation: `${ANIMATE_ROTATE} 1.03333s infinite ${EASE.IN_OUT_CUBIC}`,
 })

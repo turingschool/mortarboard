@@ -6,4 +6,6 @@ export default glamorous.section({
   maxWidth: 960,
   marginRight: 'auto',
   marginLeft: 'auto',
+  paddingRight: 16,
+  paddingLeft: 16,
 })

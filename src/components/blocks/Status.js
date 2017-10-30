@@ -6,6 +6,7 @@ import Dl from '../elements/Dl'
 import DtBase from '../elements/Dt'
 import TextLink from '../elements/TextLink'
 import { RocketIcon } from '../elements/Icons'
+import { COLORS } from '../../constants/theme'
 
 type Props = {
   children: Node,
@@ -40,9 +41,9 @@ const Dd = glamorous(DdBase)({
   fontSize: 18,
   fontWeight: 400,
   textTransform: 'uppercase',
-  color: '#333',
+  color: COLORS.GREY_4,
 })
 
 const Dt = glamorous(DtBase)({
-  color: '#999',
+  color: COLORS.GREY_9,
 })

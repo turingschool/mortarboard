@@ -17,5 +17,5 @@ export default ({ children, ...props }: Props) => (
 )
 
 const SectionContainment = glamorous(SectionContainmentBase)({
-  marginBottom: 128,
+  marginBottom: 6,
 })

@@ -123,5 +123,5 @@ const Status = glamorous(StatusBase)({
 })
 
 const ScoreContainment = glamorous(SectionContainment)({
-  marginTop: 80,
+  marginTop: 72,
 })

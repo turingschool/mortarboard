@@ -1,11 +1,12 @@
 // @flow
 import glamorous from 'glamorous'
 import Link from './Link'
+import { COLORS } from '../../constants/theme'
 
 export default glamorous(Link)({
   position: 'relative',
   zIndex: 2,
-  color: '#35c5fc',
+  color: COLORS.BLUE,
   textDecoration: 'none',
   transition: 'color 200ms',
 })

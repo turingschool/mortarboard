@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
+import { COLORS } from '../../constants/theme'
 import AppContainmentBase from '../elements/AppContainment'
 import { MagGlassIcon } from '../elements/Icons'
 
@@ -46,14 +47,15 @@ const AppContainment = glamorous(AppContainmentBase)({
 
 const Form = glamorous.form({
   position: 'relative',
-  backgroundColor: '#fff',
+  backgroundColor: COLORS.WHITE,
 })
 
 const Label = glamorous.label({
   position: 'relative',
   display: 'flex',
   alignItems: 'center',
-  color: '#808080',
+  marginTop: 24,
+  color: COLORS.GREY_8,
 })
 
 const Input = glamorous.input({

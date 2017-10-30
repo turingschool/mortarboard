@@ -2,6 +2,7 @@
 import React from 'react'
 import glamorous from 'glamorous'
 import { BASE_URL } from '../../constants/networking'
+import { COLORS } from '../../constants/theme'
 import ImageLink from '../elements/Link'
 import TextLink from '../elements/TextLink'
 import { ChevronIconThin } from '../elements/Icons'
@@ -11,45 +12,42 @@ type Props = {
 }
 
 export default (props: Props) => (
-  <View>
-    <Nav>
-      <Pulled>
+  <Nav>
+    <View>
+      <Column>
         { props.goBack &&
           <BackButton onClick={props.goBack} role="button">
             <ChevronIconThin />
           </BackButton>
         }
-      </Pulled>
-      <div>
-        <Pushed>
-          <User>
-            <span><span role="img" aria-label="hi">👋</span> Jeff Casimir</span>
-            <span> / </span>
-            <TextLink to="/">Logout</TextLink>
-            <span> / </span>
-          </User>
-          <ImageLink to="/">
-            <img
-              alt="turing school mark"
-              src={`${BASE_URL}/turing-school-mark-256.png`}
-              width={48}
-              height={48}
-            />
-          </ImageLink>
-        </Pushed>
-      </div>
-    </Nav>
-  </View>
+      </Column>
+      <Column>
+        <User>
+          <span><span role="img" aria-label="hi">👋</span> Jeff Casimir</span>
+          <span> / </span>
+          <TextLink to="/">Logout</TextLink>
+        </User>
+        <ImageLink to="/">
+          <img
+            alt="turing school mark"
+            src={`${BASE_URL}/turing-school-mark-256.png`}
+            width={48}
+            height={48}
+          />
+        </ImageLink>
+      </Column>
+    </View>
+  </Nav>
 )
 
 // -------------------------------------
 
-const View = glamorous.div({
+const Nav = glamorous.nav({
   height: 112,
-  backgroundColor: '#fff',
+  backgroundColor: COLORS.WHITE,
 })
 
-const Nav = glamorous.nav({
+const View = glamorous.div({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
@@ -57,26 +55,22 @@ const Nav = glamorous.nav({
   height: '100%',
   marginLeft: 'auto',
   marginRight: 'auto',
-  paddingRight: 16,
-  paddingLeft: 16,
+  paddingRight: 8,
+  paddingLeft: 8,
 })
 
-const Pulled = glamorous.div({
+const Column = glamorous.div({
   display: 'flex',
   alignItems: 'center',
-})
-
-const Pushed = glamorous.div({
-  display: 'flex',
-  alignItems: 'center',
+  height: '100%',
 })
 
 const User = glamorous.span({
   fontSize: 14,
-  color: '#808080',
+  color: COLORS.GREY_8,
   marginRight: 40,
 })
 
 const BackButton = glamorous.button({
-  color: '#999',
+  color: COLORS.GREY_9,
 })
