@@ -7,9 +7,9 @@ exports[`/404 shows the correct snapshot tree for the /404 page 1`] = `
   max-width: 1392px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 16px;
+  padding-right: 8px;
   padding-bottom: 16px;
-  padding-left: 16px;
+  padding-left: 8px;
 }
 
 .glamor-0,
