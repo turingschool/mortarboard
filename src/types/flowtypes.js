@@ -18,6 +18,10 @@ export type ApplicantType = {
   updatedAt: string,
 }
 
+export type EvaluationType = {
+  name: string,
+}
+
 // TODO: There is probably an offical History flow typing out there
 export type HistoryType = {
   goBack: Function,

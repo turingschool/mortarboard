@@ -66,6 +66,29 @@ ChevronIconThin.defaultProps = {
 
 // -------------------------------------
 
+export const ChevronXIcon = ({ ...props }: Props) => (
+  <Svg viewBox="0 0 28 28" {...props}>
+    <g
+      fill="none"
+      fillRule="evenodd"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <polyline points="27.155 0 14.224 12.931 0 0" />
+      <g transform="translate(13.577500, 19.465500) scale(1, -1) translate(-13.577500, -19.465500)">
+        <polyline points="27.155 13 14.224 25.931 0 13" />
+      </g>
+    </g>
+  </Svg>
+)
+
+ChevronXIcon.defaultProps = {
+  width: 28,
+  height: 28,
+}
+// -------------------------------------
+
 export const MagGlassIcon = ({ ...props }: Props) => (
   <Svg viewBox="0 0 28 28" {...props} >
     <g stroke="currentColor" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1">
