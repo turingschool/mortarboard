@@ -93,9 +93,7 @@ export default ({
     }
     {applicant.applyAction &&
       <ScoreContainment>
-        <StatusActionLabel>
-          {applicant.applyAction}
-        </StatusActionLabel>
+        <StatusActionLabel status={applicant.applyAction} />
       </ScoreContainment>
     }
   </div>

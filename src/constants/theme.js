@@ -8,6 +8,7 @@ export const ANIMATE_ROTATE = css.keyframes('ANIMATE_ROTATE', {
 
 export const COLORS = {
   BLUE: '#35c5fc',
+  RED: '#f43306',
   BLACK: '#000',
   GREY_4: '#4d4d4d',
   GREY_6: '#666',

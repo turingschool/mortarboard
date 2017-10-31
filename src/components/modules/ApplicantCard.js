@@ -25,9 +25,7 @@ export default pure(({ applicant }: Props) => (
         <span>{applicant.lastName}</span>
       </Heading>
       {applicant.applyAction &&
-        <StatusActionLabel>
-          {applicant.applyAction}
-        </StatusActionLabel>
+        <StatusActionLabel status={applicant.applyAction} />
       }
     </Header>
     <Descriptions>

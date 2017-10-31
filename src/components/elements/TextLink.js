@@ -11,9 +11,7 @@ export default glamorous(Link)(
     textDecoration: 'none',
     transition: 'color 200ms',
   },
-  ({ fontSize }) => (
-    {
-      fontSize: fontSize || null,
-    }
-  ),
+  ({ fontSize }) => ({
+    fontSize: fontSize || null,
+  }),
 )
