@@ -22,7 +22,7 @@ const Status = ({ children, to, ...props }: Props) => (
     </Dd>
     { to != null &&
       <Dd>
-        <TextLink to={to}>Change Status</TextLink>
+        <TextLink fontSize={14} to={to}>Change Status</TextLink>
       </Dd>
     }
   </Dl>
@@ -36,14 +36,14 @@ export default Status
 
 // -------------------------------------
 
+const Dt = glamorous(DtBase)({
+  color: COLORS.GREY_9,
+})
+
 const Dd = glamorous(DdBase)({
   marginTop: 16,
   fontSize: 18,
   fontWeight: 400,
   textTransform: 'uppercase',
   color: COLORS.GREY_4,
-})
-
-const Dt = glamorous(DtBase)({
-  color: COLORS.GREY_9,
 })

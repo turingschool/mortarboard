@@ -12,7 +12,7 @@ export const COLORS = {
   GREY_4: '#4d4d4d',
   GREY_6: '#666',
   GREY_8: '#808080',
-  GREY_9: '##999',
+  GREY_9: '#999',
   GREY_C: '#ccc',
   GREY_E: '#e5e5e5',
   WHITE: '#fff',

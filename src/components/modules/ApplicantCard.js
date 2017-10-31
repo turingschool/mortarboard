@@ -84,7 +84,7 @@ const Descriptions = glamorous.div({
 })
 
 const Description = glamorous(DescriptionBase)({
-  color: COLORS.GREY_9,
+  color: COLORS.GREY_8,
 })
 
 const Status = glamorous(StatusBase)({
