@@ -25,10 +25,9 @@ export default class extends React.PureComponent<Props> {
     return (
       <SectionContainment>
         <Evaluations>
-          {allEvaluations && allEvaluations.map((evaluation, i) => (
+          {allEvaluations && allEvaluations.map(evaluation => (
             <Evaluation
               evaluation={evaluation}
-              isOpen={i === 0}
               key={evaluation.id}
               refresh={() => refetch()}
             />
@@ -50,6 +49,7 @@ const Evaluations = glamorous.section({
   display: 'flex',
   flexDirection: 'column',
   paddingTop: 6,
+  paddingBottom: 32,
   '& > *': {
     marginTop: 48,
   },

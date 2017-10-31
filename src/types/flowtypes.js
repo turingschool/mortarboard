@@ -19,7 +19,10 @@ export type ApplicantType = {
 }
 
 export type EvaluationType = {
+  criteria: Array<string>,
+  id: string,
   name: string,
+  questions: Array<string>,
 }
 
 // TODO: There is probably an offical History flow typing out there

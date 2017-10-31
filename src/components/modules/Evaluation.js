@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
+import { memoizeWith, length } from 'ramda'
 import { pure } from 'recompose'
 import { COLORS } from '../../constants/theme'
 import { ChevronXIcon } from '../elements/Icons'
@@ -11,14 +12,7 @@ type Props = {
   isOpen: boolean,
 }
 
-const questions = [
-  'Tell me a little about yourself.',
-  'Why do you want to be a developer?',
-  'What have you done to work toward your goal?',
-  'Why Turing? What makes Turing the best place for you?',
-  'What do you think you would bring to the Turing community?',
-  'What would success look like for you in seven months?',
-]
+const len = memoizeWith(length, list => length(list) - 1)
 
 export default pure(({ evaluation, isOpen }: Props) => (
   <Details open={isOpen}>
@@ -28,29 +22,19 @@ export default pure(({ evaluation, isOpen }: Props) => (
     </Summary>
     <Content>
       <Questions>
-        {questions.map(question => (
+        {evaluation.questions.map(question => (
           <Question key={question}>
             {question}
           </Question>
         ))}
       </Questions>
       <CriteriaDl>
-        <CriteriaItem>
-          <CriteriaDt>3</CriteriaDt>
-          <CriteriaDd>This is the list for 3</CriteriaDd>
-        </CriteriaItem>
-        <CriteriaItem>
-          <CriteriaDt>2</CriteriaDt>
-          <CriteriaDd>This is the list for 2</CriteriaDd>
-        </CriteriaItem>
-        <CriteriaItem>
-          <CriteriaDt>1</CriteriaDt>
-          <CriteriaDd>This is the list for 1</CriteriaDd>
-        </CriteriaItem>
-        <CriteriaItem>
-          <CriteriaDt>0</CriteriaDt>
-          <CriteriaDd>This is the list for 0</CriteriaDd>
-        </CriteriaItem>
+        {evaluation.criteria.map((crit, index) => (
+          <CriteriaItem key={crit}>
+            <CriteriaDt>{len(evaluation.criteria) - index}</CriteriaDt>
+            <CriteriaDd>{crit}</CriteriaDd>
+          </CriteriaItem>
+        ))}
       </CriteriaDl>
     </Content>
   </Details>
@@ -131,6 +115,7 @@ const CriteriaDl = glamorous.dl({
 })
 
 const CriteriaItem = glamorous.div({
+  paddingRight: 32,
 })
 
 const CriteriaDt = glamorous.dt({
