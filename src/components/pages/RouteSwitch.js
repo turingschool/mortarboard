@@ -1,10 +1,10 @@
 // @flow
 import React, { type Node } from 'react'
+import type { Location } from 'react-router-dom'
 import { memoize } from 'ramda'
 import { withRouter } from 'react-router-dom'
 import { AnimatedSwitch, spring } from 'react-router-transition'
 import { css } from 'glamor'
-import type { LocationType } from '../../types/flowtypes'
 
 const glide = val => spring(val, { stiffness: 175, damping: 25 })
 
@@ -36,7 +36,7 @@ const getPathnameLength = memoize(pathname => pathname.split('/').length)
 
 type Props = {
   children: Node,
-  location: LocationType,
+  location: Location,
 }
 
 type State = {
@@ -48,6 +48,7 @@ type State = {
   },
 }
 
+// $FlowFixMe
 class RouteSwitch extends React.PureComponent<Props, State> {
   state: State = {
     locationLength: getPathnameLength(this.props.location.pathname),

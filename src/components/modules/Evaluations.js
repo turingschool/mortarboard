@@ -1,16 +1,17 @@
 // @flow
 import React, { type Node } from 'react'
 import glamorous from 'glamorous'
+import type { Location } from 'react-router-dom'
 import Evaluation from './Evaluation'
 import Loader from '../blocks/Loader'
 import SectionContainment from '../elements/SectionContainment'
-import type { ApplicantType, LocationType } from '../../types/flowtypes'
+import type { ApplicantType } from '../../types/ApplicantType'
 
 type Props = {
   children: Node,
   allEvaluations: Array<ApplicantType>,
   refetch: Function,
-  location: LocationType,
+  location: Location,
 }
 
 export default class extends React.PureComponent<Props> {

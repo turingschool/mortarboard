@@ -10,7 +10,7 @@ import HeadingBase from '../elements/Heading'
 import HitLink from '../elements/HitLink'
 import StatusBar from '../elements/StatusBar'
 import TextLink from '../elements/TextLink'
-import type { ApplicantType } from '../../types/flowtypes'
+import type { ApplicantType } from '../../types/ApplicantType'
 
 type Props = {
   applicant: ApplicantType,

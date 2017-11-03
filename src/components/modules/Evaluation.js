@@ -1,18 +1,18 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
-import { memoizeWith, length } from 'ramda'
+import { memoizeWith, identity, length } from 'ramda'
 import { pure } from 'recompose'
 import { COLORS } from '../../constants/theme'
 import { ChevronXIcon } from '../elements/Icons'
-import type { EvaluationType } from '../../types/flowtypes'
+import type { EvaluationType } from '../../types/EvaluationType'
 
 type Props = {
   evaluation: EvaluationType,
   isOpen: boolean,
 }
 
-const len = memoizeWith(length, list => length(list) - 1)
+const len = memoizeWith(identity, list => length(list) - 1)
 
 export default pure(({ evaluation, isOpen }: Props) => (
   <Details open={isOpen}>

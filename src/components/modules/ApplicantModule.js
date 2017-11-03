@@ -2,6 +2,7 @@
 import React from 'react'
 import glamorous from 'glamorous'
 import TimeAgo from 'react-timeago'
+import type { Match } from 'react-router-dom'
 import Loader from '../blocks/Loader'
 import DescriptionBase from '../blocks/Description'
 import EvaluationSummary from '../blocks/EvaluationSummary'
@@ -11,12 +12,12 @@ import Heading from '../elements/Heading'
 import SectionContainment from '../elements/SectionContainment'
 import StatusBar from '../elements/StatusBar'
 import TextLink from '../elements/TextLink'
-import type { ApplicantType, MatchType } from '../../types/flowtypes'
+import type { ApplicantType } from '../../types/ApplicantType'
 
 type Props = {
   applicant: ApplicantType,
   isEvaluatable: boolean,
-  match: MatchType,
+  match: Match,
 }
 
 export default ({

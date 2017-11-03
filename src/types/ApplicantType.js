@@ -17,25 +17,3 @@ export type ApplicantType = {
   startDate: string,
   updatedAt: string,
 }
-
-export type EvaluationType = {
-  criteria: Array<string>,
-  id: string,
-  name: string,
-  questions: Array<string>,
-}
-
-// TODO: There is probably an offical History flow typing out there
-export type HistoryType = {
-  goBack: Function,
-  replace: Function,
-}
-
-export type LocationType = {
-  key: string,
-  pathname: string,
-}
-
-export type MatchType = {
-  url: string,
-}
