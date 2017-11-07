@@ -1,7 +1,7 @@
 // @flow
 import React, { type Node } from 'react'
 import type { Location } from 'react-router-dom'
-import { memoize } from 'ramda'
+import { identity, memoizeWith } from 'ramda'
 import { withRouter } from 'react-router-dom'
 import { AnimatedSwitch, spring } from 'react-router-transition'
 import { css } from 'glamor'
@@ -32,7 +32,7 @@ const motionLeftToRight = {
   atLeave: { offset: glide(100) },
 }
 
-const getPathnameLength = memoize(pathname => pathname.split('/').length)
+const getPathnameLength = memoizeWith(identity, pathname => pathname.split('/').length)
 
 type Props = {
   children: Node,
