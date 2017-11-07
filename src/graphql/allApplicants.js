@@ -2,15 +2,18 @@
 import { gql } from 'react-apollo'
 
 export default gql`
-  query allApplicants {
+  query {
     allApplicants(orderBy: createdAt_ASC) {
-      applyAction
-      applyStatus
+      action {
+        label
+        name
+      }
       email
       firstName
       github
       id
       lastName
+      status
     }
   }
 `

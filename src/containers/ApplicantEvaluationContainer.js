@@ -4,7 +4,6 @@ import { pick } from 'ramda'
 import { branch, compose, mapProps, onlyUpdateForKeys, renderComponent } from 'recompose'
 import ApplicantModule, { ComponentLoader } from '../components/modules/ApplicantModule'
 import withApplicant from './withApplicant'
-// import withLog from '../lib/withLog'
 
 const applicantWhitelist = [
   'birthdate',
@@ -25,9 +24,6 @@ const keyWhitelist = ['applicant', 'isLoading']
 
 const withUpdateForKeys = component => compose(onlyUpdateForKeys(keyWhitelist))(component)
 
-// const withMutations = component => compose(
-// )(component)
-
 const withLoader = branch(
   props => props.isLoading,
   renderComponent(ComponentLoader),
@@ -38,7 +34,5 @@ export default compose(
   withApplicant,
   withProps,
   withUpdateForKeys,
-  // withMutations,
-  // withLog,
   withLoader,
 )(ApplicantModule)

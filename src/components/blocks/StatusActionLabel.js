@@ -3,13 +3,14 @@ import React from 'react'
 import glamorous from 'glamorous'
 import { ErrorIcon, ResetIcon, RocketIcon } from '../elements/Icons'
 import { COLORS } from '../../constants/theme'
+import type { Action } from '../../types/Action'
 
 type Props = {
-  status: string,
+  status: Action,
 }
 
 const Icon = ({ status }: Props) => {
-  switch (status) {
+  switch (status.name) {
     case 'mismatch':
       return <ErrorIcon marginRight={10} />
     case 'reset':
@@ -22,7 +23,7 @@ const Icon = ({ status }: Props) => {
 export default ({ status, ...props }: Props) => (
   <View status={status} {...props}>
     <Icon status={status} />
-    <Text>{status}</Text>
+    <Text>{status.label}</Text>
   </View>
 )
 
@@ -36,7 +37,7 @@ const View = glamorous.div(
     color: COLORS.GREY_6,
   },
   ({ color, status }) => ({
-    color: status === 'mismatch' ? COLORS.RED : color,
+    color: status.name === 'mismatch' ? COLORS.RED : color,
   }),
 )
 

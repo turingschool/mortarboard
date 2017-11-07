@@ -2,14 +2,14 @@
 import React, { type Node } from 'react'
 import glamorous from 'glamorous'
 import type { Location } from 'react-router-dom'
-import Evaluation from './Evaluation'
+import CriterionModule from './Criterion'
 import Loader from '../blocks/Loader'
 import SectionContainment from '../elements/SectionContainment'
-import type { ApplicantType } from '../../types/ApplicantType'
+import type { Criterion } from '../../types/Criterion'
 
 type Props = {
   children: Node,
-  allEvaluations: Array<ApplicantType>,
+  criteria: Array<Criterion>,
   refetch: Function,
   location: Location,
 }
@@ -22,18 +22,18 @@ export default class extends React.PureComponent<Props> {
   }
 
   render() {
-    const { allEvaluations, children, refetch } = this.props
+    const { criteria, children, refetch } = this.props
     return (
       <SectionContainment>
-        <Evaluations>
-          {allEvaluations && allEvaluations.map(evaluation => (
-            <Evaluation
-              evaluation={evaluation}
-              key={evaluation.id}
+        <Criteria>
+          {criteria && criteria.map(criterion => (
+            <CriterionModule
+              criterion={criterion}
+              key={criterion.id}
               refresh={() => refetch()}
             />
           ))}
-        </Evaluations>
+        </Criteria>
         {children}
       </SectionContainment>
     )
@@ -46,7 +46,7 @@ export const ModuleLoader = () => (
 
 // -------------------------------------
 
-const Evaluations = glamorous.section({
+const Criteria = glamorous.section({
   display: 'flex',
   flexDirection: 'column',
   paddingTop: 6,

@@ -9,6 +9,6 @@ export default() => (
   <Div>
     <PageTitle>Logic Evaluation</PageTitle>
     <ApplicantEvaluationContainer />
-    <EvaluationsContainer type="logic" />
+    <EvaluationsContainer type="Logic" />
   </Div>
 )

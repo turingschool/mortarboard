@@ -5,37 +5,37 @@ import { memoizeWith, identity, length } from 'ramda'
 import { pure } from 'recompose'
 import { COLORS } from '../../constants/theme'
 import { ChevronXIcon } from '../elements/Icons'
-import type { EvaluationType } from '../../types/EvaluationType'
+import type { Criterion } from '../../types/Criterion'
 
 type Props = {
-  evaluation: EvaluationType,
+  criterion: Criterion,
   isOpen: boolean,
 }
 
 const len = memoizeWith(identity, list => length(list) - 1)
 
-export default pure(({ evaluation, isOpen }: Props) => (
+export default pure(({ criterion, isOpen }: Props) => (
   <Details open={isOpen}>
     <Summary>
-      <span>{evaluation.name}</span>
+      <span>{criterion.label}</span>
       <ChevronXIcon />
     </Summary>
     <Content>
       <Questions>
-        {evaluation.questions.map(question => (
+        {criterion.questions.map(question => (
           <Question key={question}>
             {question}
           </Question>
         ))}
       </Questions>
-      <CriteriaDl>
-        {evaluation.criteria.map((crit, index) => (
-          <CriteriaItem key={crit}>
-            <CriteriaDt>{len(evaluation.criteria) - index}</CriteriaDt>
-            <CriteriaDd>{crit}</CriteriaDd>
-          </CriteriaItem>
+      <OptionDl>
+        {criterion.options.map((option, index) => (
+          <OptionItem key={option}>
+            <OptionDt>{len(criterion.options) - index}</OptionDt>
+            <OptionDd>{option}</OptionDd>
+          </OptionItem>
         ))}
-      </CriteriaDl>
+      </OptionDl>
     </Content>
   </Details>
 ))
@@ -99,7 +99,7 @@ const Question = glamorous.li({
   marginBottom: 24,
 })
 
-const CriteriaDl = glamorous.dl({
+const OptionDl = glamorous.dl({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'flex-start',
@@ -114,16 +114,16 @@ const CriteriaDl = glamorous.dl({
   backgroundColor: COLORS.GREY_E,
 })
 
-const CriteriaItem = glamorous.div({
+const OptionItem = glamorous.div({
   paddingRight: 32,
 })
 
-const CriteriaDt = glamorous.dt({
+const OptionDt = glamorous.dt({
   marginBottom: 14,
   fontSize: 28,
   fontWeight: 200,
 })
 
-const CriteriaDd = glamorous.dd({
+const OptionDd = glamorous.dd({
   marginLeft: 0,
 })

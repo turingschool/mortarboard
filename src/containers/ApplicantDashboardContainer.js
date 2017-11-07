@@ -14,7 +14,6 @@ import withApplicant from './withApplicant'
 const propsWhitelist = ['applicant', 'isLoading', 'match']
 const withProps = mapProps(props => ({
   ...pick(propsWhitelist, props),
-  isEvaluatable: true,
   replace: props.history.replace,
 }))
 

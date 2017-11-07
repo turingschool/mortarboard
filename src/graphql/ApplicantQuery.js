@@ -2,10 +2,20 @@
 import { gql } from 'react-apollo'
 
 export default gql`
-  query post($id: ID!) {
+  query ($id: ID!) {
     Applicant(id: $id) {
-      applyAction
-      applyStatus
+      action {
+        label
+        message
+        name
+      }
+      applications {
+        complete
+        id
+        scoreLogicEvaluation
+        scoreOnlineLogicTest
+        scoreValuesEvaluation
+      }
       birthdate
       createdAt
       email
@@ -15,9 +25,7 @@ export default gql`
       lastName
       referredBy
       resume
-      scoreLogicEvaluation
-      scoreOnlineLogicTest
-      scoreValuesEvaluation
+      status
       startDate
     }
   }

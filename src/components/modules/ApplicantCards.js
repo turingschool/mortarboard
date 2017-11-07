@@ -5,11 +5,11 @@ import type { Location } from 'react-router-dom'
 import ApplicantCard from './ApplicantCard'
 import Loader from '../blocks/Loader'
 import AppContainment from '../elements/AppContainment'
-import type { ApplicantType } from '../../types/ApplicantType'
+import type { Applicant } from '../../types/Applicant'
 
 type Props = {
   children: Node,
-  allApplicants: Array<ApplicantType>,
+  allApplicants: Array<Applicant>,
   refetch: Function,
   location: Location,
 }

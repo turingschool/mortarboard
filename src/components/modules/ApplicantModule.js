@@ -12,21 +12,19 @@ import Heading from '../elements/Heading'
 import SectionContainment from '../elements/SectionContainment'
 import StatusBar from '../elements/StatusBar'
 import TextLink from '../elements/TextLink'
-import type { ApplicantType } from '../../types/ApplicantType'
+import type { Applicant } from '../../types/Applicant'
 
 type Props = {
-  applicant: ApplicantType,
-  isEvaluatable: boolean,
+  applicant: Applicant,
   match: Match,
 }
 
 export default ({
   applicant,
-  isEvaluatable,
   match,
 }: Props) => (
   <div>
-    { applicant.applyStatus &&
+    { applicant.status != null &&
       <StatusBar />
     }
     <SectionContainment>
@@ -34,9 +32,9 @@ export default ({
         <Heading>
           {`${applicant.firstName} ${applicant.lastName}`}
         </Heading>
-        { applicant.applyStatus &&
+        { applicant.status != null &&
           <Status to="/">
-            {applicant.applyStatus}
+            {applicant.status}
           </Status>
         }
       </Header>
@@ -45,7 +43,7 @@ export default ({
           <TextLink href={`mailto:${applicant.email}`}>{applicant.email}</TextLink>
         </Description>
       }
-      { applicant.birthdate &&
+      { applicant.birthdate != null &&
       <Description term="Birthdate">
         {applicant.birthdate}
       </Description>
@@ -55,7 +53,7 @@ export default ({
           {applicant.github}
         </Description>
       }
-      { applicant.referredBy &&
+      { applicant.referredBy != null &&
         <Description term="Referred By">
           {applicant.referredBy}
         </Description>
@@ -65,36 +63,35 @@ export default ({
           <TimeAgo date={applicant.createdAt} />
         </Description>
       }
-      { applicant.resume &&
+      { applicant.resume != null &&
         <Description term="Resume">
           <TextLink href={`${applicant.resume}`}>View PDF</TextLink>
         </Description>
       }
     </SectionContainment>
-    {(isEvaluatable ||
-      applicant.scoreOnlineLogicTest ||
-      applicant.scoreLogicEvaluation ||
-      applicant.scoreValuesEvaluation) &&
+    { /* bit of kludge */ }
+    {((applicant.applications && applicant.applications[0])) &&
       <ScoreContainment>
         <EvaluationSummary
-          score={applicant.scoreOnlineLogicTest}
+          score={applicant.applications[0].scoreOnlineLogicTest}
           term="Online Logic Test"
         />
         <EvaluationSummary
-          score={applicant.scoreLogicEvaluation}
+          score={applicant.applications[0].scoreLogicEvaluation}
           term="Logic Evaluation"
           to={`${match.url}/logic-evaluation`}
         />
         <EvaluationSummary
-          score={applicant.scoreValuesEvaluation}
+          score={applicant.applications[0].scoreValuesEvaluation}
           term="Values Evaluation"
           to={`${match.url}/values-evaluation`}
         />
       </ScoreContainment>
     }
-    {applicant.applyAction &&
+    {applicant.action &&
       <ScoreContainment>
-        <StatusActionLabel status={applicant.applyAction} />
+        <StatusActionLabel status={applicant.action} />
+        <p>{applicant.action.message}</p>
       </ScoreContainment>
     }
   </div>

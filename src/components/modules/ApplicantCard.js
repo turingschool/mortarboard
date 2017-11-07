@@ -10,10 +10,10 @@ import HeadingBase from '../elements/Heading'
 import HitLink from '../elements/HitLink'
 import StatusBar from '../elements/StatusBar'
 import TextLink from '../elements/TextLink'
-import type { ApplicantType } from '../../types/ApplicantType'
+import type { Applicant } from '../../types/Applicant'
 
 type Props = {
-  applicant: ApplicantType,
+  applicant: Applicant,
 }
 
 export default pure(({ applicant }: Props) => (
@@ -24,8 +24,8 @@ export default pure(({ applicant }: Props) => (
         <span>{applicant.firstName} </span>
         <span>{applicant.lastName}</span>
       </Heading>
-      {applicant.applyAction &&
-        <StatusActionLabel status={applicant.applyAction} />
+      {applicant.action &&
+        <StatusActionLabel status={applicant.action} />
       }
     </Header>
     <Descriptions>
@@ -38,7 +38,7 @@ export default pure(({ applicant }: Props) => (
         </TextLink>
       </Description>
       <Status>
-        {applicant.applyStatus}
+        {applicant.status}
       </Status>
     </Descriptions>
     <HitLink to={`/applicant/${applicant.id}`} />

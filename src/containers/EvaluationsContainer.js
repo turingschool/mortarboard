@@ -1,25 +1,27 @@
 // @flow
 import { graphql } from 'react-apollo'
 import { withRouter } from 'react-router-dom'
-import { compose, pick } from 'ramda'
+import { compose, prop, pick } from 'ramda'
 import { branch, mapProps, pure, renderComponent } from 'recompose'
-import allEvaluationsQuery from '../graphql/allEvaluations'
-import Evaluations, { ModuleLoader } from '../components/modules/Evaluations'
+import EvaluationQuery from '../graphql/Evaluation'
+import Criteria, { ModuleLoader } from '../components/modules/Criteria'
 
-const withData = graphql(allEvaluationsQuery, {
+const withData = graphql(EvaluationQuery, {
   options: ({ type }) => ({
     variables: {
-      type,
+      name: type,
     },
   }),
-  props: ({ data: { allEvaluations, loading, refetch } }) => ({
-    allEvaluations: allEvaluations || null,
+  props: ({ data: { Evaluation, loading, refetch, ...stuff } }) => ({
+    criteria: prop('criteria', Evaluation),
     isLoading: loading,
+    name: prop('name', Evaluation),
     refetch,
+    ...stuff,
   }),
 })
 
-const propsWhitelist = ['allEvaluations', 'location', 'isLoading', 'refetch']
+const propsWhitelist = ['criteria', 'location', 'isLoading', 'name', 'refetch']
 const withProps = mapProps(props => ({
   ...pick(propsWhitelist, props),
 }))
@@ -35,4 +37,4 @@ export default compose(
   withProps,
   withLoader,
   pure,
-)(Evaluations)
+)(Criteria)
