@@ -3,6 +3,7 @@ import React from 'react'
 import glamorous from 'glamorous'
 import TimeAgo from 'react-timeago'
 import type { Match } from 'react-router-dom'
+import { COLORS } from '../../constants/theme'
 import Loader from '../blocks/Loader'
 import DescriptionBase from '../blocks/Description'
 import EvaluationSummary from '../blocks/EvaluationSummary'
@@ -91,7 +92,7 @@ export default ({
     {applicant.action &&
       <ScoreContainment>
         <StatusActionLabel status={applicant.action} />
-        <p>{applicant.action.message}</p>
+        <StatusActionMessage>{applicant.action.message}</StatusActionMessage>
       </ScoreContainment>
     }
   </div>
@@ -120,4 +121,12 @@ const Status = glamorous(StatusBase)({
 
 const ScoreContainment = glamorous(SectionContainment)({
   marginTop: 72,
+})
+
+// TODO: Move into StatusActionLabel
+const StatusActionMessage = glamorous.div({
+  fontSize: 14,
+  color: COLORS.GREY_8,
+  paddingLeft: 36,
+  marginTop: 8,
 })
