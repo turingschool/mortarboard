@@ -1,0 +1,61 @@
+﻿type Action @model {
+  id: ID! @isUnique
+  applicants: [Applicant!]! @relation(name: "ApplicantOnAction")
+  label: String!
+  message: String!
+  name: String! @isUnique
+}
+
+type Applicant @model {
+  id: ID! @isUnique
+  action: Action @relation(name: "ApplicantOnAction")
+  applications: [Application!]! @relation(name: "ApplicationOnApplicant")
+  birthdate: String
+  createdAt: DateTime!
+  email: String! @isUnique
+  firstName: String!
+  github: String
+  lastName: String!
+  referredBy: String
+  resume: String @defaultValue(value: "https://www.google.com")
+  startDate: DateTime
+  status: String
+  updatedAt: DateTime!
+}
+
+type Application @model {
+  id: ID! @isUnique
+  applicant: Applicant @relation(name: "ApplicationOnApplicant")
+  complete: Boolean @defaultValue(value: false)
+  scoreLogicEvaluation: Int
+  scoreOnlineLogicTest: Int
+  scoreValuesEvaluation: Int
+}
+
+type Criterion @model {
+  id: ID! @isUnique
+  createdAt: DateTime!
+  evaluation: Evaluation @relation(name: "EvaluationOnCriterion")
+  label: String!
+  name: String! @isUnique
+  options: [String!]
+  questions: [String!]
+  updatedAt: DateTime!
+}
+
+type Evaluation @model {
+  id: ID! @isUnique
+  criteria: [Criterion!]! @relation(name: "EvaluationOnCriterion")
+  name: String! @isUnique
+  label: String!
+}
+
+type Evaluator @model {
+  id: ID! @isUnique
+  createdAt: DateTime!
+  email: String! @isUnique
+  firstName: String!
+  github: String
+  lastName: String!
+  updatedAt: DateTime!
+}
