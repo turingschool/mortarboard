@@ -4,11 +4,16 @@ import glamorous from 'glamorous'
 import TimeAgo from 'react-timeago'
 import type { Match } from 'react-router-dom'
 import { COLORS } from '../../constants/theme'
-import Loader from '../blocks/Loader'
+import ConfirmDialog from '../modules/ConfirmDialog'
+import SendRecommendationDialog from '../modules/SendRecommendationDialog'
+import SendStatusDialog from '../modules/SendStatusDialog'
 import DescriptionBase from '../blocks/Description'
 import EvaluationSummary from '../blocks/EvaluationSummary'
-import StatusBase from '../blocks/Status'
+import Loader from '../blocks/Loader'
+import Modal from '../blocks/Modal'
 import StatusActionLabel from '../blocks/StatusActionLabel'
+import StatusBase from '../blocks/Status'
+import Button from '../elements/Button'
 import Heading from '../elements/Heading'
 import SectionContainment from '../elements/SectionContainment'
 import StatusBar from '../elements/StatusBar'
@@ -17,12 +22,36 @@ import type { Applicant } from '../../types/Applicant'
 
 type Props = {
   applicant: Applicant,
+  handleCloseModal?: Function,
+  handleOpenConfirm?: Function,
+  handleOpenSendRecommendation?: Function,
+  handleOpenSendStatus?: Function,
+  handleRecommendationSelect: Function,
+  handleStatusSelect: Function,
+  isConfirmDialog?: boolean,
+  isModalOpen?: boolean,
+  isSendRecommendationDialog?: boolean,
+  isSendStatusDialog?: boolean,
   match: Match,
+  recommendationValue: string,
+  statusValue: string,
 }
 
-export default ({
+const ApplicantModule = ({
   applicant,
+  handleCloseModal,
+  handleOpenConfirm,
+  handleOpenSendRecommendation,
+  handleOpenSendStatus,
+  handleRecommendationSelect,
+  handleStatusSelect,
+  isConfirmDialog,
+  isModalOpen,
+  isSendRecommendationDialog,
+  isSendStatusDialog,
   match,
+  recommendationValue,
+  statusValue,
 }: Props) => (
   <div>
     { applicant.status != null &&
@@ -95,9 +124,72 @@ export default ({
         <StatusActionMessage>{applicant.action.message}</StatusActionMessage>
       </ScoreContainment>
     }
+    {(handleOpenConfirm != null ||
+      handleOpenSendRecommendation != null ||
+      handleOpenSendStatus != null) &&
+      applicant.action &&
+      <Actions>
+        { handleOpenConfirm != null &&
+          <Button box primary mt={32} onClick={handleOpenConfirm}>
+            Submit Evaluation
+          </Button>
+        }
+        { handleOpenSendRecommendation != null &&
+          <Button box primary mt={32} onClick={handleOpenSendRecommendation}>
+            Send recommendation
+          </Button>
+        }
+        { handleOpenSendStatus != null &&
+          <Button box primary mt={32} onClick={handleOpenSendStatus}>
+            Send status email
+          </Button>
+        }
+      </Actions>
+    }
+    { isModalOpen != null && handleCloseModal != null &&
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={handleCloseModal}
+      >
+        { isConfirmDialog === true &&
+          <ConfirmDialog
+            handleCancel={handleCloseModal}
+            handleConfirm={handleCloseModal}
+          />
+        }
+        { isSendRecommendationDialog === true &&
+          <SendRecommendationDialog
+            handleCancel={handleCloseModal}
+            handleChange={handleRecommendationSelect}
+            handleConfirm={handleCloseModal}
+            recommendationValue={recommendationValue}
+          />
+        }
+        { isSendStatusDialog === true &&
+          <SendStatusDialog
+            handleCancel={handleCloseModal}
+            handleChange={handleStatusSelect}
+            handleConfirm={handleCloseModal}
+            statusValue={statusValue}
+          />
+        }
+      </Modal>
+    }
   </div>
 )
 
+ApplicantModule.defaultProps = {
+  handleCloseModal: null,
+  handleOpenConfirm: null,
+  handleOpenSendRecommendation: null,
+  handleOpenSendStatus: null,
+  isConfirmDialog: false,
+  isModalOpen: null,
+  isSendRecommendationDialog: false,
+  isSendStatusDialog: false,
+}
+
+export default ApplicantModule
 export const ComponentLoader = () => (
   <Loader>Loading Applicant...</Loader>
 )
@@ -127,6 +219,11 @@ const ScoreContainment = glamorous(SectionContainment)({
 const StatusActionMessage = glamorous.div({
   fontSize: 14,
   color: COLORS.GREY_8,
-  paddingLeft: 36,
   marginTop: 8,
+})
+
+const Actions = glamorous(SectionContainment)({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-end',
 })

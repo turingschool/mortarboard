@@ -28,5 +28,10 @@ export const EASE = {
 }
 
 export const MQ = {
+  MIN_BREAK_31: '@media (min-width: 31em)',
   MIN_BREAK_48: '@media (min-width: 48em)',
+}
+
+export const ZZZ = {
+  MODAL: 1080,
 }

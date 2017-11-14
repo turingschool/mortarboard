@@ -88,6 +88,28 @@ ChevronXIcon.defaultProps = {
   height: 28,
 }
 
+
+// -------------------------------------
+
+export const SelectChevronIcon = ({ ...props }: Props) => (
+  <Svg viewBox="0 0 21 12" {...props}>
+    <g
+      fill="none"
+      fillRule="evenodd"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+    >
+      <polyline points="19.182 1.067 10.611 10.067 1.182 1.067" />
+    </g>
+  </Svg>
+)
+
+SelectChevronIcon.defaultProps = {
+  width: 21,
+  height: 12,
+}
 // -------------------------------------
 
 export const ErrorIcon = ({ ...props }: Props) => (
