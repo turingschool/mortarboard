@@ -27,6 +27,7 @@ type Application @model {
   id: ID! @isUnique
   applicant: Applicant @relation(name: "ApplicationOnApplicant")
   complete: Boolean @defaultValue(value: false)
+  evaluators: [Evaluator!]! @relation(name: "ApplicationOnEvaluator")
   scoreLogicEvaluation: Int
   scoreOnlineLogicTest: Int
   scoreValuesEvaluation: Int
@@ -52,6 +53,7 @@ type Evaluation @model {
 
 type Evaluator @model {
   id: ID! @isUnique
+  applications: [Application!]! @relation(name: "ApplicationOnEvaluator")
   createdAt: DateTime!
   email: String! @isUnique
   firstName: String!

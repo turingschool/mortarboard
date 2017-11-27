@@ -22,6 +22,7 @@ import type { Applicant } from '../../types/Applicant'
 
 type Props = {
   applicant: Applicant,
+  evaluatorList?: string,
   handleCloseModal?: Function,
   handleOpenConfirm?: Function,
   handleOpenSendRecommendation?: Function,
@@ -39,6 +40,7 @@ type Props = {
 
 const ApplicantModule = ({
   applicant,
+  evaluatorList,
   handleCloseModal,
   handleOpenConfirm,
   handleOpenSendRecommendation,
@@ -91,6 +93,11 @@ const ApplicantModule = ({
       { applicant.createdAt &&
         <Description term="Application Age">
           <TimeAgo date={applicant.createdAt} />
+        </Description>
+      }
+      { evaluatorList != null &&
+        <Description term="Evaluators">
+          {evaluatorList}
         </Description>
       }
       { applicant.resume != null &&
@@ -179,6 +186,7 @@ const ApplicantModule = ({
 )
 
 ApplicantModule.defaultProps = {
+  evaluatorList: null,
   handleCloseModal: null,
   handleOpenConfirm: null,
   handleOpenSendRecommendation: null,

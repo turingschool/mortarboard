@@ -12,6 +12,10 @@ export default gql`
       applications {
         complete
         id
+        evaluators {
+          firstName
+          lastName
+        }
         scoreLogicEvaluation
         scoreOnlineLogicTest
         scoreValuesEvaluation
