@@ -10,6 +10,7 @@ import type { Criterion } from '../../types/Criterion'
 type Props = {
   children: Node,
   criteria: Array<Criterion>,
+  handleChange: Function,
   refetch: Function,
   location: Location,
 }
@@ -22,13 +23,14 @@ export default class extends React.PureComponent<Props> {
   }
 
   render() {
-    const { criteria, children, refetch } = this.props
+    const { criteria, children, handleChange, refetch } = this.props
     return (
       <SectionContainment>
         <Criteria>
           {criteria && criteria.map(criterion => (
             <CriterionModule
               criterion={criterion}
+              handleChange={handleChange}
               key={criterion.id}
               refresh={() => refetch()}
             />

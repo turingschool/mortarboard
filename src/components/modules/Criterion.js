@@ -3,24 +3,41 @@ import React from 'react'
 import glamorous from 'glamorous'
 import { memoizeWith, identity, length } from 'ramda'
 import { pure } from 'recompose'
-import { COLORS } from '../../constants/theme'
+import { COLORS, MQ } from '../../constants/theme'
 import { ChevronXIcon } from '../elements/Icons'
+import Select from '../elements/Select'
 import type { Criterion } from '../../types/Criterion'
 
 type Props = {
   criterion: Criterion,
+  handleChange: Function,
   isOpen: boolean,
+  score: string,
 }
 
 const len = memoizeWith(identity, list => length(list) - 1)
 
-export default pure(({ criterion, isOpen }: Props) => (
+export default pure(({ criterion, handleChange, isOpen, score }: Props) => (
   <Details open={isOpen}>
     <Summary>
       <span>{criterion.label}</span>
       <ChevronXIcon />
     </Summary>
     <Content>
+      <Scoring>
+        <Select
+          label="Score"
+          name={criterion.name}
+          onChange={handleChange}
+          value={score}
+        >
+          <option value={null}>Score</option>
+          <option value={0}>0 - Bad</option>
+          <option value={1}>1 - Meh</option>
+          <option value={2}>2 - Good</option>
+          <option value={3}>3 - Excellent</option>
+        </Select>
+      </Scoring>
       <Questions>
         {criterion.questions.map(question => (
           <Question key={question}>
@@ -79,8 +96,17 @@ const Summary = pure(glamorous.summary({
 }))
 
 const Content = glamorous.div({
+  position: 'relative',
   paddingTop: 44,
   paddingBottom: 48,
+})
+
+const Scoring = glamorous.div({
+  width: 256,
+  [MQ.MIN_BREAK_48]: {
+    position: 'absolute',
+    right: 0,
+  },
 })
 
 const Questions = glamorous.ol({
