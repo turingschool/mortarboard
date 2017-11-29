@@ -1,16 +1,20 @@
 // @flow
 import { withRouter } from 'react-router-dom'
-import { compose, head, join, map, omit, path } from 'ramda'
+import { __, always, compose, head, join, map, omit, pathOr, when, isEmpty } from 'ramda'
 import { branch, mapProps, onlyUpdateForKeys, renderComponent, withStateHandlers } from 'recompose'
 import withApplicant from './withApplicant'
 import ApplicantModule, { ComponentLoader } from '../components/modules/ApplicantModule'
 
+const nool = []
+
 const deriveEvaluatorList = compose(
   join(', '),
+  // $FlowFixMe
+  when(isEmpty(__), always(['N/A'])),
   map(evaluator => `${evaluator.firstName} ${evaluator.lastName}`),
-  path(['evaluators']),
+  pathOr(nool, ['evaluators']),
   head,
-  path(['applications']),
+  pathOr(nool, ['applications']),
 )
 
 const withLoader = branch(
