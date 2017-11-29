@@ -47,10 +47,22 @@ export const ComponentLoader = () => (
 // -------------------------------------
 
 const Cards = glamorous.section({
-  display: 'flex',
-  marginLeft: -16,
-  padding: '24px 16px',
-  '& > *': {
-    marginLeft: 16,
+  display: 'grid',
+  gridTemplateColumns: '1fr',
+  gridGap: 16,
+  '> *': {
+    minWidth: '100%',
+  },
+  '@media (min-width: 41em)': {
+    gridTemplateColumns: '1fr 1fr',
+    '> *': {
+      minWidth: 320,
+    },
+  },
+  '@media (min-width: 62em)': {
+    gridTemplateColumns: '1fr 1fr 1fr',
+  },
+  '@media (min-width: 83em)': {
+    gridTemplateColumns: '1fr 1fr 1fr 1fr',
   },
 })

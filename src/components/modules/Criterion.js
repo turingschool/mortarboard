@@ -20,7 +20,10 @@ const len = memoizeWith(identity, list => length(list) - 1)
 export default pure(({ criterion, handleChange, isOpen, score }: Props) => (
   <Details open={isOpen}>
     <Summary>
-      <span>{criterion.label}</span>
+      <SummaryFlex>
+        <span>{criterion.label}</span>
+        <span>{score ? 'score' : ''}</span>
+      </SummaryFlex>
       <ChevronXIcon />
     </Summary>
     <Content>
@@ -94,6 +97,15 @@ const Summary = pure(glamorous.summary({
     opacity: 0,
   },
 }))
+
+const SummaryFlex = glamorous.div({
+  display: 'flex',
+  justifyContent: 'space-between',
+  paddingRight: 48,
+  '& > span + span': {
+    color: COLORS.BLUE,
+  },
+})
 
 const Content = glamorous.div({
   position: 'relative',

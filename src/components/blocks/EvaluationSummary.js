@@ -10,17 +10,21 @@ type Props = {
   to?: string | null,
 }
 
+const hasScore = score => (
+  score != null && score > 0
+)
+
 const EvaluationSummary = ({ score, term, to, ...props }: Props) => (
   <View {...props}>
     <Heading>
       <TermText>{term}</TermText>
-      {score != null &&
+      {hasScore(score) &&
         <ScoreText>{score}</ScoreText>
       }
     </Heading>
     { to != null &&
       <ScoreLink to={to}>
-        {`${score != null ? 'Re-' : ''}Score Evaluation`}
+        {`${hasScore(score) ? 'Re-' : ''}Score Evaluation`}
       </ScoreLink>
     }
   </View>
