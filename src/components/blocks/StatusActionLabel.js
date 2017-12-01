@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
+import { noob } from '../../lib/utils'
 import { ErrorIcon, ResetIcon, RocketIcon } from '../elements/Icons'
 import { COLORS } from '../../constants/theme'
 import type { Action } from '../../types/Action'
@@ -29,6 +30,12 @@ export default ({ status, ...props }: Props) => (
 
 // -------------------------------------
 
+const inCardRule = {
+  position: 'absolute',
+  top: 16,
+  right: 16,
+}
+
 const View = glamorous.div(
   {
     display: 'flex',
@@ -36,8 +43,9 @@ const View = glamorous.div(
     alignItems: 'center',
     color: COLORS.GREY_6,
   },
-  ({ color, status }) => ({
+  ({ color, inCard, status }) => ({
     color: status.name === 'mismatch' ? COLORS.RED : color,
+    ...(inCard ? inCardRule : noob),
   }),
 )
 

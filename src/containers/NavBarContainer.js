@@ -1,11 +1,13 @@
 // @flow
 import { withRouter } from 'react-router-dom'
-import { compose, mapProps, pure } from 'recompose'
+import { compose, equals, or, path } from 'ramda'
+import { mapProps, pure } from 'recompose'
 import { BASE_URL } from '../constants/networking'
 import NavBar from '../components/modules/NavBar'
 
-const isRoot = ({ location }) => (
-  location.pathname === '/' || location.pathname === BASE_URL
+const isRoot = compose(
+  or(equals('/'), equals(BASE_URL)),
+  path(['location', 'pathname']),
 )
 
 const withProps = mapProps(props => ({

@@ -12,14 +12,7 @@ type Props = {
   value: string,
 }
 
-export default ({
-  children,
-  label,
-  name,
-  onChange,
-  value,
-  ...props
-}: Props) => (
+export default ({ children, label, name, onChange, value, ...props }: Props) => (
   <Label htmlFor={name}>
     <Select
       aria-label={label}

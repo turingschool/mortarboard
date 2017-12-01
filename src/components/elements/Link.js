@@ -1,8 +1,8 @@
 // @flow
 import React, { type Node } from 'react'
-import glamorous from 'glamorous'
-import { isNil } from 'ramda'
 import { Link } from 'react-router-dom'
+import glamorous from 'glamorous'
+import { isNotNil } from '../../lib/utils'
 import { BASE_URL } from '../../constants/networking'
 
 type Props = {
@@ -11,9 +11,8 @@ type Props = {
   to?: string | null,
 }
 
-// TODO: Does not handle #hastag links correctly
 const LinkComponent = ({ children, href, to, ...props }: Props) => {
-  if (!isNil(to)) {
+  if (isNotNil(to)) {
     const url = (to || '').includes(BASE_URL) ? to : `${BASE_URL}${(to || '')}`
     return (
       <RouterLink to={url} {...props}>

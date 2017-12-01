@@ -2,6 +2,7 @@
 import React, { type Node } from 'react'
 import glamorous from 'glamorous'
 import type { Location } from 'react-router-dom'
+import { map } from 'ramda'
 import CriterionModule from './Criterion'
 import Loader from '../blocks/Loader'
 import SectionContainment from '../elements/SectionContainment'
@@ -23,18 +24,13 @@ export default class extends React.PureComponent<Props> {
   }
 
   render() {
-    const { criteria, children, handleChange, refetch } = this.props
+    const { criteria, children, handleChange } = this.props
     return (
       <SectionContainment>
         <Criteria>
-          {criteria && criteria.map(criterion => (
-            <CriterionModule
-              criterion={criterion}
-              handleChange={handleChange}
-              key={criterion.id}
-              refresh={() => refetch()}
-            />
-          ))}
+          {map(criterion => (
+            <CriterionModule criterion={criterion} handleChange={handleChange} key={criterion.id} />
+          ), criteria)}
         </Criteria>
         {children}
       </SectionContainment>

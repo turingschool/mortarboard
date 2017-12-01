@@ -9,21 +9,6 @@ type Props = {
 
 // -------------------------------------
 
-export const RocketIcon = ({ ...props }: Props) => (
-  <Svg viewBox="0 0 24 24" {...props}>
-    <g fill="currentColor">
-      <path d="M24,0 C24,0 23.4836048,9.80252996 16.4820958,15.2719707 L16.4128111,19.0346251 L11.4820194,24 L11.4746834,20.2882431 L9.63105705,18.6292449 C8.29671435,22.7691304 1.26439406,22.7691304 1.26439406,22.7691304 C1.26439406,22.7691304 1.26439406,16.3396736 5.58319762,14.4450082 L3.94220876,12.6079505 L-2.84217094e-14,12.6079505 L5.07440302,7.66843342 L8.7285621,7.58627726 C14.4472436,0.671411685 24,0 24,0 Z M16.425,10.1644246 C17.8333261,10.1644246 18.975,9.01830529 18.975,7.60449544 C18.975,6.19068562 17.8333261,5.0445663 16.425,5.0445663 C15.0166739,5.0445663 13.875,6.19068562 13.875,7.60449544 C13.875,9.01830529 15.0166739,10.1644246 16.425,10.1644246 Z" />
-    </g>
-  </Svg>
-)
-
-RocketIcon.defaultProps = {
-  width: 32,
-  height: 32,
-}
-
-// -------------------------------------
-
 export const ChevronIcon = ({ ...props }: Props) => (
   <Svg viewBox="0 0 17 32" {...props}>
     <g
@@ -88,28 +73,6 @@ ChevronXIcon.defaultProps = {
   height: 28,
 }
 
-
-// -------------------------------------
-
-export const SelectChevronIcon = ({ ...props }: Props) => (
-  <Svg viewBox="0 0 21 12" {...props}>
-    <g
-      fill="none"
-      fillRule="evenodd"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-    >
-      <polyline points="19.182 1.067 10.611 10.067 1.182 1.067" />
-    </g>
-  </Svg>
-)
-
-SelectChevronIcon.defaultProps = {
-  width: 21,
-  height: 12,
-}
 // -------------------------------------
 
 export const ErrorIcon = ({ ...props }: Props) => (
@@ -140,6 +103,28 @@ ErrorIcon.defaultProps = {
 
 // -------------------------------------
 
+export const MagGlassIcon = ({ ...props }: Props) => (
+  <Svg viewBox="0 0 28 28" {...props} >
+    <g stroke="currentColor" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1">
+      <g transform="translate(-40.000000, -119.000000)">
+        <g transform="translate(19.000000, 104.000000)">
+          <g transform="translate(23.000000, 17.000000)">
+            <path d="M17.7401739,8.86956522 C17.7401739,3.97147826 13.7681739,0 8.86956522,0 C3.972,0 0,3.97147826 0,8.86956522 C0,13.7676522 3.972,17.7391304 8.86956522,17.7391304 C13.7681739,17.7391304 17.7401739,13.7676522 17.7401739,8.86956522 Z" />
+            <path d="M15.2007652,15.1997217 L23.9998957,23.9998957" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </Svg>
+)
+
+MagGlassIcon.defaultProps = {
+  width: 32,
+  height: 32,
+}
+
+// -------------------------------------
+
 export const ResetIcon = ({ ...props }: Props) => (
   <Svg viewBox="0 0 26 23" {...props}>
     <g
@@ -161,24 +146,71 @@ ResetIcon.defaultProps = {
   width: 26,
   height: 23,
 }
+
 // -------------------------------------
 
-export const MagGlassIcon = ({ ...props }: Props) => (
-  <Svg viewBox="0 0 28 28" {...props} >
-    <g stroke="currentColor" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1">
-      <g transform="translate(-40.000000, -119.000000)">
-        <g transform="translate(19.000000, 104.000000)">
-          <g transform="translate(23.000000, 17.000000)">
-            <path d="M17.7401739,8.86956522 C17.7401739,3.97147826 13.7681739,0 8.86956522,0 C3.972,0 0,3.97147826 0,8.86956522 C0,13.7676522 3.972,17.7391304 8.86956522,17.7391304 C13.7681739,17.7391304 17.7401739,13.7676522 17.7401739,8.86956522 Z" />
-            <path d="M15.2007652,15.1997217 L23.9998957,23.9998957" />
-          </g>
-        </g>
-      </g>
+export const RocketIcon = ({ ...props }: Props) => (
+  <Svg viewBox="0 0 24 24" {...props}>
+    <g fill="currentColor">
+      <path d="M24,0 C24,0 23.4836048,9.80252996 16.4820958,15.2719707 L16.4128111,19.0346251 L11.4820194,24 L11.4746834,20.2882431 L9.63105705,18.6292449 C8.29671435,22.7691304 1.26439406,22.7691304 1.26439406,22.7691304 C1.26439406,22.7691304 1.26439406,16.3396736 5.58319762,14.4450082 L3.94220876,12.6079505 L-2.84217094e-14,12.6079505 L5.07440302,7.66843342 L8.7285621,7.58627726 C14.4472436,0.671411685 24,0 24,0 Z M16.425,10.1644246 C17.8333261,10.1644246 18.975,9.01830529 18.975,7.60449544 C18.975,6.19068562 17.8333261,5.0445663 16.425,5.0445663 C15.0166739,5.0445663 13.875,6.19068562 13.875,7.60449544 C13.875,9.01830529 15.0166739,10.1644246 16.425,10.1644246 Z" />
     </g>
   </Svg>
 )
 
-MagGlassIcon.defaultProps = {
+RocketIcon.defaultProps = {
   width: 32,
   height: 32,
 }
+
+// -------------------------------------
+
+export const SelectChevronIcon = ({ ...props }: Props) => (
+  <Svg viewBox="0 0 21 12" {...props}>
+    <g
+      fill="none"
+      fillRule="evenodd"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+    >
+      <polyline points="19.182 1.067 10.611 10.067 1.182 1.067" />
+    </g>
+  </Svg>
+)
+
+SelectChevronIcon.defaultProps = {
+  width: 21,
+  height: 12,
+}
+
+// -------------------------------------
+
+const Icons = ({ kind, ...props }: { kind?: string | null | void }) => {
+  switch (kind) {
+    case 'ChevronIcon':
+      return <ChevronIcon {...props} />
+    case 'ChevronIconThin':
+      return <ChevronIconThin {...props} />
+    case 'ChevronXIcon':
+      return <ChevronXIcon {...props} />
+    case 'ErrorIcon':
+      return <ErrorIcon {...props} />
+    case 'MagGlassIcon':
+      return <MagGlassIcon {...props} />
+    case 'ResetIcon':
+      return <ResetIcon {...props} />
+    case 'RocketIcon':
+      return <RocketIcon {...props} />
+    case 'SelectChevronIcon':
+      return <SelectChevronIcon {...props} />
+    default:
+      return null
+  }
+}
+
+Icons.defaultProps = {
+  kind: null,
+}
+
+export default Icons

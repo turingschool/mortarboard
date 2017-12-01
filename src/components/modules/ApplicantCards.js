@@ -1,7 +1,8 @@
 // @flow
 import React, { type Node } from 'react'
-import glamorous from 'glamorous'
 import type { Location } from 'react-router-dom'
+import glamorous from 'glamorous'
+import { map } from 'ramda'
 import ApplicantCard from './ApplicantCard'
 import Loader from '../blocks/Loader'
 import AppContainment from '../elements/AppContainment'
@@ -22,17 +23,13 @@ export default class extends React.PureComponent<Props> {
   }
 
   render() {
-    const { allApplicants, children, refetch } = this.props
+    const { allApplicants, children } = this.props
     return (
       <AppContainment>
         <Cards>
-          {allApplicants && allApplicants.map(applicant => (
-            <ApplicantCard
-              key={applicant.id}
-              applicant={applicant}
-              refresh={() => refetch()}
-            />
-          ))}
+          {map(applicant => (
+            <ApplicantCard applicant={applicant} key={applicant.id} />
+          ), allApplicants)}
         </Cards>
         {children}
       </AppContainment>

@@ -3,6 +3,7 @@ import React from 'react'
 import glamorous from 'glamorous'
 import TimeAgo from 'react-timeago'
 import type { Match } from 'react-router-dom'
+import { isNotNil } from '../../lib/utils'
 import { COLORS } from '../../constants/theme'
 import ConfirmDialog from '../modules/ConfirmDialog'
 import SendRecommendationDialog from '../modules/SendRecommendationDialog'
@@ -12,7 +13,7 @@ import EvaluationSummary from '../blocks/EvaluationSummary'
 import Loader from '../blocks/Loader'
 import Modal from '../blocks/Modal'
 import StatusActionLabel from '../blocks/StatusActionLabel'
-import StatusBase from '../blocks/Status'
+import Status from '../blocks/Status'
 import Button from '../elements/Button'
 import Heading from '../elements/Heading'
 import SectionContainment from '../elements/SectionContainment'
@@ -56,7 +57,7 @@ const ApplicantModule = ({
   statusValue,
 }: Props) => (
   <div>
-    { applicant.status != null &&
+    { isNotNil(applicant.status) &&
       <StatusBar />
     }
     <SectionContainment>
@@ -64,51 +65,51 @@ const ApplicantModule = ({
         <Heading>
           {`${applicant.firstName} ${applicant.lastName}`}
         </Heading>
-        { applicant.status != null &&
-          <Status to="/">
+        { isNotNil(applicant.status) &&
+          <Status align="flex-end" onClick={handleOpenSendStatus}>
             {applicant.status}
           </Status>
         }
       </Header>
-      { applicant.email &&
+      { isNotNil(applicant.email) &&
         <Description term="Email Address">
           <TextLink href={`mailto:${applicant.email}`}>{applicant.email}</TextLink>
         </Description>
       }
-      { applicant.birthdate != null &&
+      { isNotNil(applicant.birthdate) &&
       <Description term="Birthdate">
         {applicant.birthdate}
       </Description>
       }
-      { applicant.github &&
+      { isNotNil(applicant.github) &&
         <Description term="GitHub">
           {applicant.github}
         </Description>
       }
-      { applicant.referredBy != null &&
+      { isNotNil(applicant.referredBy) &&
         <Description term="Referred By">
           {applicant.referredBy}
         </Description>
       }
-      { applicant.createdAt &&
+      { isNotNil(applicant.createdAt) &&
         <Description term="Application Age">
           <TimeAgo date={applicant.createdAt} />
         </Description>
       }
-      { evaluatorList != null &&
+      { isNotNil(evaluatorList) &&
         <Description term="Evaluators">
           {evaluatorList}
         </Description>
       }
-      { applicant.resume != null &&
+      { isNotNil(applicant.resume) &&
         <Description term="Resume">
-          <TextLink href={`${applicant.resume}`}>View PDF</TextLink>
+          <TextLink href={`${String(applicant.resume)}`}>View PDF</TextLink>
         </Description>
       }
     </SectionContainment>
     { /* bit of kludge */ }
     {((applicant.applications && applicant.applications[0])) &&
-      <ScoreContainment>
+      <SectionContainment mt={72}>
         <EvaluationSummary
           score={applicant.applications[0].scoreOnlineLogicTest}
           term="Online Logic Test"
@@ -123,30 +124,30 @@ const ApplicantModule = ({
           term="Values Evaluation"
           to={`${match.url}/values-evaluation`}
         />
-      </ScoreContainment>
+      </SectionContainment>
     }
     {applicant.action &&
-      <ScoreContainment>
+      <SectionContainment mt={72}>
         <StatusActionLabel status={applicant.action} />
         <StatusActionMessage>{applicant.action.message}</StatusActionMessage>
-      </ScoreContainment>
+      </SectionContainment>
     }
     {(handleOpenConfirm != null ||
       handleOpenSendRecommendation != null ||
       handleOpenSendStatus != null) &&
       applicant.action &&
       <Actions>
-        { handleOpenConfirm != null &&
+        { isNotNil(handleOpenConfirm) &&
           <Button box primary mt={32} onClick={handleOpenConfirm}>
             Submit Evaluation
           </Button>
         }
-        { handleOpenSendRecommendation != null &&
+        { isNotNil(handleOpenSendRecommendation) &&
           <Button box primary mt={32} onClick={handleOpenSendRecommendation}>
             Send recommendation
           </Button>
         }
-        { handleOpenSendStatus != null &&
+        { isNotNil(handleOpenSendStatus) &&
           <Button box primary mt={32} onClick={handleOpenSendStatus}>
             Send status email
           </Button>
@@ -205,7 +206,7 @@ export const ComponentLoader = () => (
 // -------------------------------------
 
 const Description = props => (
-  <DescriptionBase color="#808080" isRow {...props} />
+  <DescriptionBase color={COLORS.GREY_8} isRow {...props} />
 )
 
 const Header = glamorous.header({
@@ -215,15 +216,6 @@ const Header = glamorous.header({
   minHeight: 128,
 })
 
-const Status = glamorous(StatusBase)({
-  alignItems: 'flex-end',
-})
-
-const ScoreContainment = glamorous(SectionContainment)({
-  marginTop: 72,
-})
-
-// TODO: Move into StatusActionLabel
 const StatusActionMessage = glamorous.div({
   fontSize: 14,
   color: COLORS.GREY_8,

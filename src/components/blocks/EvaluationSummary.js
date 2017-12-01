@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
+import { gt0, isNotNil } from '../../lib/utils'
 import TextLink from '../elements/TextLink'
 import { COLORS } from '../../constants/theme'
 
@@ -10,22 +11,18 @@ type Props = {
   to?: string | null,
 }
 
-const hasScore = score => (
-  score != null && score > 0
-)
-
 const EvaluationSummary = ({ score, term, to, ...props }: Props) => (
   <View {...props}>
     <Heading>
       <TermText>{term}</TermText>
-      {hasScore(score) &&
+      {gt0(score) &&
         <ScoreText>{score}</ScoreText>
       }
     </Heading>
-    { to != null &&
-      <ScoreLink to={to}>
-        {`${hasScore(score) ? 'Re-' : ''}Score Evaluation`}
-      </ScoreLink>
+    { isNotNil(to) &&
+      <TextLink fontSize={18} to={to}>
+        {`${gt0(score) ? 'Re-' : ''}Score Evaluation`}
+      </TextLink>
     }
   </View>
 )
@@ -64,8 +61,4 @@ const ScoreText = glamorous.span({
     content: ' : ',
     color: COLORS.GREY_8,
   },
-})
-
-const ScoreLink = glamorous(TextLink)({
-  fontSize: 18,
 })

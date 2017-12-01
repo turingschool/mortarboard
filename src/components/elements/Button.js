@@ -1,6 +1,8 @@
 // @flow
 import glamorous from 'glamorous'
+import { color, space } from 'styled-system'
 import { defaultProps } from 'recompose'
+import { noob } from '../../lib/utils'
 import { COLORS } from '../../constants/theme'
 
 const box = {
@@ -29,11 +31,10 @@ export default defaultProps({
     textAlign: 'left',
   },
   props => ({
-    marginTop: props.mt || props.marginTop,
-    color: props.color,
-    backgroundColor: props.backgroundColor,
-    ...(props.box ? box : {}),
-    ...(props.primary ? primary : {}),
-    ...(props.secondary ? secondary : {}),
+    ...(props.box ? box : noob),
+    ...(props.primary ? primary : noob),
+    ...(props.secondary ? secondary : noob),
   }),
+  space,
+  color,
 ))

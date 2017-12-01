@@ -1,7 +1,7 @@
 // @flow
 import { withRouter } from 'react-router-dom'
-import { pick } from 'ramda'
-import { branch, compose, mapProps, onlyUpdateForKeys, renderComponent } from 'recompose'
+import { compose, pick } from 'ramda'
+import { branch, mapProps, onlyUpdateForKeys, renderComponent } from 'recompose'
 import ApplicantModule, { ComponentLoader } from '../components/modules/ApplicantModule'
 import withApplicant from './withApplicant'
 

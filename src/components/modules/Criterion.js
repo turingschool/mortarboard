@@ -1,8 +1,9 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
-import { memoizeWith, identity, length } from 'ramda'
 import { pure } from 'recompose'
+import { compose, dec, map, memoizeWith, identity, length, subtract } from 'ramda'
+import { mapIndexed } from '../../lib/utils'
 import { COLORS, MQ } from '../../constants/theme'
 import { ChevronXIcon } from '../elements/Icons'
 import Select from '../elements/Select'
@@ -15,7 +16,11 @@ type Props = {
   score: string,
 }
 
-const len = memoizeWith(identity, list => length(list) - 1)
+const len = memoizeWith(identity, compose(dec, length))
+
+const getCount = (list, index) => (
+  subtract(len(list), index)
+)
 
 export default pure(({ criterion, handleChange, isOpen, score }: Props) => (
   <Details open={isOpen}>
@@ -28,12 +33,7 @@ export default pure(({ criterion, handleChange, isOpen, score }: Props) => (
     </Summary>
     <Content>
       <Scoring>
-        <Select
-          label="Score"
-          name={criterion.name}
-          onChange={handleChange}
-          value={score}
-        >
+        <Select label="Score" name={criterion.name} onChange={handleChange} value={score}>
           <option value={null}>Score</option>
           <option value={0}>0 - Bad</option>
           <option value={1}>1 - Meh</option>
@@ -42,19 +42,19 @@ export default pure(({ criterion, handleChange, isOpen, score }: Props) => (
         </Select>
       </Scoring>
       <Questions>
-        {criterion.questions.map(question => (
+        {map(question => (
           <Question key={question}>
             {question}
           </Question>
-        ))}
+        ), criterion.questions)}
       </Questions>
       <OptionDl>
-        {criterion.options.map((option, index) => (
+        {mapIndexed((option, index) => (
           <OptionItem key={option}>
-            <OptionDt>{len(criterion.options) - index}</OptionDt>
+            <OptionDt>{getCount(criterion.options, index)}</OptionDt>
             <OptionDd>{option}</OptionDd>
           </OptionItem>
-        ))}
+        ), criterion.options)}
       </OptionDl>
     </Content>
   </Details>

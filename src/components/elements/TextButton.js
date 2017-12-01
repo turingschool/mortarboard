@@ -1,10 +1,12 @@
 // @flow
 import glamorous from 'glamorous'
 import { color, fontSize, space } from 'styled-system'
-import Link from './Link'
+import { defaultProps } from 'recompose'
 import { COLORS } from '../../constants/theme'
 
-export default glamorous(Link)(
+export default defaultProps({
+  role: 'button',
+})(glamorous.button(
   {
     position: 'relative',
     zIndex: 2,
@@ -15,4 +17,4 @@ export default glamorous(Link)(
   space,
   fontSize,
   color,
-)
+))

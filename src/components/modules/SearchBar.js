@@ -2,7 +2,7 @@
 import React from 'react'
 import glamorous from 'glamorous'
 import { COLORS } from '../../constants/theme'
-import AppContainmentBase from '../elements/AppContainment'
+import AppContainment from '../elements/AppContainment'
 import { MagGlassIcon } from '../elements/Icons'
 
 type Props = {
@@ -14,7 +14,7 @@ type Props = {
 }
 
 export default({ action, forId, handleChange, handleSubmit, value }: Props) => (
-  <AppContainment>
+  <AppContainment mb={40}>
     <Form
       acceptCharset="UTF-8"
       action={action}
@@ -40,10 +40,6 @@ export default({ action, forId, handleChange, handleSubmit, value }: Props) => (
 )
 
 // -------------------------------------
-
-const AppContainment = glamorous(AppContainmentBase)({
-  marginBottom: 40,
-})
 
 const Form = glamorous.form({
   position: 'relative',

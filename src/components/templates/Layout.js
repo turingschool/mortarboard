@@ -2,11 +2,7 @@
 import React, { type Node } from 'react'
 import glamorous from 'glamorous'
 import NavBar from '../../containers/NavBarContainer'
-import DevTool from '../../components/modules/DevTool'
-
-const Main = glamorous.main({
-  position: 'relative',
-})
+import DevTool from '../modules/DevTool'
 
 type Props = {
   children: Node,
@@ -21,3 +17,9 @@ export default (props: Props) => (
     <DevTool />
   </div>
 )
+
+// -------------------------------------
+
+const Main = glamorous.main({
+  position: 'relative',
+})

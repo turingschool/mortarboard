@@ -1,23 +1,23 @@
 // @flow
 import { graphql } from 'react-apollo'
 import { withRouter } from 'react-router-dom'
-import { pick } from 'ramda'
-import { branch, compose, mapProps, renderComponent } from 'recompose'
+import { compose, defaultTo, omit } from 'ramda'
+import { branch, mapProps, renderComponent } from 'recompose'
 import allApplicantsQuery from '../graphql/allApplicants'
 import ApplicantCards, { ComponentLoader } from '../components/modules/ApplicantCards'
+import { nool } from '../lib/utils'
 
 const withData = graphql(allApplicantsQuery, {
   props: ({ data: { allApplicants, loading, refetch } }) => ({
-    logName: 'CardsContainer',
-    allApplicants: allApplicants || null,
+    allApplicants: defaultTo(nool, allApplicants),
     isLoading: loading,
     refetch,
   }),
 })
 
-const propsWhitelist = ['allApplicants', 'isLoading', 'location', 'refetch']
-const withProps = mapProps(props => ({
-  ...pick(propsWhitelist, props),
+const omits = ['history', 'match']
+const omitProps = mapProps(props => ({
+  ...omit(omits, props),
 }))
 
 const withLoader = branch(
@@ -28,6 +28,6 @@ const withLoader = branch(
 export default compose(
   withRouter,
   withData,
-  withProps,
+  omitProps,
   withLoader,
 )(ApplicantCards)

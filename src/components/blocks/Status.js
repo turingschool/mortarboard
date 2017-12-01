@@ -1,47 +1,65 @@
 // @flow
 import React, { type Node } from 'react'
 import glamorous from 'glamorous'
-import DdBase from '../elements/Dd'
-import Dl from '../elements/Dl'
-import DtBase from '../elements/Dt'
-import TextLink from '../elements/TextLink'
+import { alignItems, space } from 'styled-system'
+import { isNotNil } from '../../lib/utils'
+import TextButton from '../elements/TextButton'
 import { RocketIcon } from '../elements/Icons'
 import { COLORS } from '../../constants/theme'
 
 type Props = {
   children: Node,
-  to?: string | null,
+  onClick?: Function | null,
 }
 
-const Status = ({ children, to, ...props }: Props) => (
+const Status = ({ children, onClick, ...props }: Props) => (
   <Dl {...props}>
     <Dt>Application Status</Dt>
     <Dd>
       <RocketIcon marginRight={16} />
       {children}
     </Dd>
-    { to != null &&
+    { isNotNil(onClick) &&
       <Dd>
-        <TextLink fontSize={14} to={to}>Change Status</TextLink>
+        <TextButton fontSize={16} onClick={onClick}>
+          Change Status
+        </TextButton>
       </Dd>
     }
   </Dl>
 )
 
 Status.defaultProps = {
-  to: null,
+  onClick: null,
 }
 
 export default Status
 
 // -------------------------------------
 
-const Dt = glamorous(DtBase)({
+const Dl = glamorous.dl(
+  {
+    display: 'flex',
+    flexDirection: 'column',
+    marginTop: 8,
+    marginBottom: 8,
+  },
+  alignItems,
+  space,
+)
+
+const Dt = glamorous.dt({
+  fontSize: 14,
+  fontWeight: 600,
+  textTransform: 'uppercase',
   color: COLORS.GREY_9,
 })
 
-const Dd = glamorous(DdBase)({
+const Dd = glamorous.dd({
+  display: 'flex',
+  alignItems: 'center',
   marginTop: 16,
+  marginLeft: 0,
   fontSize: 18,
   fontWeight: 400,
   textTransform: 'uppercase',

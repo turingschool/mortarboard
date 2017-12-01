@@ -3,6 +3,7 @@ import React, { type Node } from 'react'
 import glamorous from 'glamorous'
 import Button from '../elements/Button'
 import Heading from '../elements/Heading'
+import { isNotNil } from '../../lib/utils'
 import { COLORS, MQ } from '../../constants/theme'
 
 type Props = {
@@ -23,8 +24,8 @@ const Dialog = ({
   title,
 }: Props) => (
   <View>
-    { title != null && <Heading>{title}</Heading> }
-    { children != null && <Content>{children}</Content> }
+    { isNotNil(title) && <Heading>{title}</Heading> }
+    { isNotNil(children) && <Content>{children}</Content> }
     { (handleCancel || handleConfirm) &&
       <Actions>
         { handleCancel &&

@@ -1,3 +1,5 @@
 // @flow
-export const BASE_URL = `${process.env.PUBLIC_URL || ''}`
-export const GRAPHQL_ENDPOINT = `${process.env.REACT_APP_GRAPHQL_ENDPOINT || ''}`
+import { defaultTo } from 'ramda'
+
+export const BASE_URL = defaultTo('', process.env.PUBLIC_URL)
+export const GRAPHQL_ENDPOINT = defaultTo('', process.env.REACT_APP_GRAPHQL_ENDPOINT)

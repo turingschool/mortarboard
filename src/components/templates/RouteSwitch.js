@@ -1,9 +1,9 @@
 // @flow
 import React, { type Node } from 'react'
 import type { Location } from 'react-router-dom'
-import { identity, memoizeWith } from 'ramda'
 import { withRouter } from 'react-router-dom'
 import { AnimatedSwitch, spring } from 'react-router-transition'
+import { identity, memoizeWith } from 'ramda'
 import { css } from 'glamor'
 
 const glide = val => spring(val, { stiffness: 175, damping: 25 })

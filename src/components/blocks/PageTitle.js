@@ -1,7 +1,6 @@
 // @flow
 import React, { type Node } from 'react'
-import glamorous from 'glamorous'
-import SectionContainmentBase from '../elements/SectionContainment'
+import SectionContainment from '../elements/SectionContainment'
 import Title from '../elements/Title'
 
 type Props = {
@@ -9,13 +8,9 @@ type Props = {
 }
 
 export default ({ children, ...props }: Props) => (
-  <SectionContainment {...props}>
+  <SectionContainment mb={6} {...props}>
     <Title>
       {children}
     </Title>
   </SectionContainment>
 )
-
-const SectionContainment = glamorous(SectionContainmentBase)({
-  marginBottom: 6,
-})
