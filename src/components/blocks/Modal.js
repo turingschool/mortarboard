@@ -29,10 +29,14 @@ const modalRules = css({
   outline: 0,
 })
 
+// @see: https://github.com/reactjs/react-modal#app-element
+Modal.setAppElement('body')
+
 export default (props: Props) => (
   <Modal
     bodyOpenClassName="scrollIsDisabled"
     className={`${modalRules}`}
+    contentLabel="Modal"
     overlayClassName={`${overlayRules}`}
     {...props}
   >
