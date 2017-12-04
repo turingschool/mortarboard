@@ -60,6 +60,7 @@ class RouteSwitch extends React.PureComponent<Props, State> {
     const locationLength = getPathnameLength(nextProps.location.pathname)
     const motion = locationLength < prevLocationLength ? motionLeftToRight : motionRightToLeft
     this.setState(() => ({ motion, locationLength }))
+    window.scrollTo(0, 0)
   }
 
   render() {

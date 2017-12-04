@@ -2,16 +2,17 @@
 import gql from 'graphql-tag'
 
 export default gql`
-  query {
+  query allApplicants {
     allApplicants(orderBy: createdAt_ASC) {
+      id
       action {
+        id
         label
         name
       }
       email
       firstName
       github
-      id
       lastName
       status
     }

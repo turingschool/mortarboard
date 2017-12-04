@@ -2,7 +2,7 @@
 import gql from 'graphql-tag'
 
 export default gql`
-  query ($name: String!) {
+  query Evaluation($name: String!) {
     Evaluation(name: $name) {
       id
       name

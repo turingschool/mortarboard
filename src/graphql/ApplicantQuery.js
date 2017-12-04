@@ -2,17 +2,20 @@
 import gql from 'graphql-tag'
 
 export default gql`
-  query ($id: ID!) {
+  query ApplicantQuery($id: ID!) {
     Applicant(id: $id) {
+      id
       action {
+        id
         label
         message
         name
       }
       applications {
-        complete
         id
+        complete
         evaluators {
+          id
           firstName
           lastName
         }
@@ -25,7 +28,6 @@ export default gql`
       email
       firstName
       github
-      id
       lastName
       referredBy
       resume
