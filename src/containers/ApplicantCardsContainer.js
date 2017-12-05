@@ -3,9 +3,9 @@ import { graphql } from 'react-apollo'
 import { withRouter } from 'react-router-dom'
 import { compose, defaultTo, omit } from 'ramda'
 import { branch, mapProps, renderComponent } from 'recompose'
+import { nool } from '../lib/utils'
 import allApplicantsQuery from '../graphql/allApplicants'
 import ApplicantCards, { ComponentLoader } from '../components/modules/ApplicantCards'
-import { nool } from '../lib/utils'
 
 const withData = graphql(allApplicantsQuery, {
   props: ({ data: { allApplicants, loading, refetch } }) => ({

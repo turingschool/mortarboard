@@ -24,6 +24,10 @@ const secondary = {
   backgroundColor: COLORS.GREY_9,
 }
 
+const centered = {
+  textAlign: 'center',
+}
+
 export default defaultProps({
   role: 'button',
 })(glamorous.button(
@@ -34,6 +38,7 @@ export default defaultProps({
     ...(props.box ? box : noob),
     ...(props.primary ? primary : noob),
     ...(props.secondary ? secondary : noob),
+    ...(props.centered ? centered : noob),
   }),
   space,
   color,

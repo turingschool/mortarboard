@@ -138,17 +138,17 @@ const ApplicantModule = ({
       applicant.action &&
       <Actions>
         { isNotNil(handleOpenConfirm) &&
-          <Button box primary mt={32} onClick={handleOpenConfirm}>
+          <Button box centered primary mt={32} onClick={handleOpenConfirm}>
             Submit Evaluation
           </Button>
         }
         { isNotNil(handleOpenSendRecommendation) &&
-          <Button box primary mt={32} onClick={handleOpenSendRecommendation}>
+          <Button box centered primary mt={32} onClick={handleOpenSendRecommendation}>
             Send recommendation
           </Button>
         }
         { isNotNil(handleOpenSendStatus) &&
-          <Button box primary mt={32} onClick={handleOpenSendStatus}>
+          <Button box centered primary mt={32} onClick={handleOpenSendStatus}>
             Send status email
           </Button>
         }
