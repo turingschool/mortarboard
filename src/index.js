@@ -6,10 +6,8 @@ import { ApolloClient } from 'apollo-client'
 import { InMemoryCache } from 'apollo-cache-inmemory/lib'
 import { ApolloLink } from 'apollo-link'
 import { HttpLink } from 'apollo-link-http'
-import loggerLink from 'apollo-link-logger'
 import { ApolloProvider } from 'react-apollo'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { isDev } from './lib/utils'
 import { BASE_URL, GRAPHQL_ENDPOINT } from './constants/networking'
 import Layout from './components/templates/Layout'
 import RouteSwitch from './components/templates/RouteSwitch'
@@ -25,7 +23,6 @@ const httpLink = new HttpLink({
 })
 
 const link = ApolloLink.from([
-  ...(isDev() ? [loggerLink] : []),
   httpLink,
 ])
 
