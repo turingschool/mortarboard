@@ -1,18 +1,15 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
-import { always } from 'ramda'
-import { BASE_URL } from '../../constants/networking'
 import { COLORS } from '../../constants/theme'
 import ImageLink from '../elements/Link'
 import TextLink from '../elements/TextLink'
+import TuringMark from '../elements/TuringMark'
 import { ChevronIconThin } from '../elements/Icons'
 
 type Props = {
   goBack: Function,
 }
-
-const markSrc = always(`${BASE_URL}/turing-school-mark-256.png`)
 
 export default (props: Props) => (
   <Nav>
@@ -28,15 +25,10 @@ export default (props: Props) => (
         <User>
           <span><span role="img" aria-label="hi">👋</span> Jeff Casimir</span>
           <span> / </span>
-          <TextLink to="/">Logout</TextLink>
+          <TextLink to="/login">Logout</TextLink>
         </User>
         <ImageLink to="/">
-          <img
-            alt="turing school mark"
-            src={markSrc()}
-            width={48}
-            height={48}
-          />
+          <TuringMark />
         </ImageLink>
       </Column>
     </View>
