@@ -1,5 +1,10 @@
+// @flow
 import { __, addIndex, always, and, complement, either, gt, isEmpty, isNil, map } from 'ramda'
 import { withProps } from 'recompose'
+
+// -------------------------------------
+// Environments
+export const isDev = always(process.env.NODE_ENV === 'development')
 
 // -------------------------------------
 // Types

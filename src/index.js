@@ -4,11 +4,12 @@ import ReactDOM from 'react-dom'
 import { ApolloClient } from 'apollo-client'
 // TODO: Remove `/lib` once the apollo clients version bump
 import { InMemoryCache } from 'apollo-cache-inmemory/lib'
+import { ApolloLink } from 'apollo-link'
 import { HttpLink } from 'apollo-link-http'
-import logger from 'apollo-link-logger'
+import loggerLink from 'apollo-link-logger'
 import { ApolloProvider } from 'react-apollo'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { concat } from 'ramda'
+import { isDev } from './lib/utils'
 import { BASE_URL, GRAPHQL_ENDPOINT } from './constants/networking'
 import Layout from './components/templates/Layout'
 import RouteSwitch from './components/templates/RouteSwitch'
@@ -22,13 +23,15 @@ const httpLink = new HttpLink({
   uri: GRAPHQL_ENDPOINT,
 })
 
-const link = concat(logger, httpLink)
+const link = ApolloLink.from([
+  ...(isDev() ? [loggerLink] : []),
+  httpLink,
+])
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   link,
 })
-
 
 const rootElement = document && document.getElementById('root')
 
