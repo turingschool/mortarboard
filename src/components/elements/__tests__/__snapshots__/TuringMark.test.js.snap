@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TuringMark /> shows the correct snapshot tree for the <TuringMark> element 1`] = `
+<img
+  alt="turing school mark"
+  height={48}
+  src="/turing-school-mark-256.png"
+  width={48}
+/>
+`;
+
+exports[`<TuringMark /> shows the correct snapshot tree for the <TuringMark> element with options 1`] = `
+<img
+  alt="turing school mark"
+  height={64}
+  src="/turing-school-mark-256.png"
+  width={64}
+/>
+`;

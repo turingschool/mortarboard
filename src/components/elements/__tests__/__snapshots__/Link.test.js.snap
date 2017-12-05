@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> shows the correct snapshot tree for the <Link href> element 1`] = `
+<a
+  className="css-nil"
+  href="https://www.turing.io"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  The External Link
+</a>
+`;
+
+exports[`<Link /> shows the correct snapshot tree for the <Link to> element 1`] = `
+<a
+  className="css-nil"
+  href="/hello"
+  onClick={[Function]}
+>
+  The Router Link
+</a>
+`;

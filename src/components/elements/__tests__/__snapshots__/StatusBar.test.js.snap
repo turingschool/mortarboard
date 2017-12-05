@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StatusBar /> shows the correct snapshot tree for the <StatusBar> element 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  height: 4px;
+  background-color: #4d4d4d;
+}
+
+<div
+  className="glamor-0"
+/>
+`;

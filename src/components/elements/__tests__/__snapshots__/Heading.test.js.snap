@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Heading /> shows the correct snapshot tree for the <Heading> element 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 34px;
+  font-weight: 200;
+  color: #808080;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+<h2
+  className="glamor-0"
+>
+  The Heading
+</h2>
+`;
+
+exports[`<Heading /> shows the correct snapshot tree for the <Heading> element with options 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: 200;
+  color: magenta;
+  margin-top: 8px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+<h2
+  className="glamor-0"
+>
+  The Heading with options
+</h2>
+`;

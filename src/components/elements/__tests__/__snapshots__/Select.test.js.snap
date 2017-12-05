@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Select /> shows the correct snapshot tree for the <Select> element 1`] = `
+.glamor-3,
+[data-glamor-3] {
+  position: relative;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  -webkit-appearance: button;
+  -webkit-border-radius: 0;
+  -webkit-box-shadow: none;
+  -webkit-padding-end: 0;
+  -webkit-padding-start: 0;
+  -webkit-user-select: none;
+  width: 100%;
+  height: 48px;
+  margin: 0;
+  padding: 0 32px;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #4d4d4d;
+  background-image: none;
+  background-position: initial;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  border: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.glamor-0:focus,
+[data-glamor-0]:focus {
+  border-color: #999;
+  outline: 0;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  position: absolute;
+  top: calc(50% - 8px);
+  right: 32px;
+  color: #fff;
+  pointer-events: none;
+}
+
+<label
+  className="glamor-3"
+  htmlFor="select-name"
+>
+  <select
+    aria-label="Score"
+    className="glamor-0"
+    id="select-name"
+    name="select-name"
+    onChange={[Function]}
+    value={null}
+  >
+    <option
+      value={null}
+    >
+      Score
+    </option>
+    <option
+      value={0}
+    >
+      0 - Bad
+    </option>
+    <option
+      value={1}
+    >
+      1 - Meh
+    </option>
+    <option
+      value={2}
+    >
+      2 - Good
+    </option>
+    <option
+      value={3}
+    >
+      3 - Excellent
+    </option>
+  </select>
+  <div
+    className="glamor-2"
+  >
+    <svg
+      className="glamor-1"
+      height={12}
+      viewBox="0 0 21 12"
+      width={21}
+    >
+      <g
+        fill="none"
+        fillRule="evenodd"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      >
+        <polyline
+          points="19.182 1.067 10.611 10.067 1.182 1.067"
+        />
+      </g>
+    </svg>
+  </div>
+</label>
+`;
