@@ -18,6 +18,7 @@ import ApplicantValuesEvaluation from './components/pages/ApplicantValuesEvaluat
 import ApplicantLogicEvaluation from './components/pages/ApplicantLogicEvaluation'
 import Applicants from './components/pages/Applicants'
 import NotFound from './components/pages/NotFound'
+import Login from './components/pages/Login'
 
 const httpLink = new HttpLink({
   uri: GRAPHQL_ENDPOINT,
@@ -46,6 +47,7 @@ if (rootElement) {
             <Route path={`${BASE_URL}/applicant/:id/logic-evaluation`} component={ApplicantLogicEvaluation} />
             <Route path={`${BASE_URL}/applicant/:id/values-evaluation`} component={ApplicantValuesEvaluation} />
             <Route path={`${BASE_URL}/applicant/:id`} component={ApplicantDetail} />
+            <Route path={`${BASE_URL}/login`} component={Login} />
             <Route component={NotFound} />
           </RouteSwitch>
         </Layout>
