@@ -3,27 +3,34 @@
 exports[`/404 shows the correct snapshot tree for the /404 page 1`] = `
 .glamor-1,
 [data-glamor-1] {
-  position: relative;
-  max-width: 1392px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 8px;
-  padding-bottom: 16px;
-  padding-left: 8px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
 }
 
 .glamor-0,
 [data-glamor-0] {
-  font-weight: 600;
+  font-size: 48px;
+  font-weight: 200;
+  color: #808080;
 }
 
 <div
   className="glamor-1"
 >
-  <div
+  <h1
     className="glamor-0"
   >
     Not Found
-  </div>
+  </h1>
 </div>
 `;

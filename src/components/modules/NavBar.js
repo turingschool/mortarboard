@@ -37,7 +37,7 @@ export default (props: Props) => (
 
 // -------------------------------------
 
-const Nav = glamorous.nav({
+export const Nav = glamorous.nav({
   height: 112,
   backgroundColor: COLORS.WHITE,
 })

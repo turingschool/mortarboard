@@ -26,9 +26,7 @@ export default (props: Props) => (
 // -------------------------------------
 
 const View = glamorous.div({
-  minHeight: '100vh',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'center',
   alignItems: 'center',
 })

@@ -1,14 +1,18 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
-import AppContainment from '../elements/AppContainment'
+import Title from '../elements/Title'
 
 export default () => (
-  <AppContainment>
-    <View>Not Found</View>
-  </AppContainment>
+  <View>
+    <Title>Not Found</Title>
+  </View>
 )
 
+// -------------------------------------
+
 const View = glamorous.div({
-  fontWeight: 600,
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
 })

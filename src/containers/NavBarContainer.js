@@ -1,9 +1,9 @@
 // @flow
 import { withRouter } from 'react-router-dom'
 import { compose, equals, not, or, path } from 'ramda'
-import { branch, mapProps, pure, renderNothing } from 'recompose'
+import { branch, mapProps, pure, renderComponent } from 'recompose'
 import { BASE_URL } from '../constants/networking'
-import NavBar from '../components/modules/NavBar'
+import NavBar, { Nav } from '../components/modules/NavBar'
 
 const isRoot = compose(
   or(equals('/'), equals(BASE_URL)),
@@ -24,7 +24,7 @@ const withProps = mapProps(props => ({
 
 const hideIfNotAuthenticated = branch(
   props => not(props.isAuthenticated),
-  renderNothing,
+  renderComponent(Nav),
 )
 
 export default compose(
