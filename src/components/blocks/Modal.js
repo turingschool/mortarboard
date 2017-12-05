@@ -30,7 +30,7 @@ const modalRules = css({
 })
 
 // @see: https://github.com/reactjs/react-modal#app-element
-Modal.setAppElement('body')
+Modal.setAppElement('#root')
 
 export default (props: Props) => (
   <Modal
@@ -38,8 +38,10 @@ export default (props: Props) => (
     className={`${modalRules}`}
     contentLabel="Modal"
     overlayClassName={`${overlayRules}`}
+    shouldReturnFocusAfterClose={false}
     {...props}
   >
     {props.children}
   </Modal>
 )
+
