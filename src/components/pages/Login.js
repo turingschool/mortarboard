@@ -14,9 +14,6 @@ type Props = {
 
 export default (props: Props) => (
   <View>
-    { // eslint-disable-next-line
-      console.log('Login', props, BASE_URL)
-      }
     <ImageLink to={`${BASE_URL}/`}>
       <TuringMark />
     </ImageLink>

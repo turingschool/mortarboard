@@ -32,11 +32,6 @@ const client = new ApolloClient({
 })
 
 const rootElement = document && document.getElementById('root')
-if (typeof window !== 'undefined') {
-  // eslint-disable-next-line
-  console.log('BASE_URL', BASE_URL)
-  window.YO_BASE_URL = BASE_URL
-}
 
 if (rootElement) {
   ReactDOM.render(
@@ -58,4 +53,3 @@ if (rootElement) {
     rootElement,
   )
 }
-

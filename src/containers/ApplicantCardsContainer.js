@@ -3,7 +3,7 @@ import { graphql } from 'react-apollo'
 import { withRouter } from 'react-router-dom'
 import { compose, defaultTo, omit } from 'ramda'
 import { branch, mapProps, renderComponent } from 'recompose'
-import { nool, log } from '../lib/utils'
+import { nool } from '../lib/utils'
 import allApplicantsQuery from '../graphql/allApplicants'
 import ApplicantCards, { ComponentLoader } from '../components/modules/ApplicantCards'
 
@@ -18,7 +18,6 @@ const withData = graphql(allApplicantsQuery, {
 const omits = ['history', 'match']
 const omitProps = mapProps(props => ({
   ...omit(omits, props),
-  displayName: 'ApplicantCardsContainer',
 }))
 
 const withLoader = branch(
@@ -29,7 +28,6 @@ const withLoader = branch(
 export default compose(
   withRouter,
   withData,
-  log,
   omitProps,
   withLoader,
 )(ApplicantCards)

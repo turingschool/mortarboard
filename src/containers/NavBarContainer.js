@@ -1,20 +1,26 @@
 // @flow
 import { withRouter } from 'react-router-dom'
-import { compose, equals, not, or, path } from 'ramda'
+import { anyPass, compose, equals, not, path } from 'ramda'
 import { branch, mapProps, pure, renderComponent } from 'recompose'
 import { log } from '../lib/utils'
 import { BASE_URL } from '../constants/networking'
 import NavBar, { Nav } from '../components/modules/NavBar'
 
+const equalsBase = [
+  equals('/'),
+  equals(BASE_URL),
+  equals(`${BASE_URL}/`),
+]
+
 const isRoot = compose(
-  or(equals('/'), equals(BASE_URL)),
+  anyPass(equalsBase),
   path(['location', 'pathname']),
 )
 
 // TODO: Placeholder
 const isAuthenticated = compose(
   not,
-  equals('/login'),
+  equals(`${BASE_URL}/login`),
   path(['location', 'pathname']),
 )
 
@@ -22,7 +28,7 @@ const withProps = mapProps(props => ({
   displayName: 'NavBarContainer',
   isAuthenticated: isAuthenticated(props),
   goBack: isRoot(props) ? null : path(['history', 'goBack'], props),
-  base: BASE_URL,
+  BASE_URL,
 }))
 
 const hideIfNotAuthenticated = branch(
