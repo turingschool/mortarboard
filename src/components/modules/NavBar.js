@@ -2,6 +2,7 @@
 import React from 'react'
 import glamorous from 'glamorous'
 import { COLORS } from '../../constants/theme'
+import { BASE_URL } from '../../constants/networking'
 import ImageLink from '../elements/Link'
 import TextLink from '../elements/TextLink'
 import TuringMark from '../elements/TuringMark'
@@ -25,9 +26,9 @@ export default (props: Props) => (
         <User>
           <span><span role="img" aria-label="hi">👋</span> Jeff Casimir</span>
           <span> / </span>
-          <TextLink to="/login">Logout</TextLink>
+          <TextLink to={`${BASE_URL}/login`}>Logout</TextLink>
         </User>
-        <ImageLink to="/">
+        <ImageLink to={`${BASE_URL}/`}>
           <TuringMark />
         </ImageLink>
       </Column>
