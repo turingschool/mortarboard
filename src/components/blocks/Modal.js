@@ -2,6 +2,7 @@
 import React, { type Node } from 'react'
 import { css } from 'glamor'
 import Modal from 'react-modal'
+import { isNotNil } from '../../lib/utils'
 import { ZZZ } from '../../constants/theme'
 
 type Props = {
@@ -30,7 +31,9 @@ const modalRules = css({
 })
 
 // @see: https://github.com/reactjs/react-modal#app-element
-Modal.setAppElement('#root')
+if (isNotNil(document)) {
+  Modal.setAppElement('#root')
+}
 
 export default (props: Props) => (
   <Modal

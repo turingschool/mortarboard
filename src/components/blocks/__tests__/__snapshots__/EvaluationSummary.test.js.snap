@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EvaluationSummary /> shows the correct snapshot tree for the <EvaluationSummary> block 1`] = `
+.glamor-4,
+[data-glamor-4] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 44px;
+  border-bottom: 1px solid #ccc;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 28px;
+  font-weight: 300;
+  color: #808080;
+  -webkit-flex-flow: row nowrap;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  color: #8ad30e;
+  margin-left: 8px;
+}
+
+.glamor-1::before,
+[data-glamor-1]::before {
+  content: " : ";
+  color: #808080;
+}
+
+.glamor-3,
+[data-glamor-3] {
+  position: relative;
+  z-index: 2;
+  color: #35c5fc;
+  text-decoration: none;
+  transition: color 200ms;
+  font-size: 18px;
+  -webkit-transition: color 200ms;
+  -moz-transition: color 200ms;
+}
+
+<div
+  className="glamor-4"
+>
+  <h2
+    className="glamor-2"
+  >
+    <span
+      className="glamor-0"
+    >
+      Evaluation Summary Term
+    </span>
+    <span
+      className="glamor-1"
+    >
+      100
+    </span>
+  </h2>
+  <a
+    className="glamor-3"
+    fontSize={18}
+    href="/to-evaluation-summary"
+    onClick={[Function]}
+  >
+    Re-Score Evaluation
+  </a>
+</div>
+`;

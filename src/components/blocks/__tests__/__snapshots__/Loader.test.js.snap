@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loader /> shows the correct snapshot tree for the <Loader> block 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: dashed;
+  border-color: #4d4d4d;
+  animation: ANIMATE_ROTATE_1a8hhxx 1.03333s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-animation: ANIMATE_ROTATE_1a8hhxx 1.03333s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+<div
+  className="glamor-1"
+>
+  <div
+    className="glamor-0"
+  />
+  Loading Loader...
+</div>
+`;
