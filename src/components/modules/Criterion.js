@@ -11,7 +11,7 @@ import type { Criterion } from '../../types/Criterion'
 
 type Props = {
   criterion: Criterion,
-  handleChange: Function,
+  handleChange: () => {},
   isOpen: boolean,
   score: string,
 }

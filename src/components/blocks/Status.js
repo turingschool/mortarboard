@@ -9,7 +9,7 @@ import { COLORS } from '../../constants/theme'
 
 type Props = {
   children: Node,
-  onClick?: Function | null,
+  onClick?: ?() => {},
 }
 
 const Status = ({ children, onClick, ...props }: Props) => (

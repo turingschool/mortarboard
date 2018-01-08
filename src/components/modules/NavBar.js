@@ -9,7 +9,7 @@ import TuringMark from '../elements/TuringMark'
 import { ChevronIconThin } from '../elements/Icons'
 
 type Props = {
-  goBack: Function,
+  goBack: () => {},
 }
 
 export default (props: Props) => (

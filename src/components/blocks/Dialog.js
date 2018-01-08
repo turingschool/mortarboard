@@ -10,8 +10,8 @@ type Props = {
   cancelLabel?: string,
   children?: Node,
   confirmLabel?: string,
-  handleCancel?: Function,
-  handleConfirm?: Function,
+  handleCancel?: () => {},
+  handleConfirm?: () => {},
   title?: string,
 }
 

@@ -3,8 +3,8 @@ import React from 'react'
 import Dialog from '../blocks/Dialog'
 
 type Props = {
-  handleCancel: Function,
-  handleConfirm: Function,
+  handleCancel: () => {},
+  handleConfirm: () => {},
 }
 
 export default({ handleCancel, handleConfirm }: Props) => (

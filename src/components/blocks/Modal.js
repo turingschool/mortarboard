@@ -8,7 +8,7 @@ import { ZZZ } from '../../constants/theme'
 type Props = {
   children: Node,
   isOpen: boolean,
-  onRequestClose: Function
+  onRequestClose: () => {}
 }
 
 const overlayRules = css({

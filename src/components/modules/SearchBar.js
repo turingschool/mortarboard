@@ -8,8 +8,8 @@ import { MagGlassIcon } from '../elements/Icons'
 type Props = {
   action: string,
   forId: string,
-  handleChange: Function,
-  handleSubmit: Function,
+  handleChange: () => {},
+  handleSubmit: () => {},
   value: string,
 }
 

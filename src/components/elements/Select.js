@@ -8,7 +8,7 @@ type Props = {
   children: Node,
   label: string,
   name: string,
-  onChange: Function,
+  onChange: () => {},
   value: string,
 }
 

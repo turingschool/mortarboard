@@ -11,8 +11,8 @@ import type { Criterion } from '../../types/Criterion'
 type Props = {
   children: Node,
   criteria: Array<Criterion>,
-  handleChange: Function,
-  refetch: Function,
+  handleChange: () => {},
+  refetch: () => {},
   location: Location,
 }
 

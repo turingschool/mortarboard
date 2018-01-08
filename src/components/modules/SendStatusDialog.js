@@ -4,9 +4,9 @@ import Select from '../elements/Select'
 import Dialog from '../blocks/Dialog'
 
 type Props = {
-  handleCancel: Function,
-  handleChange: Function,
-  handleConfirm: Function,
+  handleCancel: () => {},
+  handleChange: () => {},
+  handleConfirm: () => {},
   statusValue: string,
 }
 

@@ -11,7 +11,7 @@ import type { Applicant } from '../../types/Applicant'
 type Props = {
   children: Node,
   allApplicants: Array<Applicant>,
-  refetch: Function,
+  refetch: () => {},
   location: Location,
 }
 
