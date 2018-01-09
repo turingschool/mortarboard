@@ -64,17 +64,6 @@ exports[`/login shows the correct snapshot tree for the Layout template 1`] = `
   position: relative;
 }
 
-.glamor-8,
-[data-glamor-8] {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3000;
-  pointer-events: none;
-}
-
 <div>
   <nav
     className="glamor-6"
@@ -134,22 +123,5 @@ exports[`/login shows the correct snapshot tree for the Layout template 1`] = `
       Children
     </div>
   </main>
-  <div
-    className="glamor-8"
-  >
-    <div
-      style={
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "pointerEvents": "none",
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-          "zIndex": 2,
-        }
-      }
-    />
-  </div>
 </div>
 `;

@@ -31,8 +31,7 @@
     "react-router-transition": "1.1.3",
     "react-timeago": "3.4.3",
     "recompose": "0.26.0",
-    "styled-system": "1.1.1",
-    "toolkitt": "1.0.0"
+    "styled-system": "1.1.1"
   },
   "devDependencies": {
     "babel-eslint": "8.1.2",

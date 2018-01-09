@@ -6863,10 +6863,6 @@ to-fast-properties@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
 
-toolkitt@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/toolkitt/-/toolkitt-1.0.0.tgz#ded9750bb56ae5107be299ed0c761734d0484b38"
-
 toposort@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/toposort/-/toposort-1.0.3.tgz#f02cd8a74bd8be2fc0e98611c3bacb95a171869c"
