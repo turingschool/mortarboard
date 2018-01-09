@@ -1,0 +1,932 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantModule> module 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  height: 4px;
+  background-color: #4d4d4d;
+}
+
+.glamor-27,
+[data-glamor-27] {
+  position: relative;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.glamor-6,
+[data-glamor-6] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 128px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 34px;
+  font-weight: 200;
+  color: #808080;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-5,
+[data-glamor-5] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.glamor-4,
+[data-glamor-4] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  margin-left: 0;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #4d4d4d;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-3,
+[data-glamor-3] {
+  margin-right: 16px;
+}
+
+.glamor-10,
+[data-glamor-10] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #808080;
+  flex-flow: row nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-flex-flow: row nowrap;
+}
+
+.glamor-7,
+[data-glamor-7] {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: currentColor;
+  min-width: 192px;
+}
+
+.glamor-9,
+[data-glamor-9] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  font-size: 16px;
+  font-weight: 200;
+  color: currentColor;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-8,
+[data-glamor-8] {
+  position: relative;
+  z-index: 2;
+  color: #35c5fc;
+  text-decoration: none;
+  transition: color 200ms;
+  -webkit-transition: color 200ms;
+  -moz-transition: color 200ms;
+}
+
+<div>
+  <div
+    className="glamor-0"
+  />
+  <section
+    className="glamor-27"
+  >
+    <header
+      className="glamor-6"
+    >
+      <h2
+        className="glamor-1"
+      >
+        Kenny Bania
+      </h2>
+      <dl
+        className="glamor-5"
+      >
+        <dt
+          className="glamor-2"
+        >
+          Application Status
+        </dt>
+        <dd
+          className="glamor-4"
+        >
+          <svg
+            className="glamor-3"
+            height={32}
+            viewBox="0 0 24 24"
+            width={32}
+          >
+            <g
+              fill="currentColor"
+            >
+              <path
+                d="M24,0 C24,0 23.4836048,9.80252996 16.4820958,15.2719707 L16.4128111,19.0346251 L11.4820194,24 L11.4746834,20.2882431 L9.63105705,18.6292449 C8.29671435,22.7691304 1.26439406,22.7691304 1.26439406,22.7691304 C1.26439406,22.7691304 1.26439406,16.3396736 5.58319762,14.4450082 L3.94220876,12.6079505 L-2.84217094e-14,12.6079505 L5.07440302,7.66843342 L8.7285621,7.58627726 C14.4472436,0.671411685 24,0 24,0 Z M16.425,10.1644246 C17.8333261,10.1644246 18.975,9.01830529 18.975,7.60449544 C18.975,6.19068562 17.8333261,5.0445663 16.425,5.0445663 C15.0166739,5.0445663 13.875,6.19068562 13.875,7.60449544 C13.875,9.01830529 15.0166739,10.1644246 16.425,10.1644246 Z"
+              />
+            </g>
+          </svg>
+          pending
+        </dd>
+      </dl>
+    </header>
+    <dl
+      className="glamor-10"
+    >
+      <dt
+        className="glamor-7"
+      >
+        Email Address
+      </dt>
+      <dd
+        className="glamor-9"
+      >
+        <a
+          className="glamor-8"
+          href="mailto:kenny.bania@example.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          kenny.bania@example.com
+        </a>
+      </dd>
+    </dl>
+    <dl
+      className="glamor-10"
+    >
+      <dt
+        className="glamor-7"
+      >
+        Birthdate
+      </dt>
+      <dd
+        className="glamor-9"
+      >
+        06/06/2006
+      </dd>
+    </dl>
+    <dl
+      className="glamor-10"
+    >
+      <dt
+        className="glamor-7"
+      >
+        GitHub
+      </dt>
+      <dd
+        className="glamor-9"
+      >
+        kennyBania
+      </dd>
+    </dl>
+    <dl
+      className="glamor-10"
+    >
+      <dt
+        className="glamor-7"
+      >
+        Referred By
+      </dt>
+      <dd
+        className="glamor-9"
+      >
+        Simon Taranto
+      </dd>
+    </dl>
+    <dl
+      className="glamor-10"
+    >
+      <dt
+        className="glamor-7"
+      >
+        Application Age
+      </dt>
+      <dd
+        className="glamor-9"
+      >
+        <time
+          dateTime="2017-10-31T12:12:12.000Z"
+          title="2017-10-31T12:12:12.000Z"
+        >
+          2 months ago
+        </time>
+      </dd>
+    </dl>
+    <dl
+      className="glamor-10"
+    >
+      <dt
+        className="glamor-7"
+      >
+        Resume
+      </dt>
+      <dd
+        className="glamor-9"
+      >
+        <a
+          className="glamor-8"
+          href="https://www.resume.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          View PDF
+        </a>
+      </dd>
+    </dl>
+  </section>
+</div>
+`;
+
+exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantModule> module with data 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  height: 4px;
+  background-color: #4d4d4d;
+}
+
+.glamor-32,
+[data-glamor-32] {
+  position: relative;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.glamor-8,
+[data-glamor-8] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 128px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 34px;
+  font-weight: 200;
+  color: #808080;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-7,
+[data-glamor-7] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.glamor-4,
+[data-glamor-4] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  margin-left: 0;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #4d4d4d;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-3,
+[data-glamor-3] {
+  margin-right: 16px;
+}
+
+.glamor-12,
+[data-glamor-12] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #808080;
+  flex-flow: row nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-flex-flow: row nowrap;
+}
+
+.glamor-9,
+[data-glamor-9] {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: currentColor;
+  min-width: 192px;
+}
+
+.glamor-11,
+[data-glamor-11] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  font-size: 16px;
+  font-weight: 200;
+  color: currentColor;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-10,
+[data-glamor-10] {
+  position: relative;
+  z-index: 2;
+  color: #35c5fc;
+  text-decoration: none;
+  transition: color 200ms;
+  -webkit-transition: color 200ms;
+  -moz-transition: color 200ms;
+}
+
+.glamor-5,
+[data-glamor-5] {
+  position: relative;
+  z-index: 2;
+  color: #35c5fc;
+  text-decoration: none;
+  transition: color 200ms;
+  font-size: 16px;
+  -webkit-transition: color 200ms;
+  -moz-transition: color 200ms;
+}
+
+.glamor-47,
+[data-glamor-47] {
+  position: relative;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-top: 72px;
+}
+
+.glamor-36,
+[data-glamor-36] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 44px;
+  border-bottom: 1px solid #ccc;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-35,
+[data-glamor-35] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 28px;
+  font-weight: 300;
+  color: #808080;
+  -webkit-flex-flow: row nowrap;
+}
+
+.glamor-34,
+[data-glamor-34] {
+  color: #8ad30e;
+  margin-left: 8px;
+}
+
+.glamor-34::before,
+[data-glamor-34]::before {
+  content: " : ";
+  color: #808080;
+}
+
+.glamor-40,
+[data-glamor-40] {
+  position: relative;
+  z-index: 2;
+  color: #35c5fc;
+  text-decoration: none;
+  transition: color 200ms;
+  font-size: 18px;
+  -webkit-transition: color 200ms;
+  -moz-transition: color 200ms;
+}
+
+.glamor-50,
+[data-glamor-50] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #f43306;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-48,
+[data-glamor-48] {
+  margin-right: 10px;
+}
+
+.glamor-49,
+[data-glamor-49] {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.glamor-51,
+[data-glamor-51] {
+  font-size: 14px;
+  color: #808080;
+  margin-top: 8px;
+}
+
+.glamor-56,
+[data-glamor-56] {
+  position: relative;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+}
+
+.glamor-53,
+[data-glamor-53] {
+  text-align: center;
+  min-width: 240px;
+  height: 48px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #4d4d4d;
+  margin-top: 32px;
+}
+
+<div>
+  <div
+    className="glamor-0"
+  />
+  <section
+    className="glamor-32"
+  >
+    <header
+      className="glamor-8"
+    >
+      <h2
+        className="glamor-1"
+      >
+        Kenny Bania
+      </h2>
+      <dl
+        className="glamor-7"
+      >
+        <dt
+          className="glamor-2"
+        >
+          Application Status
+        </dt>
+        <dd
+          className="glamor-4"
+        >
+          <svg
+            className="glamor-3"
+            height={32}
+            viewBox="0 0 24 24"
+            width={32}
+          >
+            <g
+              fill="currentColor"
+            >
+              <path
+                d="M24,0 C24,0 23.4836048,9.80252996 16.4820958,15.2719707 L16.4128111,19.0346251 L11.4820194,24 L11.4746834,20.2882431 L9.63105705,18.6292449 C8.29671435,22.7691304 1.26439406,22.7691304 1.26439406,22.7691304 C1.26439406,22.7691304 1.26439406,16.3396736 5.58319762,14.4450082 L3.94220876,12.6079505 L-2.84217094e-14,12.6079505 L5.07440302,7.66843342 L8.7285621,7.58627726 C14.4472436,0.671411685 24,0 24,0 Z M16.425,10.1644246 C17.8333261,10.1644246 18.975,9.01830529 18.975,7.60449544 C18.975,6.19068562 17.8333261,5.0445663 16.425,5.0445663 C15.0166739,5.0445663 13.875,6.19068562 13.875,7.60449544 C13.875,9.01830529 15.0166739,10.1644246 16.425,10.1644246 Z"
+              />
+            </g>
+          </svg>
+          pending
+        </dd>
+        <dd
+          className="glamor-4"
+        >
+          <button
+            className="glamor-5"
+            onClick={[Function]}
+            role="button"
+          >
+            Change Status
+          </button>
+        </dd>
+      </dl>
+    </header>
+    <dl
+      className="glamor-12"
+    >
+      <dt
+        className="glamor-9"
+      >
+        Email Address
+      </dt>
+      <dd
+        className="glamor-11"
+      >
+        <a
+          className="glamor-10"
+          href="mailto:kenny.bania@example.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          kenny.bania@example.com
+        </a>
+      </dd>
+    </dl>
+    <dl
+      className="glamor-12"
+    >
+      <dt
+        className="glamor-9"
+      >
+        Birthdate
+      </dt>
+      <dd
+        className="glamor-11"
+      >
+        06/06/2006
+      </dd>
+    </dl>
+    <dl
+      className="glamor-12"
+    >
+      <dt
+        className="glamor-9"
+      >
+        GitHub
+      </dt>
+      <dd
+        className="glamor-11"
+      >
+        kennyBania
+      </dd>
+    </dl>
+    <dl
+      className="glamor-12"
+    >
+      <dt
+        className="glamor-9"
+      >
+        Referred By
+      </dt>
+      <dd
+        className="glamor-11"
+      >
+        Simon Taranto
+      </dd>
+    </dl>
+    <dl
+      className="glamor-12"
+    >
+      <dt
+        className="glamor-9"
+      >
+        Application Age
+      </dt>
+      <dd
+        className="glamor-11"
+      >
+        <time
+          dateTime="2017-10-31T12:12:12.000Z"
+          title="2017-10-31T12:12:12.000Z"
+        >
+          2 months ago
+        </time>
+      </dd>
+    </dl>
+    <dl
+      className="glamor-12"
+    >
+      <dt
+        className="glamor-9"
+      >
+        Evaluators
+      </dt>
+      <dd
+        className="glamor-11"
+      >
+        Evaluator 1, Evaluator 2
+      </dd>
+    </dl>
+    <dl
+      className="glamor-12"
+    >
+      <dt
+        className="glamor-9"
+      >
+        Resume
+      </dt>
+      <dd
+        className="glamor-11"
+      >
+        <a
+          className="glamor-10"
+          href="https://www.resume.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          View PDF
+        </a>
+      </dd>
+    </dl>
+  </section>
+  <section
+    className="glamor-47"
+  >
+    <div
+      className="glamor-36"
+    >
+      <h2
+        className="glamor-35"
+      >
+        <span
+          className="glamor-33"
+        >
+          Online Logic Test
+        </span>
+        <span
+          className="glamor-34"
+        >
+          40
+        </span>
+      </h2>
+    </div>
+    <div
+      className="glamor-36"
+    >
+      <h2
+        className="glamor-35"
+      >
+        <span
+          className="glamor-33"
+        >
+          Logic Evaluation
+        </span>
+        <span
+          className="glamor-34"
+        >
+          20
+        </span>
+      </h2>
+      <a
+        className="glamor-40"
+        fontSize={18}
+        href="/match/url/logic-evaluation"
+        onClick={[Function]}
+      >
+        Re-Score Evaluation
+      </a>
+    </div>
+    <div
+      className="glamor-36"
+    >
+      <h2
+        className="glamor-35"
+      >
+        <span
+          className="glamor-33"
+        >
+          Values Evaluation
+        </span>
+        <span
+          className="glamor-34"
+        >
+          20
+        </span>
+      </h2>
+      <a
+        className="glamor-40"
+        fontSize={18}
+        href="/match/url/values-evaluation"
+        onClick={[Function]}
+      >
+        Re-Score Evaluation
+      </a>
+    </div>
+  </section>
+  <section
+    className="glamor-47"
+  >
+    <div
+      className="glamor-50"
+    >
+      <svg
+        className="glamor-48"
+        height={26}
+        viewBox="0 0 26 26"
+        width={26}
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+          stroke="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1"
+        >
+          <g
+            stroke="currentColor"
+          >
+            <path
+              d="M24.9977757,12.792875 C25.1127757,19.419875 19.6267757,24.886875 12.9997757,25.001875 C6.37377574,25.116875 1.11577574,19.836875 1.00177574,13.210875 C0.886775744,6.58287499 6.37277574,1.11587499 12.9997757,1.00187499 C19.6267757,0.885874988 24.8827757,6.16687499 24.9977757,12.792875 Z"
+            />
+            <path
+              d="M12.9997757,14.635675 L12.9997757,6.99967499"
+            />
+          </g>
+          <g
+            fill="currentColor"
+          >
+            <path
+              d="M11.9087757,18.472175 C11.9187757,19.069175 12.4047757,19.544175 12.9987757,19.544175 C13.6207757,19.533175 14.1017757,19.037175 14.0907757,18.435175 C14.0797757,17.839175 13.5947757,17.363175 13.0007757,17.363175 C12.3787757,17.373175 11.8977757,17.871175 11.9087757,18.472175 Z"
+            />
+          </g>
+        </g>
+      </svg>
+      <span
+        className="glamor-49"
+      >
+        Mismatch
+      </span>
+    </div>
+    <div
+      className="glamor-51"
+    >
+      Mismatch message
+    </div>
+  </section>
+  <section
+    className="glamor-56"
+  >
+    <button
+      className="glamor-53"
+      onClick={[Function]}
+      role="button"
+    >
+      Submit Evaluation
+    </button>
+    <button
+      className="glamor-53"
+      onClick={[Function]}
+      role="button"
+    >
+      Send recommendation
+    </button>
+    <button
+      className="glamor-53"
+      onClick={[Function]}
+      role="button"
+    >
+      Send status email
+    </button>
+  </section>
+</div>
+`;

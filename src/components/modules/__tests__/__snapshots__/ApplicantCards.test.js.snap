@@ -1,0 +1,434 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicantCards> module 1`] = `
+.glamor-37,
+[data-glamor-37] {
+  position: relative;
+  max-width: 1392px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 8px;
+  padding-bottom: 16px;
+  padding-left: 8px;
+}
+
+.glamor-36,
+[data-glamor-36] {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  -ms-grid-template-columns: 1fr;
+  -ms-grid-gap: 16px;
+}
+
+.glamor-36> *,
+[data-glamor-36]> * {
+  min-width: 100%;
+}
+
+.glamor-17,
+[data-glamor-17] {
+  position: relative;
+  min-width: 320px;
+  height: 400px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.glamor-0,
+[data-glamor-0] {
+  height: 4px;
+  background-color: #4d4d4d;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  padding-right: 24px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  background-color: #e5e5e5;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 34px;
+  font-weight: 200;
+  color: #808080;
+  margin-top: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-15,
+[data-glamor-15] {
+  margin-top: 24px;
+  padding-right: 24px;
+  padding-left: 24px;
+  color: #4d4d4d;
+}
+
+.glamor-6,
+[data-glamor-6] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: currentColor;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-3,
+[data-glamor-3] {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: currentColor;
+}
+
+.glamor-5,
+[data-glamor-5] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  font-size: 16px;
+  font-weight: 200;
+  color: currentColor;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-4,
+[data-glamor-4] {
+  position: relative;
+  z-index: 2;
+  color: #35c5fc;
+  text-decoration: none;
+  transition: color 200ms;
+  -webkit-transition: color 200ms;
+  -moz-transition: color 200ms;
+}
+
+.glamor-14,
+[data-glamor-14] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-11,
+[data-glamor-11] {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.glamor-13,
+[data-glamor-13] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  margin-left: 0;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #4d4d4d;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-12,
+[data-glamor-12] {
+  margin-right: 16px;
+}
+
+.glamor-16,
+[data-glamor-16] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@media (min-width: 41em) {
+  .glamor-36,
+  [data-glamor-36] {
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-template-columns: 1fr 1fr;
+  }
+
+  .glamor-36> *,
+  [data-glamor-36]> * {
+    min-width: 320px;
+  }
+}
+
+@media (min-width: 62em) {
+  .glamor-36,
+  [data-glamor-36] {
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 83em) {
+  .glamor-36,
+  [data-glamor-36] {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+<div
+  className="glamor-37"
+>
+  <section
+    className="glamor-36"
+  >
+    <div
+      className="glamor-17"
+    >
+      <div
+        className="glamor-0"
+      />
+      <header
+        className="glamor-2"
+      >
+        <h2
+          className="glamor-1"
+        >
+          <span>
+            Kenny
+             
+          </span>
+          <span>
+            Bania
+          </span>
+        </h2>
+      </header>
+      <div
+        className="glamor-15"
+      >
+        <dl
+          className="glamor-6"
+        >
+          <dt
+            className="glamor-3"
+          >
+            Email Address
+          </dt>
+          <dd
+            className="glamor-5"
+          >
+            <a
+              className="glamor-4"
+              href="mailto:kenny.bania@example.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              kenny.bania@example.com
+            </a>
+          </dd>
+        </dl>
+        <dl
+          className="glamor-6"
+        >
+          <dt
+            className="glamor-3"
+          >
+            GitHub
+          </dt>
+          <dd
+            className="glamor-5"
+          >
+            <a
+              className="glamor-4"
+              href="https://github.com/kennyBania"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              github.com/kennyBania
+            </a>
+          </dd>
+        </dl>
+        <dl
+          className="glamor-14"
+        >
+          <dt
+            className="glamor-11"
+          >
+            Application Status
+          </dt>
+          <dd
+            className="glamor-13"
+          >
+            <svg
+              className="glamor-12"
+              height={32}
+              viewBox="0 0 24 24"
+              width={32}
+            >
+              <g
+                fill="currentColor"
+              >
+                <path
+                  d="M24,0 C24,0 23.4836048,9.80252996 16.4820958,15.2719707 L16.4128111,19.0346251 L11.4820194,24 L11.4746834,20.2882431 L9.63105705,18.6292449 C8.29671435,22.7691304 1.26439406,22.7691304 1.26439406,22.7691304 C1.26439406,22.7691304 1.26439406,16.3396736 5.58319762,14.4450082 L3.94220876,12.6079505 L-2.84217094e-14,12.6079505 L5.07440302,7.66843342 L8.7285621,7.58627726 C14.4472436,0.671411685 24,0 24,0 Z M16.425,10.1644246 C17.8333261,10.1644246 18.975,9.01830529 18.975,7.60449544 C18.975,6.19068562 17.8333261,5.0445663 16.425,5.0445663 C15.0166739,5.0445663 13.875,6.19068562 13.875,7.60449544 C13.875,9.01830529 15.0166739,10.1644246 16.425,10.1644246 Z"
+                />
+              </g>
+            </svg>
+            pending
+          </dd>
+        </dl>
+      </div>
+      <a
+        className="glamor-16"
+        href="/applicant/kennyBania"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="glamor-17"
+    >
+      <div
+        className="glamor-0"
+      />
+      <header
+        className="glamor-2"
+      >
+        <h2
+          className="glamor-1"
+        >
+          <span>
+            Robert
+             
+          </span>
+          <span>
+            Sacamano
+          </span>
+        </h2>
+      </header>
+      <div
+        className="glamor-15"
+      >
+        <dl
+          className="glamor-6"
+        >
+          <dt
+            className="glamor-3"
+          >
+            Email Address
+          </dt>
+          <dd
+            className="glamor-5"
+          >
+            <a
+              className="glamor-4"
+              href="mailto:kenny.bania@example.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              kenny.bania@example.com
+            </a>
+          </dd>
+        </dl>
+        <dl
+          className="glamor-6"
+        >
+          <dt
+            className="glamor-3"
+          >
+            GitHub
+          </dt>
+          <dd
+            className="glamor-5"
+          >
+            <a
+              className="glamor-4"
+              href="https://github.com/robertSacamano"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              github.com/robertSacamano
+            </a>
+          </dd>
+        </dl>
+        <dl
+          className="glamor-14"
+        >
+          <dt
+            className="glamor-11"
+          >
+            Application Status
+          </dt>
+          <dd
+            className="glamor-13"
+          >
+            <svg
+              className="glamor-12"
+              height={32}
+              viewBox="0 0 24 24"
+              width={32}
+            >
+              <g
+                fill="currentColor"
+              >
+                <path
+                  d="M24,0 C24,0 23.4836048,9.80252996 16.4820958,15.2719707 L16.4128111,19.0346251 L11.4820194,24 L11.4746834,20.2882431 L9.63105705,18.6292449 C8.29671435,22.7691304 1.26439406,22.7691304 1.26439406,22.7691304 C1.26439406,22.7691304 1.26439406,16.3396736 5.58319762,14.4450082 L3.94220876,12.6079505 L-2.84217094e-14,12.6079505 L5.07440302,7.66843342 L8.7285621,7.58627726 C14.4472436,0.671411685 24,0 24,0 Z M16.425,10.1644246 C17.8333261,10.1644246 18.975,9.01830529 18.975,7.60449544 C18.975,6.19068562 17.8333261,5.0445663 16.425,5.0445663 C15.0166739,5.0445663 13.875,6.19068562 13.875,7.60449544 C13.875,9.01830529 15.0166739,10.1644246 16.425,10.1644246 Z"
+                />
+              </g>
+            </svg>
+            pending
+          </dd>
+        </dl>
+      </div>
+      <a
+        className="glamor-16"
+        href="/applicant/robertSacamano"
+        onClick={[Function]}
+      />
+    </div>
+  </section>
+</div>
+`;

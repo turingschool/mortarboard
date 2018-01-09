@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SendRecommendationDialog /> shows the correct snapshot tree for the <SendRecommendationDialog> module 1`] = `
+.glamor-9,
+[data-glamor-9] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 112px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 34px;
+  font-weight: 200;
+  color: #808080;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-5,
+[data-glamor-5] {
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: #808080;
+}
+
+.glamor-4,
+[data-glamor-4] {
+  position: relative;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  -webkit-appearance: button;
+  -webkit-border-radius: 0;
+  -webkit-box-shadow: none;
+  -webkit-padding-end: 0;
+  -webkit-padding-start: 0;
+  -webkit-user-select: none;
+  width: 100%;
+  height: 48px;
+  margin: 0;
+  padding: 0 32px;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #4d4d4d;
+  background-image: none;
+  background-position: initial;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  border: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.glamor-1:focus,
+[data-glamor-1]:focus {
+  border-color: #999;
+  outline: 0;
+}
+
+.glamor-3,
+[data-glamor-3] {
+  position: absolute;
+  top: calc(50% - 8px);
+  right: 32px;
+  color: #fff;
+  pointer-events: none;
+}
+
+.glamor-8,
+[data-glamor-8] {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  -ms-grid-template-columns: 1fr;
+  -ms-grid-gap: 16px;
+}
+
+.glamor-6,
+[data-glamor-6] {
+  text-align: left;
+  min-width: 240px;
+  height: 48px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #999;
+}
+
+.glamor-7,
+[data-glamor-7] {
+  text-align: left;
+  min-width: 240px;
+  height: 48px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #4d4d4d;
+}
+
+@media (min-width: 31em) {
+  .glamor-9,
+  [data-glamor-9] {
+    width: 496px;
+  }
+}
+
+@media (min-width: 31em) {
+  .glamor-5,
+  [data-glamor-5] {
+    margin-bottom: 64px;
+  }
+}
+
+@media (min-width: 31em) {
+  .glamor-8,
+  [data-glamor-8] {
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-template-columns: 1fr 1fr;
+  }
+}
+
+<div
+  className="glamor-9"
+>
+  <h2
+    className="glamor-0"
+  >
+    What is Recommendation?
+  </h2>
+  <div
+    className="glamor-5"
+  >
+    <label
+      className="glamor-4"
+      htmlFor="recommendationSelect"
+    >
+      <select
+        aria-label="Choose Recommendation"
+        className="glamor-1"
+        id="recommendationSelect"
+        name="recommendationSelect"
+        onChange={[Function]}
+        value="Recommendation Value"
+      >
+        <option
+          value="option1"
+        >
+          Option 1
+        </option>
+        <option
+          value="option2"
+        >
+          Option 2
+        </option>
+        <option
+          value="option3"
+        >
+          Option 3
+        </option>
+        <option
+          value="option4"
+        >
+          Option 4
+        </option>
+        <option
+          value="option5"
+        >
+          Option 5
+        </option>
+      </select>
+      <div
+        className="glamor-3"
+      >
+        <svg
+          className="glamor-2"
+          height={12}
+          viewBox="0 0 21 12"
+          width={21}
+        >
+          <g
+            fill="none"
+            fillRule="evenodd"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+          >
+            <polyline
+              points="19.182 1.067 10.611 10.067 1.182 1.067"
+            />
+          </g>
+        </svg>
+      </div>
+    </label>
+  </div>
+  <div
+    className="glamor-8"
+  >
+    <button
+      className="glamor-6"
+      onClick={[Function]}
+      role="button"
+    >
+      cancel
+    </button>
+    <button
+      className="glamor-7"
+      onClick={[Function]}
+      role="button"
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;

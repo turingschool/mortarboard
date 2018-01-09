@@ -1,0 +1,581 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 1`] = `
+.glamor-49,
+[data-glamor-49] {
+  position: relative;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.glamor-48,
+[data-glamor-48] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  padding-top: 6px;
+  padding-bottom: 32px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-48 > *,
+[data-glamor-48] > * {
+  margin-top: 48px;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  position: relative;
+  min-height: 48px;
+  font-size: 28px;
+  font-weight: 200;
+  color: #808080;
+  border-bottom: 1px solid;
+  outline: 0;
+  cursor: pointer;
+}
+
+.glamor-2::-webkit-details-marker,
+[data-glamor-2]::-webkit-details-marker {
+  display: none;
+}
+
+.glamor-2:first-of-type,
+[data-glamor-2]:first-of-type {
+  list-style-type: none;
+}
+
+.glamor-2 > svg,
+[data-glamor-2] > svg {
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 48px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+}
+
+.glamor-0 > span + span,
+[data-glamor-0] > span + span {
+  color: #35c5fc;
+}
+
+.glamor-22,
+[data-glamor-22] {
+  position: relative;
+  padding-top: 44px;
+  padding-bottom: 48px;
+}
+
+.glamor-7,
+[data-glamor-7] {
+  width: 256px;
+}
+
+.glamor-6,
+[data-glamor-6] {
+  position: relative;
+}
+
+.glamor-3,
+[data-glamor-3] {
+  -webkit-appearance: button;
+  -webkit-border-radius: 0;
+  -webkit-box-shadow: none;
+  -webkit-padding-end: 0;
+  -webkit-padding-start: 0;
+  -webkit-user-select: none;
+  width: 100%;
+  height: 48px;
+  margin: 0;
+  padding: 0 32px;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #4d4d4d;
+  background-image: none;
+  background-position: initial;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  border: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.glamor-3:focus,
+[data-glamor-3]:focus {
+  border-color: #999;
+  outline: 0;
+}
+
+.glamor-5,
+[data-glamor-5] {
+  position: absolute;
+  top: calc(50% - 8px);
+  right: 32px;
+  color: #fff;
+  pointer-events: none;
+}
+
+.glamor-11,
+[data-glamor-11] {
+  list-style: none;
+  margin: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 38px;
+  padding-left: 48px;
+  color: #4d4d4d;
+}
+
+.glamor-8,
+[data-glamor-8] {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.glamor-21,
+[data-glamor-21] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 160px;
+  margin: 0;
+  margin-top: 14px;
+  padding-top: 32px;
+  padding-right: 48px;
+  padding-bottom: 42px;
+  padding-left: 48px;
+  color: #4d4d4d;
+  background-color: #e5e5e5;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+}
+
+.glamor-14,
+[data-glamor-14] {
+  padding-right: 32px;
+}
+
+.glamor-12,
+[data-glamor-12] {
+  margin-bottom: 14px;
+  font-size: 28px;
+  font-weight: 200;
+}
+
+.glamor-13,
+[data-glamor-13] {
+  margin-left: 0;
+}
+
+@media (min-width: 48em) {
+  .glamor-7,
+  [data-glamor-7] {
+    position: absolute;
+    right: 0;
+  }
+}
+
+<section
+  className="glamor-49"
+>
+  <section
+    className="glamor-48"
+  >
+    <details
+      className="glamor-1"
+      open={undefined}
+    >
+      <summary
+        className="glamor-2"
+      >
+        <div
+          className="glamor-0"
+        >
+          <span>
+            Problem Solving
+          </span>
+          <span>
+            
+          </span>
+        </div>
+        <svg
+          className="glamor-1"
+          height={28}
+          viewBox="0 0 28 28"
+          width={28}
+        >
+          <g
+            fill="none"
+            fillRule="evenodd"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline
+              points="27.155 0 14.224 12.931 0 0"
+            />
+            <g
+              transform="translate(13.577500, 19.465500) scale(1, -1) translate(-13.577500, -19.465500)"
+            >
+              <polyline
+                points="27.155 13 14.224 25.931 0 13"
+              />
+            </g>
+          </g>
+        </svg>
+      </summary>
+      <div
+        className="glamor-22"
+      >
+        <div
+          className="glamor-7"
+        >
+          <label
+            className="glamor-6"
+            htmlFor="problemSolving"
+          >
+            <select
+              aria-label="Score"
+              className="glamor-3"
+              id="problemSolving"
+              name="problemSolving"
+              onChange={
+                Object {
+                  "noop": [Function],
+                }
+              }
+              value={undefined}
+            >
+              <option
+                value={null}
+              >
+                Score
+              </option>
+              <option
+                value={0}
+              >
+                0 - Bad
+              </option>
+              <option
+                value={1}
+              >
+                1 - Meh
+              </option>
+              <option
+                value={2}
+              >
+                2 - Good
+              </option>
+              <option
+                value={3}
+              >
+                3 - Excellent
+              </option>
+            </select>
+            <div
+              className="glamor-5"
+            >
+              <svg
+                className="glamor-1"
+                height={12}
+                viewBox="0 0 21 12"
+                width={21}
+              >
+                <g
+                  fill="none"
+                  fillRule="evenodd"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                >
+                  <polyline
+                    points="19.182 1.067 10.611 10.067 1.182 1.067"
+                  />
+                </g>
+              </svg>
+            </div>
+          </label>
+        </div>
+        <ol
+          className="glamor-11"
+        >
+          <li
+            className="glamor-8"
+          >
+            Problem Solving Question 1
+          </li>
+          <li
+            className="glamor-8"
+          >
+            Problem Solving Question 2
+          </li>
+          <li
+            className="glamor-8"
+          >
+            Problem Solving Question 3
+          </li>
+        </ol>
+        <dl
+          className="glamor-21"
+        >
+          <div
+            className="glamor-14"
+          >
+            <dt
+              className="glamor-12"
+            >
+              2
+            </dt>
+            <dd
+              className="glamor-13"
+            >
+              Problem Solving Option 3
+            </dd>
+          </div>
+          <div
+            className="glamor-14"
+          >
+            <dt
+              className="glamor-12"
+            >
+              1
+            </dt>
+            <dd
+              className="glamor-13"
+            >
+              Problem Solving Option 2
+            </dd>
+          </div>
+          <div
+            className="glamor-14"
+          >
+            <dt
+              className="glamor-12"
+            >
+              0
+            </dt>
+            <dd
+              className="glamor-13"
+            >
+              Problem Solving Option 1
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </details>
+    <details
+      className="glamor-1"
+      open={undefined}
+    >
+      <summary
+        className="glamor-2"
+      >
+        <div
+          className="glamor-0"
+        >
+          <span>
+            Self Reflection
+          </span>
+          <span>
+            
+          </span>
+        </div>
+        <svg
+          className="glamor-1"
+          height={28}
+          viewBox="0 0 28 28"
+          width={28}
+        >
+          <g
+            fill="none"
+            fillRule="evenodd"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline
+              points="27.155 0 14.224 12.931 0 0"
+            />
+            <g
+              transform="translate(13.577500, 19.465500) scale(1, -1) translate(-13.577500, -19.465500)"
+            >
+              <polyline
+                points="27.155 13 14.224 25.931 0 13"
+              />
+            </g>
+          </g>
+        </svg>
+      </summary>
+      <div
+        className="glamor-22"
+      >
+        <div
+          className="glamor-7"
+        >
+          <label
+            className="glamor-6"
+            htmlFor="selfReflection"
+          >
+            <select
+              aria-label="Score"
+              className="glamor-3"
+              id="selfReflection"
+              name="selfReflection"
+              onChange={
+                Object {
+                  "noop": [Function],
+                }
+              }
+              value={undefined}
+            >
+              <option
+                value={null}
+              >
+                Score
+              </option>
+              <option
+                value={0}
+              >
+                0 - Bad
+              </option>
+              <option
+                value={1}
+              >
+                1 - Meh
+              </option>
+              <option
+                value={2}
+              >
+                2 - Good
+              </option>
+              <option
+                value={3}
+              >
+                3 - Excellent
+              </option>
+            </select>
+            <div
+              className="glamor-5"
+            >
+              <svg
+                className="glamor-1"
+                height={12}
+                viewBox="0 0 21 12"
+                width={21}
+              >
+                <g
+                  fill="none"
+                  fillRule="evenodd"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                >
+                  <polyline
+                    points="19.182 1.067 10.611 10.067 1.182 1.067"
+                  />
+                </g>
+              </svg>
+            </div>
+          </label>
+        </div>
+        <ol
+          className="glamor-11"
+        >
+          <li
+            className="glamor-8"
+          >
+            Self Reflection Question 1
+          </li>
+          <li
+            className="glamor-8"
+          >
+            Self Reflection Question 2
+          </li>
+          <li
+            className="glamor-8"
+          >
+            Self Reflection Question 3
+          </li>
+        </ol>
+        <dl
+          className="glamor-21"
+        >
+          <div
+            className="glamor-14"
+          >
+            <dt
+              className="glamor-12"
+            >
+              2
+            </dt>
+            <dd
+              className="glamor-13"
+            >
+              Self Reflection Option 3
+            </dd>
+          </div>
+          <div
+            className="glamor-14"
+          >
+            <dt
+              className="glamor-12"
+            >
+              1
+            </dt>
+            <dd
+              className="glamor-13"
+            >
+              Self Reflection Option 2
+            </dd>
+          </div>
+          <div
+            className="glamor-14"
+          >
+            <dt
+              className="glamor-12"
+            >
+              0
+            </dt>
+            <dd
+              className="glamor-13"
+            >
+              Self Reflection Option 1
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </details>
+  </section>
+</section>
+`;

@@ -12,8 +12,8 @@ type Props = {
   children: Node,
   criteria: Array<Criterion>,
   handleChange: () => {},
-  refetch: () => {},
   location: Location,
+  refetch: () => {},
 }
 
 export default class extends React.PureComponent<Props> {

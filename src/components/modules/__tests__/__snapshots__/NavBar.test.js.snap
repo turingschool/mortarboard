@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavBar /> shows the correct snapshot tree for the <NavBar> module 1`] = `
+.glamor-8,
+[data-glamor-8] {
+  height: 112px;
+  background-color: #fff;
+}
+
+.glamor-7,
+[data-glamor-7] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1392px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 8px;
+  padding-left: 8px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  color: #999;
+}
+
+.glamor-4,
+[data-glamor-4] {
+  font-size: 14px;
+  color: #808080;
+  margin-right: 40px;
+}
+
+.glamor-3,
+[data-glamor-3] {
+  position: relative;
+  z-index: 2;
+  color: #35c5fc;
+  text-decoration: none;
+  transition: color 200ms;
+  -webkit-transition: color 200ms;
+  -moz-transition: color 200ms;
+}
+
+<nav
+  className="glamor-8"
+>
+  <div
+    className="glamor-7"
+  >
+    <div
+      className="glamor-2"
+    >
+      <button
+        className="glamor-1"
+        onClick={[Function]}
+        role="button"
+      >
+        <svg
+          className="glamor-0"
+          height={24}
+          viewBox="0 0 16 30"
+          width={12}
+        >
+          <g
+            fill="none"
+            fillRule="evenodd"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            transform="translate(-8.000000, -1.000000)"
+          >
+            <polyline
+              points="23 31 9 16.7142331 23 1"
+            />
+          </g>
+        </svg>
+      </button>
+    </div>
+    <div
+      className="glamor-2"
+    >
+      <span
+        className="glamor-4"
+      >
+        <span>
+          <span
+            aria-label="hi"
+            role="img"
+          >
+            👋
+          </span>
+           Jeff Casimir
+        </span>
+        <span>
+           / 
+        </span>
+        <a
+          className="glamor-3"
+          href="/login"
+          onClick={[Function]}
+        >
+          Logout
+        </a>
+      </span>
+      <a
+        className="glamor-0"
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="turing school mark"
+          height={48}
+          src="/turing-school-mark-256.png"
+          width={48}
+        />
+      </a>
+    </div>
+  </div>
+</nav>
+`;

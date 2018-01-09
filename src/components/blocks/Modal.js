@@ -32,7 +32,7 @@ const modalRules = css({
 
 // @see: https://github.com/reactjs/react-modal#app-element
 if (isNotNil(document)) {
-  Modal.setAppElement('#root')
+  Modal.setAppElement('body')
 }
 
 export default (props: Props) => (

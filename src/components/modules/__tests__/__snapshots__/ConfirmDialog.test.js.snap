@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConfirmDialog /> shows the correct snapshot tree for the <ConfirmDialog> module 1`] = `
+.glamor-5,
+[data-glamor-5] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 112px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 34px;
+  font-weight: 200;
+  color: #808080;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: #808080;
+}
+
+.glamor-4,
+[data-glamor-4] {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  -ms-grid-template-columns: 1fr;
+  -ms-grid-gap: 16px;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  text-align: left;
+  min-width: 240px;
+  height: 48px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #999;
+}
+
+.glamor-3,
+[data-glamor-3] {
+  text-align: left;
+  min-width: 240px;
+  height: 48px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #4d4d4d;
+}
+
+@media (min-width: 31em) {
+  .glamor-5,
+  [data-glamor-5] {
+    width: 496px;
+  }
+}
+
+@media (min-width: 31em) {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 64px;
+  }
+}
+
+@media (min-width: 31em) {
+  .glamor-4,
+  [data-glamor-4] {
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-template-columns: 1fr 1fr;
+  }
+}
+
+<div
+  className="glamor-5"
+>
+  <h2
+    className="glamor-0"
+  >
+    Are you sure?
+  </h2>
+  <div
+    className="glamor-1"
+  >
+    Clicking yes will confirm the action. Clicking cancel will abort this dialog.
+  </div>
+  <div
+    className="glamor-4"
+  >
+    <button
+      className="glamor-2"
+      onClick={[Function]}
+      role="button"
+    >
+      cancel
+    </button>
+    <button
+      className="glamor-3"
+      onClick={[Function]}
+      role="button"
+    >
+      Yes, I'm sure
+    </button>
+  </div>
+</div>
+`;
