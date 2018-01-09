@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/login shows the correct snapshot tree for the /404 page 1`] = `
+.glamor-3,
+[data-glamor-3] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  font-size: 48px;
+  font-weight: 200;
+  color: #808080;
+  margin-top: 32px;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  text-align: center;
+  min-width: 240px;
+  height: 48px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #4d4d4d;
+  margin-top: 32px;
+}
+
+<div
+  className="glamor-3"
+>
+  <a
+    className="glamor-0"
+    href="/"
+    onClick={[Function]}
+  >
+    <img
+      alt="turing school mark"
+      height={48}
+      src="/turing-school-mark-256.png"
+      width={48}
+    />
+  </a>
+  <h1
+    className="glamor-1"
+  >
+    Turing Apply
+  </h1>
+  <button
+    className="glamor-2"
+    onClick={[Function]}
+    role="button"
+  >
+    Authenticate with GitHub
+  </button>
+</div>
+`;
+
+exports[`/login shows the correct snapshot tree for the /login page 1`] = `
+.glamor-3,
+[data-glamor-3] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  font-size: 48px;
+  font-weight: 200;
+  color: #808080;
+  margin-top: 32px;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  text-align: center;
+  min-width: 240px;
+  height: 48px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #4d4d4d;
+  margin-top: 32px;
+}
+
+<div
+  className="glamor-3"
+>
+  <a
+    className="glamor-0"
+    href="/"
+    onClick={[Function]}
+  >
+    <img
+      alt="turing school mark"
+      height={48}
+      src="/turing-school-mark-256.png"
+      width={48}
+    />
+  </a>
+  <h1
+    className="glamor-1"
+  >
+    Turing Apply
+  </h1>
+  <button
+    className="glamor-2"
+    onClick={[Function]}
+    role="button"
+  >
+    Authenticate with GitHub
+  </button>
+</div>
+`;
