@@ -1,0 +1,5 @@
+# Copied to gh-pages so CircleCI doesn't run
+general:
+  branches:
+    ignore:
+      - gh-pages
