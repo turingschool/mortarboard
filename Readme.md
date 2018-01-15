@@ -1,7 +1,7 @@
 # Mortarboard
 The [WebApp to Apply][app].
 
-Mortarboard is a [Create React App][cra] built with [React Apollo][apollo] for
+Mortarboard is a [Create React App][cra] built with [Apollo][apollo] for
 consuming the [Apply GraphQL API][api].
 
 This project prefers [yarn][yarn] as it's package manager, though [npm][npm]
@@ -26,14 +26,16 @@ yarn install
 Normal [Create React App scripts][cra_scripts] are now available replacing `npm`
 with `yarn`.
 
-* `yarn start`: Starts the development environment
-* `yarn test`: Runs the [jest][jest] test suite
-* `yarn lint`: Lints the project using [eslint-config-airbnb][airbnb]
-* `yarn flow`: Runs the [flow][flow] type checker
+```sh
+yarn start # Starts the development environment
+yarn test  # Runs the Jest test suite
+yarn lint  # Lints the project using eslint-config-airbnb
+yarn flow  # Runs the Flow type checker
+```
 
 ## CI and Deployments
-[![Travis Build Status](https://travis-ci.org/turingschool/apply-webapp.svg?branch=master)](https://travis-ci.org/turingschool/apply-webapp)
 [![CircleCI Build Status](https://circleci.com/gh/turingschool/apply-webapp/tree/master.svg?style=svg)](https://circleci.com/gh/turingschool/apply-webapp/tree/master)
+[![Travis Build Status](https://travis-ci.org/turingschool/apply-webapp.svg?branch=master)](https://travis-ci.org/turingschool/apply-webapp)
 
 [Travis][travis] will auto deploy to the [gh-pages][pages] branch once a passing
 build has run on `master`.
@@ -46,20 +48,18 @@ yarn flow
 yarn test
 ```
 
-**The GitHub pages branch is production. A staging server does not exist.**
+**A staging server does not exist.**
+**The GitHub pages branch is production.**
 
 👋🎓 
 
 <!-- Links -->
-[airbnb]: https://github.com/airbnb/javascript
 [api]: https://github.com/turingschool/apply
 [apollo]: https://www.apollographql.com/docs/react/ 
 [app]: https://turingschool.github.io/apply-webapp/
 [cra]: https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md
 [cra_scripts]: https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#available-scripts
-[flow]: https://flow.org
 [guiceworks]: http://www.guice.works
-[jest]: https://facebook.github.io/jest/
 [npm]: https://www.npmjs.com/get-npm
 [pages]: https://github.com/turingschool/apply-webapp/tree/gh-pages
 [prototype]: https://projects.invisionapp.com//share/87BC70RUV
