@@ -274,7 +274,7 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
           dateTime="2017-10-31T12:12:12.000Z"
           title="2017-10-31T12:12:12.000Z"
         >
-          2 months ago
+          3 months ago
         </time>
       </dd>
     </dl>
@@ -738,7 +738,7 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
           dateTime="2017-10-31T12:12:12.000Z"
           title="2017-10-31T12:12:12.000Z"
         >
-          2 months ago
+          3 months ago
         </time>
       </dd>
     </dl>
