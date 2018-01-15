@@ -1,5 +1,5 @@
 # Mortarboard
-The [WebApp to Apply][app].
+The front-end [WebApp client][app] to Apply.
 
 Mortarboard is a [Create React App][cra] built with [Apollo][apollo] for
 consuming the [Apply GraphQL API][api].
@@ -49,6 +49,7 @@ yarn test
 ```
 
 **A staging server does not exist.**
+
 **The GitHub pages branch is production.**
 
 👋🎓 
