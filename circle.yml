@@ -22,5 +22,7 @@ deployment:
   staging:
     branch: master
     commands:
+      - git config --global user.email robots@circleci.com
+      - git config --global user.name CircleCI
       - yarn build
       - yarn deploy
