@@ -5,6 +5,7 @@
   "homepage": "https://turingschool.github.io/apply-webapp/",
   "scripts": {
     "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "flow": "flow ./src",
     "lint": "eslint ./src",
     "start": "react-scripts start",
