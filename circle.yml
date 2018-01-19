@@ -18,3 +18,9 @@ test:
     - yarn lint
     - yarn flow
     - yarn test
+deployment:
+  staging:
+    branch: master
+    commands:
+      - yarn build
+      - yarn deploy
