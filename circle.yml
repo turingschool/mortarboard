@@ -23,4 +23,4 @@ deployment:
     branch: master
     commands:
       - yarn build
-      - yarn run deploy
+      - yarn deploy
