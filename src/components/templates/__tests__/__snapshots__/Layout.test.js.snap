@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`/login shows the correct snapshot tree for the Layout template 1`] = `
+.glamor-7,
+[data-glamor-7] {
+  position: relative;
+}
+
 .glamor-6,
 [data-glamor-6] {
   height: 112px;
@@ -59,12 +64,9 @@ exports[`/login shows the correct snapshot tree for the Layout template 1`] = `
   -moz-transition: color 200ms;
 }
 
-.glamor-7,
-[data-glamor-7] {
-  position: relative;
-}
-
-<div>
+<div
+  className="glamor-7"
+>
   <nav
     className="glamor-6"
   >
