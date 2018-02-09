@@ -2,7 +2,6 @@
   "name": "mortarboard",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://mortarboard.turing.io",
   "scripts": {
     "build": "react-scripts build",
     "deploy": "gh-pages -d build --repo https://$GITHUB_TOKEN@github.com/turingschool/mortarboard.git",
