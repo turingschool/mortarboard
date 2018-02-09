@@ -23,4 +23,4 @@ deployment:
     branch: master
     commands:
       - yarn build
-      - aws s3 sync build/ s3://turing-mortarboard-staging --delete
+      - aws s3 sync build/ s3://turing-mortarboard-staging
