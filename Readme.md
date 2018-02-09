@@ -34,7 +34,7 @@ yarn flow  # Runs the Flow type checker
 ```
 
 ## CI and Deployments
-[![CircleCI Build Status](https://circleci.com/gh/turingschool/apply-webapp/tree/master.svg?style=svg)](https://circleci.com/gh/turingschool/apply-webapp/tree/master)
+[![CircleCI Build Status](https://circleci.com/gh/turingschool/mortarboard/tree/master.svg?style=svg)](https://circleci.com/gh/turingschool/mortarboard/tree/master)
 
 [CircleCI][circle] will auto deploy to the [gh-pages][pages] branch once a passing
 build has run on `master`.
@@ -55,13 +55,13 @@ yarn test
 
 <!-- Links -->
 [api]: https://github.com/turingschool/apply
-[apollo]: https://www.apollographql.com/docs/react/ 
-[app]: https://turingschool.github.io/apply-webapp/
-[circle]: https://circleci.com/gh/turingschool/apply-webapp
+[apollo]: https://www.apollographql.com/docs/react/
+[app]: https://mortarboard.turing.io
+[circle]: https://circleci.com/gh/turingschool/mortarboard
 [cra]: https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md
 [cra_scripts]: https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#available-scripts
 [guiceworks]: http://www.guice.works
 [npm]: https://www.npmjs.com/get-npm
-[pages]: https://github.com/turingschool/apply-webapp/tree/gh-pages
+[pages]: https://github.com/turingschool/mortarboard/tree/gh-pages
 [prototype]: https://projects.invisionapp.com//share/87BC70RUV
-[yarn]: https://yarnpkg.com/en/ 
+[yarn]: https://yarnpkg.com
