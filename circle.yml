@@ -18,9 +18,13 @@ test:
     - yarn lint
     - yarn flow
     - yarn test
+    - yarn build
 deployment:
   staging:
     branch: master
     commands:
-      - yarn build
       - aws s3 sync build/ s3://turing-mortarboard-staging --delete
+  release:
+    tag: /v[0-9]+(\.[0-9]+)*/
+    commands:
+      - aws s3 sync build/ s3://turing-mortarboard-production --delete
