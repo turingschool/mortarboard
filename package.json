@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "build": "react-scripts build",
-    "deploy": "gh-pages -d build --repo https://$GITHUB_TOKEN@github.com/turingschool/mortarboard.git",
     "flow": "flow ./src",
     "lint": "eslint ./src",
     "start": "react-scripts start",
@@ -43,7 +42,6 @@
     "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-react": "7.6.1",
     "flow-bin": "0.64.0",
-    "gh-pages": "1.1.0",
     "jest-glamor-react": "3.3.0",
     "react-addons-test-utils": "15.6.2",
     "react-scripts": "1.1.0",
@@ -65,7 +63,8 @@
       "plugin:flowtype/recommended"
     ],
     "plugins": [
-      "flowtype"
+      "flowtype",
+      "import"
     ],
     "env": {
       "browser": "true",
