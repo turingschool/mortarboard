@@ -1,7 +1,10 @@
 # Mortarboard
 The front-end [WebApp client][app] to Apply.
 
+👋🎓 
+
 &raquo; [Staging App][staging]
+
 &raquo; [Production App][production]
 
 Mortarboard is a [Create React App][cra] built with [Apollo][apollo] for
@@ -71,13 +74,12 @@ yarn test
 [CircleCI][circle] will auto deploy to the S3 buckets:
 
 &raquo; [Staging][staging]: Auto deployed when the master branch passes
+
 &raquo; [Production App][production]: Auto deployed when a tagged commit passes
 
 Both S3 buckets use CloudFront as a CDN.
 
 :raising_hand_man: if you need access to S3 or CloudFront
-
-👋🎓 
 
 <!-- Links -->
 [api]: https://github.com/turingschool/apply
