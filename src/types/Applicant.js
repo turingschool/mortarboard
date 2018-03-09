@@ -1,24 +1,44 @@
 // @flow
 import { camelize } from 'humps'
+import { compose, prop, split, head, last } from 'ramda'
 import type { Action } from './Action'
 import type { Application } from './Application'
+
+export default undefined
 
 export type Applicant = {
   action: ?Action,
   applications: Array<Application>,
-  birthdate: ?string,
+  birthDate: ?string,
   createdAt: DateTime,
   email: string,
-  firstName: string,
   github: string,
   id: ID,
-  lastName: string,
+  name: string,
   referredBy: ?string,
   resume: ?string,
   startDate: ?DateTime,
   status: ?string,
   updatedAt: DateTime,
+  // derived data...
+  firstName: string,
+  lastName: string,
 }
+
+// -------------------------------------
+// Derived helpers
+
+export const deriveFirstName = compose(
+  head,
+  split(' '),
+  prop('name'),
+)
+
+export const deriveLastName = compose(
+  last,
+  split(' '),
+  prop('name'),
+)
 
 // -------------------------------------
 // For testing content
@@ -30,7 +50,7 @@ export const stub = (props: Applicant) => {
     id: camel,
     action: null,
     applications: [],
-    birthdate: '06/06/2006',
+    birthDate: '06/06/2006',
     createdAt: '2017-10-31T12:12:12.000Z',
     email: 'kenny.bania@example.com',
     firstName: 'Kenny',
@@ -47,5 +67,3 @@ export const stub = (props: Applicant) => {
     ...props,
   }
 }
-
-export default undefined

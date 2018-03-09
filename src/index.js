@@ -2,24 +2,33 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { ApolloClient } from 'apollo-client'
-// TODO: Remove `/lib` once the apollo clients version bump
-import { InMemoryCache } from 'apollo-cache-inmemory/lib'
+import { InMemoryCache } from 'apollo-cache-inmemory'
 import { ApolloLink } from 'apollo-link'
+// import { setContext } from 'apollo-link-context'
 import { HttpLink } from 'apollo-link-http'
 import { ApolloProvider } from 'react-apollo'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { BASE_URL, GRAPHQL_ENDPOINT } from './constants/networking'
+import { AUTH_TOKEN, BASE_URL, GRAPHQL_ENDPOINT } from './constants/networking'
 import Layout from './components/templates/Layout'
 import RouteSwitch from './components/templates/RouteSwitch'
 import ApplicantDetail from './components/pages/ApplicantDetail'
 import ApplicantValuesEvaluation from './components/pages/ApplicantValuesEvaluation'
 import ApplicantLogicEvaluation from './components/pages/ApplicantLogicEvaluation'
-import Applicants from './components/pages/Applicants'
+import Applications from './components/pages/Applications'
 import NotFound from './components/pages/NotFound'
 import Login from './components/pages/Login'
 
+const cache = new InMemoryCache({
+  // eslint-disable-next-line no-console
+  logger: console.log,
+  loggerEnabled: true,
+})
+
 const httpLink = new HttpLink({
   uri: GRAPHQL_ENDPOINT,
+  headers: {
+    'x-turing-auth': `${AUTH_TOKEN}`,
+  },
 })
 
 const link = ApolloLink.from([
@@ -27,7 +36,7 @@ const link = ApolloLink.from([
 ])
 
 const client = new ApolloClient({
-  cache: new InMemoryCache(),
+  cache,
   link,
 })
 
@@ -39,8 +48,8 @@ if (rootElement) {
       <Router>
         <Layout>
           <RouteSwitch>
-            <Route exact path={`${BASE_URL}/`} component={Applicants} />
-            <Route exact path={`${BASE_URL}/applicants`} component={Applicants} />
+            <Route exact path={`${BASE_URL}/`} component={Applications} />
+            <Route exact path={`${BASE_URL}/applications`} component={Applications} />
             <Route path={`${BASE_URL}/applicant/:id/logic-evaluation`} component={ApplicantLogicEvaluation} />
             <Route path={`${BASE_URL}/applicant/:id/values-evaluation`} component={ApplicantValuesEvaluation} />
             <Route path={`${BASE_URL}/applicant/:id`} component={ApplicantDetail} />
