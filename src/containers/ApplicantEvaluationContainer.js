@@ -6,7 +6,7 @@ import ApplicantModule, { ComponentLoader } from '../components/modules/Applican
 import withApplicant from './withApplicant'
 
 const applicantWhitelist = [
-  'birthdate',
+  'birthDate',
   'email',
   'firstName',
   'github',

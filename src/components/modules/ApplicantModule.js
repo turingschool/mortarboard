@@ -76,9 +76,9 @@ const ApplicantModule = ({
           <TextLink href={`mailto:${applicant.email}`}>{applicant.email}</TextLink>
         </Description>
       }
-      { isNotNil(applicant.birthdate) &&
-      <Description term="Birthdate">
-        {applicant.birthdate}
+      { isNotNil(applicant.birthDate) &&
+      <Description term="Birth Date">
+        {applicant.birthDate}
       </Description>
       }
       { isNotNil(applicant.github) &&

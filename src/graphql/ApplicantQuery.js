@@ -23,7 +23,7 @@ export default gql`
         scoreOnlineLogicTest
         scoreValuesEvaluation
       }
-      birthdate
+      birthDate
       createdAt
       email
       firstName
