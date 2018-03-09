@@ -223,7 +223,7 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       <dt
         className="glamor-7"
       >
-        Birthdate
+        Birth Date
       </dt>
       <dd
         className="glamor-9"
@@ -271,10 +271,10 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
         className="glamor-9"
       >
         <time
-          dateTime="2017-10-31T12:12:12.000Z"
-          title="2017-10-31T12:12:12.000Z"
+          dateTime="2010-10-31T12:12:12.000Z"
+          title="2010-10-31T12:12:12.000Z"
         >
-          3 months ago
+          7 years ago
         </time>
       </dd>
     </dl>
@@ -687,7 +687,7 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       <dt
         className="glamor-9"
       >
-        Birthdate
+        Birth Date
       </dt>
       <dd
         className="glamor-11"
@@ -735,10 +735,10 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
         className="glamor-11"
       >
         <time
-          dateTime="2017-10-31T12:12:12.000Z"
-          title="2017-10-31T12:12:12.000Z"
+          dateTime="2010-10-31T12:12:12.000Z"
+          title="2010-10-31T12:12:12.000Z"
         >
-          3 months ago
+          7 years ago
         </time>
       </dd>
     </dl>

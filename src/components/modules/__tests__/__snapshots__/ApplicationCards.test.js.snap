@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicantCards> module 1`] = `
+exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationCards> module 1`] = `
 .glamor-37,
 [data-glamor-37] {
   position: relative;
@@ -425,7 +425,7 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicantCar
       </div>
       <a
         className="glamor-16"
-        href="/applicant/robertSacamano"
+        href="/applicant/2"
         onClick={[Function]}
       />
     </div>

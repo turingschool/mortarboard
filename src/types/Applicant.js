@@ -51,7 +51,7 @@ export const stub = (props: Applicant) => {
     action: null,
     applications: [],
     birthDate: '06/06/2006',
-    createdAt: '2017-10-31T12:12:12.000Z',
+    createdAt: '2010-10-31T12:12:12.000Z',
     email: 'kenny.bania@example.com',
     firstName: 'Kenny',
     github: camel,
@@ -60,7 +60,7 @@ export const stub = (props: Applicant) => {
     resume: 'https://www.resume.com',
     startDate: null,
     status: 'pending',
-    updatedAt: '2017-12-24T24:24:24.000Z',
+    updatedAt: '2010-12-24T24:24:24.000Z',
   }
   return {
     ...applicant,
