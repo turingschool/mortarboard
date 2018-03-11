@@ -4,7 +4,7 @@ import { graphql } from 'react-apollo'
 import { withRouter } from 'react-router-dom'
 import { assoc, compose, defaultTo, map, omit, prop } from 'ramda'
 import { branch, mapProps, renderComponent } from 'recompose'
-import { log, nool } from '../lib/utils'
+import { nool } from '../lib/utils'
 import allApplicationsQuery from '../graphql/allApplications'
 import ApplicationCards, { ComponentLoader } from '../components/modules/ApplicationCards'
 import { deriveFirstName, deriveLastName } from '../types/Applicant'
@@ -46,5 +46,4 @@ export default compose(
   withData,
   omitProps,
   withLoader,
-  log,
 )(ApplicationCards)

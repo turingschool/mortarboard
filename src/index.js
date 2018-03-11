@@ -1,14 +1,9 @@
 // @flow
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { ApolloClient } from 'apollo-client'
-import { InMemoryCache } from 'apollo-cache-inmemory'
-import { ApolloLink } from 'apollo-link'
-// import { setContext } from 'apollo-link-context'
-import { HttpLink } from 'apollo-link-http'
 import { ApolloProvider } from 'react-apollo'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { AUTH_TOKEN, BASE_URL, GRAPHQL_ENDPOINT } from './constants/networking'
+import { BASE_URL } from './constants/networking'
 import Layout from './components/templates/Layout'
 import RouteSwitch from './components/templates/RouteSwitch'
 import ApplicantDetail from './components/pages/ApplicantDetail'
@@ -17,29 +12,9 @@ import ApplicantLogicEvaluation from './components/pages/ApplicantLogicEvaluatio
 import Applications from './components/pages/Applications'
 import NotFound from './components/pages/NotFound'
 import Login from './components/pages/Login'
+import createApollo from './createApollo'
 
-const cache = new InMemoryCache({
-  // eslint-disable-next-line no-console
-  logger: console.log,
-  loggerEnabled: true,
-})
-
-const httpLink = new HttpLink({
-  uri: GRAPHQL_ENDPOINT,
-  headers: {
-    'x-turing-auth': `${AUTH_TOKEN}`,
-  },
-})
-
-const link = ApolloLink.from([
-  httpLink,
-])
-
-const client = new ApolloClient({
-  cache,
-  link,
-})
-
+const client = createApollo()
 const rootElement = document && document.getElementById('root')
 
 if (rootElement) {
