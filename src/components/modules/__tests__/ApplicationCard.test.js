@@ -8,7 +8,7 @@ describe('<ApplicationCard />', () => {
   it('shows the correct snapshot tree for the <ApplicantCard> module', () => {
     const component = (
       <MemoryRouter>
-        <ApplicationCard applicant={stub()} />
+        <ApplicationCard applicant={stub()} id="10" />
       </MemoryRouter>
     )
     const tree = renderer.create(component).toJSON()

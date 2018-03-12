@@ -6,12 +6,12 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { BASE_URL } from './constants/networking'
 import Layout from './components/templates/Layout'
 import RouteSwitch from './components/templates/RouteSwitch'
-import ApplicantDetail from './components/pages/ApplicantDetail'
-import ApplicantValuesEvaluation from './components/pages/ApplicantValuesEvaluation'
-import ApplicantLogicEvaluation from './components/pages/ApplicantLogicEvaluation'
+import ApplicationDetail from './components/pages/ApplicationDetail'
+import ApplicationLogicEvaluation from './components/pages/ApplicationLogicEvaluation'
+import ApplicationValuesEvaluation from './components/pages/ApplicationValuesEvaluation'
 import Applications from './components/pages/Applications'
-import NotFound from './components/pages/NotFound'
 import Login from './components/pages/Login'
+import NotFound from './components/pages/NotFound'
 import createApollo from './createApollo'
 
 const client = createApollo()
@@ -25,9 +25,9 @@ if (rootElement) {
           <RouteSwitch>
             <Route exact path={`${BASE_URL}/`} component={Applications} />
             <Route exact path={`${BASE_URL}/applications`} component={Applications} />
-            <Route path={`${BASE_URL}/applicant/:id/logic-evaluation`} component={ApplicantLogicEvaluation} />
-            <Route path={`${BASE_URL}/applicant/:id/values-evaluation`} component={ApplicantValuesEvaluation} />
-            <Route path={`${BASE_URL}/applicant/:id`} component={ApplicantDetail} />
+            <Route path={`${BASE_URL}/application/:id/logic-evaluation`} component={ApplicationLogicEvaluation} />
+            <Route path={`${BASE_URL}/application/:id/values-evaluation`} component={ApplicationValuesEvaluation} />
+            <Route path={`${BASE_URL}/application/:id`} component={ApplicationDetail} />
             <Route path={`${BASE_URL}/login`} component={Login} />
             <Route component={NotFound} />
           </RouteSwitch>

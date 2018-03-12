@@ -324,7 +324,7 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
       </div>
       <a
         className="glamor-16"
-        href="/applicant/kennyBania"
+        href="/application/1"
         onClick={[Function]}
       />
     </div>
@@ -425,7 +425,7 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
       </div>
       <a
         className="glamor-16"
-        href="/applicant/2"
+        href="/application/22"
         onClick={[Function]}
       />
     </div>

@@ -264,7 +264,7 @@ exports[`<ApplicationCard /> shows the correct snapshot tree for the <ApplicantC
   </div>
   <a
     className="glamor-16"
-    href="/applicant/kennyBania"
+    href="/application/10"
     onClick={[Function]}
   />
 </div>

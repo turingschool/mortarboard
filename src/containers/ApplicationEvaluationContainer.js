@@ -1,9 +1,9 @@
 // @flow
 import { withRouter } from 'react-router-dom'
-import { compose, pick } from 'ramda'
+import { assoc, compose, pick } from 'ramda'
 import { branch, mapProps, onlyUpdateForKeys, renderComponent } from 'recompose'
 import ApplicantModule, { ComponentLoader } from '../components/modules/ApplicantModule'
-import withApplicant from './withApplicant'
+import withApplication from './withApplication'
 
 const applicantWhitelist = [
   'birthDate',
@@ -14,8 +14,15 @@ const applicantWhitelist = [
   'resume',
 ]
 
+/* eslint-disable function-paren-newline */
+const normalizedApplication = application => compose(
+  assoc('applicant', pick(applicantWhitelist, application.applicant)),
+)(application)
+/* eslint-enable function-paren-newline */
+
 const withProps = mapProps(props => ({
-  applicant: props.applicant ? pick(applicantWhitelist, props.applicant) : null,
+  // application: props.applicant ? pick(applicantWhitelist, props.applicant) : null,
+  application: props.application ? normalizedApplication(props.application) : null,
   isLoading: props.isLoading,
   match: props.match,
 }))
@@ -31,7 +38,7 @@ const withLoader = branch(
 
 export default compose(
   withRouter,
-  withApplicant,
+  withApplication,
   withProps,
   withUpdateForKeys,
   withLoader,

@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 import { __, always, compose, head, join, map, omit, pathOr, when, isEmpty } from 'ramda'
 import { branch, mapProps, onlyUpdateForKeys, renderComponent, withStateHandlers } from 'recompose'
 import { nool } from '../lib/utils'
-import withApplicant from './withApplicant'
+import withApplication from './withApplication'
 import ApplicantModule, { ComponentLoader } from '../components/modules/ApplicantModule'
 
 const deriveEvaluatorList = compose(
@@ -60,15 +60,17 @@ const withStateEvents = withStateHandlers(
 const omits = ['history', 'location']
 const withProps = mapProps(props => ({
   ...omit(omits, props),
-  evaluatorList: deriveEvaluatorList(props.applicant),
+  hasScores: true,
+  evaluatorList: deriveEvaluatorList(pathOr(null, ['application', 'applicant'], props)),
+  // evaluatorList: deriveEvaluatorList(props.applicant),
 }))
 
-const keyWhitelist = ['applicant', 'isLoading', 'isModalOpen', 'recommendationValue']
+const keyWhitelist = ['application', 'isLoading', 'isModalOpen', 'recommendationValue']
 const withUpdateForKeys = component => compose(onlyUpdateForKeys(keyWhitelist))(component)
 
 export default compose(
   withRouter,
-  withApplicant,
+  withApplication,
   withLoader,
   withStateEvents,
   withProps,

@@ -28,7 +28,11 @@ export default class extends React.PureComponent<Props> {
       <AppContainment>
         <Cards>
           {map(application => (
-            <ApplicationCard applicant={application.applicant} key={application.id} />
+            <ApplicationCard
+              applicant={application.applicant}
+              id={application.id}
+              key={application.id}
+            />
           ), allApplications)}
         </Cards>
         {children}
