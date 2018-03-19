@@ -17,9 +17,9 @@ export default () => {
   const cache = new InMemoryCache()
 
   const logger = new ApolloLink((operation, forward) => {
-    log(operation.operationName)
+    log(`outgoing: ${operation.operationName}`, operation)
     return forward(operation).map((result) => {
-      log(`${operation.operationName}...`, result)
+      log(`incoming: ${operation.operationName}`, result)
       return result
     })
   })
