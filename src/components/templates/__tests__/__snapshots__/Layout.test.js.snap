@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`/login shows the correct snapshot tree for the Layout template 1`] = `
-.glamor-7,
-[data-glamor-7] {
+.css-0,
+[data-css-0] {
   position: relative;
 }
 
-.glamor-6,
-[data-glamor-6] {
+.css-1,
+[data-css-1] {
   height: 112px;
   background-color: #fff;
 }
 
-.glamor-5,
-[data-glamor-5] {
+.css-2,
+[data-css-2] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -33,8 +33,8 @@ exports[`/login shows the correct snapshot tree for the Layout template 1`] = `
   -webkit-align-items: center;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.css-3,
+[data-css-3] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -46,15 +46,15 @@ exports[`/login shows the correct snapshot tree for the Layout template 1`] = `
   -webkit-align-items: center;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.css-4,
+[data-css-4] {
   font-size: 14px;
   color: #808080;
   margin-right: 40px;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.css-5,
+[data-css-5] {
   position: relative;
   z-index: 2;
   color: #35c5fc;
@@ -65,22 +65,22 @@ exports[`/login shows the correct snapshot tree for the Layout template 1`] = `
 }
 
 <div
-  className="glamor-7"
+  className="css-0"
 >
   <nav
-    className="glamor-6"
+    className="css-1"
   >
     <div
-      className="glamor-5"
+      className="css-2"
     >
       <div
-        className="glamor-0"
+        className="css-3"
       />
       <div
-        className="glamor-0"
+        className="css-3"
       >
         <span
-          className="glamor-2"
+          className="css-4"
         >
           <span>
             <span
@@ -95,7 +95,7 @@ exports[`/login shows the correct snapshot tree for the Layout template 1`] = `
              / 
           </span>
           <a
-            className="glamor-1"
+            className="css-5"
             href="/login"
             onClick={[Function]}
           >
@@ -103,7 +103,7 @@ exports[`/login shows the correct snapshot tree for the Layout template 1`] = `
           </a>
         </span>
         <a
-          className="glamor-3"
+          className="css-nil"
           href="/"
           onClick={[Function]}
         >
@@ -118,7 +118,7 @@ exports[`/login shows the correct snapshot tree for the Layout template 1`] = `
     </div>
   </nav>
   <main
-    className="glamor-7"
+    className="css-0"
     role="main"
   >
     <div>

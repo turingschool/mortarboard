@@ -10,7 +10,7 @@ type Applicant @model {
   id: ID! @isUnique
   action: Action @relation(name: "ApplicantOnAction")
   applications: [Application!]! @relation(name: "ApplicationOnApplicant")
-  birthdate: String
+  birthDate: String
   createdAt: DateTime!
   email: String! @isUnique
   firstName: String!

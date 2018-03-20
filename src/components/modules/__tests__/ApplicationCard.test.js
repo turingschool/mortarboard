@@ -1,14 +1,14 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { MemoryRouter } from 'react-router-dom'
-import ApplicantCard from '../ApplicantCard'
+import ApplicationCard from '../ApplicationCard'
 import { stub } from '../../../types/Applicant'
 
-describe('<ApplicantCard />', () => {
+describe('<ApplicationCard />', () => {
   it('shows the correct snapshot tree for the <ApplicantCard> module', () => {
     const component = (
       <MemoryRouter>
-        <ApplicantCard applicant={stub()} />
+        <ApplicationCard applicant={stub()} id="10" />
       </MemoryRouter>
     )
     const tree = renderer.create(component).toJSON()

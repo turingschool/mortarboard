@@ -19,10 +19,10 @@ import Heading from '../elements/Heading'
 import SectionContainment from '../elements/SectionContainment'
 import StatusBar from '../elements/StatusBar'
 import TextLink from '../elements/TextLink'
-import type { Applicant } from '../../types/Applicant'
+import type { Application } from '../../types/Application'
 
 type Props = {
-  applicant: Applicant,
+  application: Application,
   evaluatorList?: string,
   handleCloseModal?: () => {},
   handleOpenConfirm?: () => {},
@@ -30,6 +30,7 @@ type Props = {
   handleOpenSendStatus?: () => {},
   handleRecommendationSelect: () => {},
   handleStatusSelect: () => {},
+  hasScores?: boolean,
   isConfirmDialog?: boolean,
   isModalOpen?: boolean,
   isSendRecommendationDialog?: boolean,
@@ -40,7 +41,7 @@ type Props = {
 }
 
 const ApplicantModule = ({
-  applicant,
+  application: { applicant, scoreLogicEvaluation, scoreOnlineLogicTest, scoreValuesEvaluation },
   evaluatorList,
   handleCloseModal,
   handleOpenConfirm,
@@ -48,6 +49,7 @@ const ApplicantModule = ({
   handleOpenSendStatus,
   handleRecommendationSelect,
   handleStatusSelect,
+  hasScores,
   isConfirmDialog,
   isModalOpen,
   isSendRecommendationDialog,
@@ -76,9 +78,9 @@ const ApplicantModule = ({
           <TextLink href={`mailto:${applicant.email}`}>{applicant.email}</TextLink>
         </Description>
       }
-      { isNotNil(applicant.birthdate) &&
-      <Description term="Birthdate">
-        {applicant.birthdate}
+      { isNotNil(applicant.birthDate) &&
+      <Description term="Birth Date">
+        {applicant.birthDate}
       </Description>
       }
       { isNotNil(applicant.github) &&
@@ -107,20 +109,19 @@ const ApplicantModule = ({
         </Description>
       }
     </SectionContainment>
-    { /* bit of kludge */ }
-    {((applicant.applications && applicant.applications[0])) &&
+    { hasScores === true &&
       <SectionContainment mt={72}>
         <EvaluationSummary
-          score={applicant.applications[0].scoreOnlineLogicTest}
+          score={scoreOnlineLogicTest}
           term="Online Logic Test"
         />
         <EvaluationSummary
-          score={applicant.applications[0].scoreLogicEvaluation}
+          score={scoreLogicEvaluation}
           term="Logic Evaluation"
           to={`${match.url}/logic-evaluation`}
         />
         <EvaluationSummary
-          score={applicant.applications[0].scoreValuesEvaluation}
+          score={scoreValuesEvaluation}
           term="Values Evaluation"
           to={`${match.url}/values-evaluation`}
         />
@@ -192,6 +193,7 @@ ApplicantModule.defaultProps = {
   handleOpenConfirm: null,
   handleOpenSendRecommendation: null,
   handleOpenSendStatus: null,
+  hasScores: false,
   isConfirmDialog: false,
   isModalOpen: null,
   isSendRecommendationDialog: false,

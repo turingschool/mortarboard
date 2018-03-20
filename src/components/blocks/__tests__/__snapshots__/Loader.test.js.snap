@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Loader /> shows the correct snapshot tree for the <Loader> block 1`] = `
-.glamor-1,
-[data-glamor-1] {
+.css-0,
+[data-css-0] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -17,8 +17,8 @@ exports[`<Loader /> shows the correct snapshot tree for the <Loader> block 1`] =
   -webkit-align-items: center;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.css-1,
+[data-css-1] {
   width: 16px;
   height: 16px;
   margin-right: 8px;
@@ -31,10 +31,10 @@ exports[`<Loader /> shows the correct snapshot tree for the <Loader> block 1`] =
 }
 
 <div
-  className="glamor-1"
+  className="css-0"
 >
   <div
-    className="glamor-0"
+    className="css-1"
   />
   Loading Loader...
 </div>

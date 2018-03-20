@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SendStatusDialog /> shows the correct snapshot tree for the <SendStatusDialog> module 1`] = `
-.glamor-9,
-[data-glamor-9] {
+.css-0,
+[data-css-0] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -18,8 +18,8 @@ exports[`<SendStatusDialog /> shows the correct snapshot tree for the <SendStatu
   -webkit-align-items: center;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.css-1,
+[data-css-1] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -34,8 +34,8 @@ exports[`<SendStatusDialog /> shows the correct snapshot tree for the <SendStatu
   -webkit-flex-direction: column;
 }
 
-.glamor-5,
-[data-glamor-5] {
+.css-2,
+[data-css-2] {
   width: 100%;
   margin-top: 16px;
   margin-bottom: 32px;
@@ -43,13 +43,13 @@ exports[`<SendStatusDialog /> shows the correct snapshot tree for the <SendStatu
   color: #808080;
 }
 
-.glamor-4,
-[data-glamor-4] {
+.css-3,
+[data-css-3] {
   position: relative;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.css-4,
+[data-css-4] {
   -webkit-appearance: button;
   -webkit-border-radius: 0;
   -webkit-box-shadow: none;
@@ -75,14 +75,14 @@ exports[`<SendStatusDialog /> shows the correct snapshot tree for the <SendStatu
   white-space: nowrap;
 }
 
-.glamor-1:focus,
-[data-glamor-1]:focus {
+.css-4:focus,
+[data-css-4]:focus {
   border-color: #999;
   outline: 0;
 }
 
-.glamor-3,
-[data-glamor-3] {
+.css-6,
+[data-css-6] {
   position: absolute;
   top: calc(50% - 8px);
   right: 32px;
@@ -90,8 +90,8 @@ exports[`<SendStatusDialog /> shows the correct snapshot tree for the <SendStatu
   pointer-events: none;
 }
 
-.glamor-8,
-[data-glamor-8] {
+.css-7,
+[data-css-7] {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 16px;
@@ -99,8 +99,8 @@ exports[`<SendStatusDialog /> shows the correct snapshot tree for the <SendStatu
   -ms-grid-gap: 16px;
 }
 
-.glamor-6,
-[data-glamor-6] {
+.css-8,
+[data-css-8] {
   text-align: left;
   min-width: 240px;
   height: 48px;
@@ -112,8 +112,8 @@ exports[`<SendStatusDialog /> shows the correct snapshot tree for the <SendStatu
   background-color: #999;
 }
 
-.glamor-7,
-[data-glamor-7] {
+.css-9,
+[data-css-9] {
   text-align: left;
   min-width: 240px;
   height: 48px;
@@ -126,45 +126,45 @@ exports[`<SendStatusDialog /> shows the correct snapshot tree for the <SendStatu
 }
 
 @media (min-width: 31em) {
-  .glamor-9,
-  [data-glamor-9] {
+  .css-0,
+  [data-css-0] {
     width: 496px;
   }
 }
 
 @media (min-width: 31em) {
-  .glamor-5,
-  [data-glamor-5] {
+  .css-2,
+  [data-css-2] {
     margin-bottom: 64px;
   }
 }
 
 @media (min-width: 31em) {
-  .glamor-8,
-  [data-glamor-8] {
+  .css-7,
+  [data-css-7] {
     grid-template-columns: 1fr 1fr;
     -ms-grid-template-columns: 1fr 1fr;
   }
 }
 
 <div
-  className="glamor-9"
+  className="css-0"
 >
   <h2
-    className="glamor-0"
+    className="css-1"
   >
     Send Status Email
   </h2>
   <div
-    className="glamor-5"
+    className="css-2"
   >
     <label
-      className="glamor-4"
+      className="css-3"
       htmlFor="recommendationSelect"
     >
       <select
         aria-label="Choose Status"
-        className="glamor-1"
+        className="css-4"
         id="recommendationSelect"
         name="recommendationSelect"
         onChange={[Function]}
@@ -197,10 +197,10 @@ exports[`<SendStatusDialog /> shows the correct snapshot tree for the <SendStatu
         </option>
       </select>
       <div
-        className="glamor-3"
+        className="css-6"
       >
         <svg
-          className="glamor-2"
+          className="css-nil"
           height={12}
           viewBox="0 0 21 12"
           width={21}
@@ -222,17 +222,17 @@ exports[`<SendStatusDialog /> shows the correct snapshot tree for the <SendStatu
     </label>
   </div>
   <div
-    className="glamor-8"
+    className="css-7"
   >
     <button
-      className="glamor-6"
+      className="css-8"
       onClick={[Function]}
       role="button"
     >
       cancel
     </button>
     <button
-      className="glamor-7"
+      className="css-9"
       onClick={[Function]}
       role="button"
     >

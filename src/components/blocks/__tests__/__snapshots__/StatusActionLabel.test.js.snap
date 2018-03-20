@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StatusActionLabel /> shows the correct snapshot tree for the <StatusActionLabel inCard> block 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.css-0,
+[data-css-0] {
   margin-right: 12px;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.css-1,
+[data-css-1] {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.css-2,
+[data-css-2] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -34,10 +34,10 @@ exports[`<StatusActionLabel /> shows the correct snapshot tree for the <StatusAc
 }
 
 <div
-  className="glamor-2"
+  className="css-2"
 >
   <svg
-    className="glamor-0"
+    className="css-0"
     height={24}
     viewBox="0 0 24 24"
     width={24}
@@ -51,14 +51,14 @@ exports[`<StatusActionLabel /> shows the correct snapshot tree for the <StatusAc
     </g>
   </svg>
   <span
-    className="glamor-1"
+    className="css-1"
   />
 </div>
 `;
 
 exports[`<StatusActionLabel /> shows the correct snapshot tree for the <StatusActionLabel> block 1`] = `
-.glamor-2,
-[data-glamor-2] {
+.css-0,
+[data-css-0] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -74,23 +74,23 @@ exports[`<StatusActionLabel /> shows the correct snapshot tree for the <StatusAc
   -webkit-align-items: center;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.css-1,
+[data-css-1] {
   margin-right: 12px;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.css-2,
+[data-css-2] {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 <div
-  className="glamor-2"
+  className="css-0"
 >
   <svg
-    className="glamor-0"
+    className="css-1"
     height={24}
     viewBox="0 0 24 24"
     width={24}
@@ -104,7 +104,7 @@ exports[`<StatusActionLabel /> shows the correct snapshot tree for the <StatusAc
     </g>
   </svg>
   <span
-    className="glamor-1"
+    className="css-2"
   />
 </div>
 `;

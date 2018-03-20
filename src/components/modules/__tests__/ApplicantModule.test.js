@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import { MemoryRouter } from 'react-router-dom'
 import ApplicantModule from '../ApplicantModule'
 import { noop } from '../../../lib/utils'
-import { stub } from '../../../types/Applicant'
+import { stub as stubApplicant } from '../../../types/Applicant'
 import { stub as stubAction } from '../../../types/Action'
 import { stub as stubApplication } from '../../../types/Application'
 
@@ -16,7 +16,10 @@ describe('<ApplicantModule />', () => {
     const component = (
       <MemoryRouter>
         <ApplicantModule
-          applicant={stub()}
+          application={stubApplication({
+            applicant: stubApplicant(),
+          })}
+          hasScores
           match={match}
         />
       </MemoryRouter>
@@ -26,15 +29,15 @@ describe('<ApplicantModule />', () => {
   })
 
   it('shows the correct snapshot tree for the <ApplicantModule> module with data', () => {
-    const applicant = stub({
+    const application = stubApplication({
       action: stubAction(),
-      applications: [stubApplication()],
+      applicant: stubApplicant(),
     })
 
     const component = (
       <MemoryRouter>
         <ApplicantModule
-          applicant={applicant}
+          application={application}
           evaluatorList="Evaluator 1, Evaluator 2"
           match={match}
           handleCloseModal={noop}
@@ -43,6 +46,7 @@ describe('<ApplicantModule />', () => {
           handleOpenSendStatus={noop}
           handleRecommendationSelect={noop}
           handleStatusSelect={noop}
+          hasScores
           isConfirmDialog
           recommendationValue="Recommendation Value"
           statusValue="status value"

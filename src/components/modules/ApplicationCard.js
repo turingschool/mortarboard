@@ -13,10 +13,11 @@ import TextLink from '../elements/TextLink'
 import type { Applicant } from '../../types/Applicant'
 
 type Props = {
+  id: ID,
   applicant: Applicant,
 }
 
-export default pure(({ applicant }: Props) => (
+export default pure(({ applicant, id }: Props) => (
   <Card>
     <StatusBar />
     <Header>
@@ -41,7 +42,7 @@ export default pure(({ applicant }: Props) => (
         {applicant.status}
       </Status>
     </Descriptions>
-    <HitLink to={`/applicant/${applicant.id}`} />
+    <HitLink to={`/application/${id}`} />
   </Card>
 ))
 

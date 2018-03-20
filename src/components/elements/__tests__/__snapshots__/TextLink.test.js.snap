@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextLink /> shows the correct snapshot tree for the <TextLink> element 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.css-0,
+[data-css-0] {
   position: relative;
   z-index: 2;
   color: #35c5fc;
@@ -13,7 +13,7 @@ exports[`<TextLink /> shows the correct snapshot tree for the <TextLink> element
 }
 
 <a
-  className="glamor-0"
+  className="css-0"
   href="https://www.turing.io"
   rel="noopener noreferrer"
   target="_blank"
@@ -23,21 +23,21 @@ exports[`<TextLink /> shows the correct snapshot tree for the <TextLink> element
 `;
 
 exports[`<TextLink /> shows the correct snapshot tree for the <TextLink> element with options 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.css-0,
+[data-css-0] {
   position: relative;
   z-index: 2;
   color: magenta;
   text-decoration: none;
   transition: color 200ms;
-  margin-top: 8px;
+  margin-top: 512px;
   font-size: 18px;
   -webkit-transition: color 200ms;
   -moz-transition: color 200ms;
 }
 
 <a
-  className="glamor-0"
+  className="css-0"
   color="magenta"
   fontSize={18}
   href="/hello"

@@ -1,11 +1,11 @@
 // @flow
 import React from 'react'
-import ApplicantCards from '../../containers/ApplicantCardsContainer'
+import ApplicationCards from '../../containers/ApplicationCardsContainer'
 import SearchBar from '../../containers/SearchBarContainer'
 
 export default () => (
   <div>
     <SearchBar />
-    <ApplicantCards />
+    <ApplicationCards />
   </div>
 )

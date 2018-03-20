@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AppContainment /> shows the correct snapshot tree for the <AppContainment> element 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.css-0,
+[data-css-0] {
   position: relative;
   max-width: 1392px;
   margin-right: auto;
@@ -13,13 +13,13 @@ exports[`<AppContainment /> shows the correct snapshot tree for the <AppContainm
 }
 
 <div
-  className="glamor-0"
+  className="css-0"
 />
 `;
 
 exports[`<AppContainment /> shows the correct snapshot tree for the <AppContainment> element with options 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.css-0,
+[data-css-0] {
   position: relative;
   max-width: 1392px;
   margin-right: auto;
@@ -33,6 +33,6 @@ exports[`<AppContainment /> shows the correct snapshot tree for the <AppContainm
 }
 
 <div
-  className="glamor-0"
+  className="css-0"
 />
 `;

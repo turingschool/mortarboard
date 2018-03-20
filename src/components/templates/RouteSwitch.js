@@ -1,5 +1,5 @@
 // @flow
-import React, { type Node } from 'react'
+import React from 'react'
 import type { Location } from 'react-router-dom'
 import { withRouter } from 'react-router-dom'
 import { AnimatedSwitch, spring } from 'react-router-transition'
@@ -35,7 +35,6 @@ const motionLeftToRight = {
 const getPathnameLength = memoizeWith(identity, pathname => pathname.split('/').length)
 
 type Props = {
-  children: Node,
   location: Location,
 }
 
@@ -48,7 +47,6 @@ type State = {
   },
 }
 
-// $FlowFixMe
 class RouteSwitch extends React.PureComponent<Props, State> {
   state: State = {
     locationLength: getPathnameLength(this.props.location.pathname),
@@ -64,16 +62,14 @@ class RouteSwitch extends React.PureComponent<Props, State> {
   }
 
   render() {
-    const { children } = this.props
     const { motion } = this.state
     return (
       <AnimatedSwitch
         {...motion}
         className={`${style}`}
         mapStyles={mapStyles}
-      >
-        { children }
-      </AnimatedSwitch>
+        {...this.props}
+      />
     )
   }
 }

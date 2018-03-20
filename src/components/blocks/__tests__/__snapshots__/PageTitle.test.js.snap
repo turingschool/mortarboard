@@ -1,29 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PageTitle /> shows the correct snapshot tree for the <PageTitle> block 1`] = `
-.glamor-1,
-[data-glamor-1] {
+.css-0,
+[data-css-0] {
   position: relative;
   max-width: 960px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 16px;
   padding-left: 16px;
-  margin-bottom: 6px;
+  margin-bottom: 128px;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.css-1,
+[data-css-1] {
   font-size: 48px;
   font-weight: 200;
   color: #808080;
 }
 
 <section
-  className="glamor-1"
+  className="css-0"
 >
   <h1
-    className="glamor-0"
+    className="css-1"
   >
     The Page Title
   </h1>

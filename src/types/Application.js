@@ -16,6 +16,7 @@ export type Application = {
 // For testing content
 export const stub = (props: Application) => {
   const application = {
+    id: '1',
     complete: false,
     evaluators: null,
     scoreLogicEvaluation: 20,

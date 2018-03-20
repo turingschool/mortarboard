@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button /> shows the correct snapshot tree for the <Button> element 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.css-0,
+[data-css-0] {
   text-align: left;
 }
 
 <button
-  className="glamor-0"
+  className="css-0"
   role="button"
 >
   The Button
@@ -15,8 +15,8 @@ exports[`<Button /> shows the correct snapshot tree for the <Button> element 1`]
 `;
 
 exports[`<Button /> shows the correct snapshot tree for the <Button> element with composable options 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.css-0,
+[data-css-0] {
   text-align: center;
   min-width: 240px;
   height: 48px;
@@ -24,12 +24,12 @@ exports[`<Button /> shows the correct snapshot tree for the <Button> element wit
   padding-right: 32px;
   font-size: 14px;
   text-transform: uppercase;
-  margin-top: 8px;
+  margin-top: 512px;
   color: pink;
 }
 
 <button
-  className="glamor-0"
+  className="css-0"
   role="button"
 >
   The Composable Button
@@ -37,15 +37,15 @@ exports[`<Button /> shows the correct snapshot tree for the <Button> element wit
 `;
 
 exports[`<Button /> shows the correct snapshot tree for the <Button> element with primary option 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.css-0,
+[data-css-0] {
   text-align: left;
   color: #fff;
   background-color: #4d4d4d;
 }
 
 <button
-  className="glamor-0"
+  className="css-0"
   role="button"
 >
   The Primary Button
@@ -53,15 +53,15 @@ exports[`<Button /> shows the correct snapshot tree for the <Button> element wit
 `;
 
 exports[`<Button /> shows the correct snapshot tree for the <Button> element with secondary option 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.css-0,
+[data-css-0] {
   text-align: left;
   color: #fff;
   background-color: #999;
 }
 
 <button
-  className="glamor-0"
+  className="css-0"
   role="button"
 >
   The Secondary Button

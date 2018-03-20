@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Dialog /> shows the correct snapshot tree for the <Dialog> block 1`] = `
-.glamor-5,
-[data-glamor-5] {
+.css-0,
+[data-css-0] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -18,8 +18,8 @@ exports[`<Dialog /> shows the correct snapshot tree for the <Dialog> block 1`] =
   -webkit-align-items: center;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.css-1,
+[data-css-1] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -34,8 +34,8 @@ exports[`<Dialog /> shows the correct snapshot tree for the <Dialog> block 1`] =
   -webkit-flex-direction: column;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.css-2,
+[data-css-2] {
   width: 100%;
   margin-top: 16px;
   margin-bottom: 32px;
@@ -43,8 +43,8 @@ exports[`<Dialog /> shows the correct snapshot tree for the <Dialog> block 1`] =
   color: #808080;
 }
 
-.glamor-4,
-[data-glamor-4] {
+.css-3,
+[data-css-3] {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 16px;
@@ -52,8 +52,8 @@ exports[`<Dialog /> shows the correct snapshot tree for the <Dialog> block 1`] =
   -ms-grid-gap: 16px;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.css-4,
+[data-css-4] {
   text-align: left;
   min-width: 240px;
   height: 48px;
@@ -65,8 +65,8 @@ exports[`<Dialog /> shows the correct snapshot tree for the <Dialog> block 1`] =
   background-color: #999;
 }
 
-.glamor-3,
-[data-glamor-3] {
+.css-5,
+[data-css-5] {
   text-align: left;
   min-width: 240px;
   height: 48px;
@@ -79,52 +79,52 @@ exports[`<Dialog /> shows the correct snapshot tree for the <Dialog> block 1`] =
 }
 
 @media (min-width: 31em) {
-  .glamor-5,
-  [data-glamor-5] {
+  .css-0,
+  [data-css-0] {
     width: 496px;
   }
 }
 
 @media (min-width: 31em) {
-  .glamor-1,
-  [data-glamor-1] {
+  .css-2,
+  [data-css-2] {
     margin-bottom: 64px;
   }
 }
 
 @media (min-width: 31em) {
-  .glamor-4,
-  [data-glamor-4] {
+  .css-3,
+  [data-css-3] {
     grid-template-columns: 1fr 1fr;
     -ms-grid-template-columns: 1fr 1fr;
   }
 }
 
 <div
-  className="glamor-5"
+  className="css-0"
 >
   <h2
-    className="glamor-0"
+    className="css-1"
   >
     Title
   </h2>
   <div
-    className="glamor-1"
+    className="css-2"
   >
     Dialog Children
   </div>
   <div
-    className="glamor-4"
+    className="css-3"
   >
     <button
-      className="glamor-2"
+      className="css-4"
       onClick={[Function]}
       role="button"
     >
       Cancel Label
     </button>
     <button
-      className="glamor-3"
+      className="css-5"
       onClick={[Function]}
       role="button"
     >

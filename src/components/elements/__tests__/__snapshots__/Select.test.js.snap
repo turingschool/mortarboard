@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Select /> shows the correct snapshot tree for the <Select> element 1`] = `
-.glamor-3,
-[data-glamor-3] {
+.css-0,
+[data-css-0] {
   position: relative;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.css-1,
+[data-css-1] {
   -webkit-appearance: button;
   -webkit-border-radius: 0;
   -webkit-box-shadow: none;
@@ -33,14 +33,14 @@ exports[`<Select /> shows the correct snapshot tree for the <Select> element 1`]
   white-space: nowrap;
 }
 
-.glamor-0:focus,
-[data-glamor-0]:focus {
+.css-1:focus,
+[data-css-1]:focus {
   border-color: #999;
   outline: 0;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.css-3,
+[data-css-3] {
   position: absolute;
   top: calc(50% - 8px);
   right: 32px;
@@ -49,12 +49,12 @@ exports[`<Select /> shows the correct snapshot tree for the <Select> element 1`]
 }
 
 <label
-  className="glamor-3"
+  className="css-0"
   htmlFor="select-name"
 >
   <select
     aria-label="Score"
-    className="glamor-0"
+    className="css-1"
     id="select-name"
     name="select-name"
     onChange={[Function]}
@@ -87,10 +87,10 @@ exports[`<Select /> shows the correct snapshot tree for the <Select> element 1`]
     </option>
   </select>
   <div
-    className="glamor-2"
+    className="css-3"
   >
     <svg
-      className="glamor-1"
+      className="css-nil"
       height={12}
       viewBox="0 0 21 12"
       width={21}
