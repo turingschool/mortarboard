@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HitLink /> shows the correct snapshot tree for the <HitLink> element 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.css-0,
+[data-css-0] {
   position: absolute;
   top: 0;
   right: 0;
@@ -13,7 +13,7 @@ exports[`<HitLink /> shows the correct snapshot tree for the <HitLink> element 1
 }
 
 <a
-  className="glamor-0"
+  className="css-0"
   href="/hello"
   onClick={[Function]}
 >

@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantModule> module 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.css-0,
+[data-css-0] {
   height: 4px;
   background-color: #4d4d4d;
 }
 
-.glamor-27,
-[data-glamor-27] {
+.css-1,
+[data-css-1] {
   position: relative;
   max-width: 960px;
   margin-right: auto;
@@ -17,8 +17,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   padding-left: 16px;
 }
 
-.glamor-6,
-[data-glamor-6] {
+.css-2,
+[data-css-2] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -33,8 +33,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-align-items: center;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.css-3,
+[data-css-3] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -49,8 +49,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-flex-direction: column;
 }
 
-.glamor-5,
-[data-glamor-5] {
+.css-4,
+[data-css-4] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -67,16 +67,16 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-align-items: flex-end;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.css-5,
+[data-css-5] {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   color: #999;
 }
 
-.glamor-4,
-[data-glamor-4] {
+.css-6,
+[data-css-6] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -93,13 +93,13 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-align-items: center;
 }
 
-.glamor-3,
-[data-glamor-3] {
+.css-7,
+[data-css-7] {
   margin-right: 16px;
 }
 
-.glamor-10,
-[data-glamor-10] {
+.css-8,
+[data-css-8] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -116,8 +116,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-flex-flow: row nowrap;
 }
 
-.glamor-7,
-[data-glamor-7] {
+.css-9,
+[data-css-9] {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -125,8 +125,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   min-width: 192px;
 }
 
-.glamor-9,
-[data-glamor-9] {
+.css-10,
+[data-css-10] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -141,8 +141,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-align-items: center;
 }
 
-.glamor-8,
-[data-glamor-8] {
+.css-11,
+[data-css-11] {
   position: relative;
   z-index: 2;
   color: #35c5fc;
@@ -152,8 +152,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -moz-transition: color 200ms;
 }
 
-.glamor-42,
-[data-glamor-42] {
+.css-12,
+[data-css-12] {
   position: relative;
   max-width: 960px;
   margin-right: auto;
@@ -163,8 +163,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   margin-top: 72px;
 }
 
-.glamor-31,
-[data-glamor-31] {
+.css-13,
+[data-css-13] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -180,8 +180,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-align-items: center;
 }
 
-.glamor-30,
-[data-glamor-30] {
+.css-14,
+[data-css-14] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -194,20 +194,20 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-flex-flow: row nowrap;
 }
 
-.glamor-29,
-[data-glamor-29] {
+.css-15,
+[data-css-15] {
   color: #8ad30e;
   margin-left: 8px;
 }
 
-.glamor-29::before,
-[data-glamor-29]::before {
+.css-15::before,
+[data-css-15]::before {
   content: " : ";
   color: #808080;
 }
 
-.glamor-35,
-[data-glamor-35] {
+.css-17,
+[data-css-17] {
   position: relative;
   z-index: 2;
   color: #35c5fc;
@@ -220,32 +220,32 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
 
 <div>
   <div
-    className="glamor-0"
+    className="css-0"
   />
   <section
-    className="glamor-27"
+    className="css-1"
   >
     <header
-      className="glamor-6"
+      className="css-2"
     >
       <h2
-        className="glamor-1"
+        className="css-3"
       >
         Kenny Bania
       </h2>
       <dl
-        className="glamor-5"
+        className="css-4"
       >
         <dt
-          className="glamor-2"
+          className="css-5"
         >
           Application Status
         </dt>
         <dd
-          className="glamor-4"
+          className="css-6"
         >
           <svg
-            className="glamor-3"
+            className="css-7"
             height={32}
             viewBox="0 0 24 24"
             width={32}
@@ -263,18 +263,18 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       </dl>
     </header>
     <dl
-      className="glamor-10"
+      className="css-8"
     >
       <dt
-        className="glamor-7"
+        className="css-9"
       >
         Email Address
       </dt>
       <dd
-        className="glamor-9"
+        className="css-10"
       >
         <a
-          className="glamor-8"
+          className="css-11"
           href="mailto:kenny.bania@example.com"
           rel="noopener noreferrer"
           target="_blank"
@@ -284,57 +284,57 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       </dd>
     </dl>
     <dl
-      className="glamor-10"
+      className="css-8"
     >
       <dt
-        className="glamor-7"
+        className="css-9"
       >
         Birth Date
       </dt>
       <dd
-        className="glamor-9"
+        className="css-10"
       >
         06/06/2006
       </dd>
     </dl>
     <dl
-      className="glamor-10"
+      className="css-8"
     >
       <dt
-        className="glamor-7"
+        className="css-9"
       >
         GitHub
       </dt>
       <dd
-        className="glamor-9"
+        className="css-10"
       >
         kennyBania
       </dd>
     </dl>
     <dl
-      className="glamor-10"
+      className="css-8"
     >
       <dt
-        className="glamor-7"
+        className="css-9"
       >
         Referred By
       </dt>
       <dd
-        className="glamor-9"
+        className="css-10"
       >
         Simon Taranto
       </dd>
     </dl>
     <dl
-      className="glamor-10"
+      className="css-8"
     >
       <dt
-        className="glamor-7"
+        className="css-9"
       >
         Application Age
       </dt>
       <dd
-        className="glamor-9"
+        className="css-10"
       >
         <time
           dateTime="2010-10-31T12:12:12.000Z"
@@ -345,18 +345,18 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       </dd>
     </dl>
     <dl
-      className="glamor-10"
+      className="css-8"
     >
       <dt
-        className="glamor-7"
+        className="css-9"
       >
         Resume
       </dt>
       <dd
-        className="glamor-9"
+        className="css-10"
       >
         <a
-          className="glamor-8"
+          className="css-11"
           href="https://www.resume.com"
           rel="noopener noreferrer"
           target="_blank"
@@ -367,45 +367,45 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
     </dl>
   </section>
   <section
-    className="glamor-42"
+    className="css-12"
   >
     <div
-      className="glamor-31"
+      className="css-13"
     >
       <h2
-        className="glamor-30"
+        className="css-14"
       >
         <span
-          className="glamor-28"
+          className="css-nil"
         >
           Online Logic Test
         </span>
         <span
-          className="glamor-29"
+          className="css-15"
         >
           40
         </span>
       </h2>
     </div>
     <div
-      className="glamor-31"
+      className="css-13"
     >
       <h2
-        className="glamor-30"
+        className="css-14"
       >
         <span
-          className="glamor-28"
+          className="css-nil"
         >
           Logic Evaluation
         </span>
         <span
-          className="glamor-29"
+          className="css-15"
         >
           20
         </span>
       </h2>
       <a
-        className="glamor-35"
+        className="css-17"
         fontSize={18}
         href="/match/url/logic-evaluation"
         onClick={[Function]}
@@ -414,24 +414,24 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       </a>
     </div>
     <div
-      className="glamor-31"
+      className="css-13"
     >
       <h2
-        className="glamor-30"
+        className="css-14"
       >
         <span
-          className="glamor-28"
+          className="css-nil"
         >
           Values Evaluation
         </span>
         <span
-          className="glamor-29"
+          className="css-15"
         >
           20
         </span>
       </h2>
       <a
-        className="glamor-35"
+        className="css-17"
         fontSize={18}
         href="/match/url/values-evaluation"
         onClick={[Function]}
@@ -444,14 +444,14 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
 `;
 
 exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantModule> module with data 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.css-0,
+[data-css-0] {
   height: 4px;
   background-color: #4d4d4d;
 }
 
-.glamor-32,
-[data-glamor-32] {
+.css-1,
+[data-css-1] {
   position: relative;
   max-width: 960px;
   margin-right: auto;
@@ -460,8 +460,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   padding-left: 16px;
 }
 
-.glamor-8,
-[data-glamor-8] {
+.css-2,
+[data-css-2] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -476,8 +476,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-align-items: center;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.css-3,
+[data-css-3] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -492,8 +492,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-flex-direction: column;
 }
 
-.glamor-7,
-[data-glamor-7] {
+.css-4,
+[data-css-4] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -510,16 +510,16 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-align-items: flex-end;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.css-5,
+[data-css-5] {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   color: #999;
 }
 
-.glamor-4,
-[data-glamor-4] {
+.css-6,
+[data-css-6] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -536,13 +536,13 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-align-items: center;
 }
 
-.glamor-3,
-[data-glamor-3] {
+.css-7,
+[data-css-7] {
   margin-right: 16px;
 }
 
-.glamor-12,
-[data-glamor-12] {
+.css-8,
+[data-css-8] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -559,8 +559,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-flex-flow: row nowrap;
 }
 
-.glamor-9,
-[data-glamor-9] {
+.css-9,
+[data-css-9] {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -568,8 +568,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   min-width: 192px;
 }
 
-.glamor-11,
-[data-glamor-11] {
+.css-10,
+[data-css-10] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -584,8 +584,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-align-items: center;
 }
 
-.glamor-10,
-[data-glamor-10] {
+.css-11,
+[data-css-11] {
   position: relative;
   z-index: 2;
   color: #35c5fc;
@@ -595,8 +595,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -moz-transition: color 200ms;
 }
 
-.glamor-47,
-[data-glamor-47] {
+.css-12,
+[data-css-12] {
   position: relative;
   max-width: 960px;
   margin-right: auto;
@@ -606,8 +606,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   margin-top: 72px;
 }
 
-.glamor-36,
-[data-glamor-36] {
+.css-13,
+[data-css-13] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -623,8 +623,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-align-items: center;
 }
 
-.glamor-35,
-[data-glamor-35] {
+.css-14,
+[data-css-14] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -637,20 +637,20 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-flex-flow: row nowrap;
 }
 
-.glamor-34,
-[data-glamor-34] {
+.css-15,
+[data-css-15] {
   color: #8ad30e;
   margin-left: 8px;
 }
 
-.glamor-34::before,
-[data-glamor-34]::before {
+.css-15::before,
+[data-css-15]::before {
   content: " : ";
   color: #808080;
 }
 
-.glamor-40,
-[data-glamor-40] {
+.css-17,
+[data-css-17] {
   position: relative;
   z-index: 2;
   color: #35c5fc;
@@ -661,8 +661,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -moz-transition: color 200ms;
 }
 
-.glamor-5,
-[data-glamor-5] {
+.css-18,
+[data-css-18] {
   position: relative;
   z-index: 2;
   color: #35c5fc;
@@ -675,32 +675,32 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
 
 <div>
   <div
-    className="glamor-0"
+    className="css-0"
   />
   <section
-    className="glamor-32"
+    className="css-1"
   >
     <header
-      className="glamor-8"
+      className="css-2"
     >
       <h2
-        className="glamor-1"
+        className="css-3"
       >
         Kenny Bania
       </h2>
       <dl
-        className="glamor-7"
+        className="css-4"
       >
         <dt
-          className="glamor-2"
+          className="css-5"
         >
           Application Status
         </dt>
         <dd
-          className="glamor-4"
+          className="css-6"
         >
           <svg
-            className="glamor-3"
+            className="css-7"
             height={32}
             viewBox="0 0 24 24"
             width={32}
@@ -716,10 +716,10 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
           pending
         </dd>
         <dd
-          className="glamor-4"
+          className="css-6"
         >
           <button
-            className="glamor-5"
+            className="css-18"
             onClick={[Function]}
             role="button"
           >
@@ -729,18 +729,18 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       </dl>
     </header>
     <dl
-      className="glamor-12"
+      className="css-8"
     >
       <dt
-        className="glamor-9"
+        className="css-9"
       >
         Email Address
       </dt>
       <dd
-        className="glamor-11"
+        className="css-10"
       >
         <a
-          className="glamor-10"
+          className="css-11"
           href="mailto:kenny.bania@example.com"
           rel="noopener noreferrer"
           target="_blank"
@@ -750,57 +750,57 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       </dd>
     </dl>
     <dl
-      className="glamor-12"
+      className="css-8"
     >
       <dt
-        className="glamor-9"
+        className="css-9"
       >
         Birth Date
       </dt>
       <dd
-        className="glamor-11"
+        className="css-10"
       >
         06/06/2006
       </dd>
     </dl>
     <dl
-      className="glamor-12"
+      className="css-8"
     >
       <dt
-        className="glamor-9"
+        className="css-9"
       >
         GitHub
       </dt>
       <dd
-        className="glamor-11"
+        className="css-10"
       >
         kennyBania
       </dd>
     </dl>
     <dl
-      className="glamor-12"
+      className="css-8"
     >
       <dt
-        className="glamor-9"
+        className="css-9"
       >
         Referred By
       </dt>
       <dd
-        className="glamor-11"
+        className="css-10"
       >
         Simon Taranto
       </dd>
     </dl>
     <dl
-      className="glamor-12"
+      className="css-8"
     >
       <dt
-        className="glamor-9"
+        className="css-9"
       >
         Application Age
       </dt>
       <dd
-        className="glamor-11"
+        className="css-10"
       >
         <time
           dateTime="2010-10-31T12:12:12.000Z"
@@ -811,32 +811,32 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       </dd>
     </dl>
     <dl
-      className="glamor-12"
+      className="css-8"
     >
       <dt
-        className="glamor-9"
+        className="css-9"
       >
         Evaluators
       </dt>
       <dd
-        className="glamor-11"
+        className="css-10"
       >
         Evaluator 1, Evaluator 2
       </dd>
     </dl>
     <dl
-      className="glamor-12"
+      className="css-8"
     >
       <dt
-        className="glamor-9"
+        className="css-9"
       >
         Resume
       </dt>
       <dd
-        className="glamor-11"
+        className="css-10"
       >
         <a
-          className="glamor-10"
+          className="css-11"
           href="https://www.resume.com"
           rel="noopener noreferrer"
           target="_blank"
@@ -847,45 +847,45 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
     </dl>
   </section>
   <section
-    className="glamor-47"
+    className="css-12"
   >
     <div
-      className="glamor-36"
+      className="css-13"
     >
       <h2
-        className="glamor-35"
+        className="css-14"
       >
         <span
-          className="glamor-33"
+          className="css-nil"
         >
           Online Logic Test
         </span>
         <span
-          className="glamor-34"
+          className="css-15"
         >
           40
         </span>
       </h2>
     </div>
     <div
-      className="glamor-36"
+      className="css-13"
     >
       <h2
-        className="glamor-35"
+        className="css-14"
       >
         <span
-          className="glamor-33"
+          className="css-nil"
         >
           Logic Evaluation
         </span>
         <span
-          className="glamor-34"
+          className="css-15"
         >
           20
         </span>
       </h2>
       <a
-        className="glamor-40"
+        className="css-17"
         fontSize={18}
         href="/match/url/logic-evaluation"
         onClick={[Function]}
@@ -894,24 +894,24 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       </a>
     </div>
     <div
-      className="glamor-36"
+      className="css-13"
     >
       <h2
-        className="glamor-35"
+        className="css-14"
       >
         <span
-          className="glamor-33"
+          className="css-nil"
         >
           Values Evaluation
         </span>
         <span
-          className="glamor-34"
+          className="css-15"
         >
           20
         </span>
       </h2>
       <a
-        className="glamor-40"
+        className="css-17"
         fontSize={18}
         href="/match/url/values-evaluation"
         onClick={[Function]}

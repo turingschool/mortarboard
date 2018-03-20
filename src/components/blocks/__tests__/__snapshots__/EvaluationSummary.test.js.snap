@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<EvaluationSummary /> shows the correct snapshot tree for the <EvaluationSummary> block 1`] = `
-.glamor-4,
-[data-glamor-4] {
+.css-0,
+[data-css-0] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -18,8 +18,8 @@ exports[`<EvaluationSummary /> shows the correct snapshot tree for the <Evaluati
   -webkit-align-items: center;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.css-1,
+[data-css-1] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -32,20 +32,20 @@ exports[`<EvaluationSummary /> shows the correct snapshot tree for the <Evaluati
   -webkit-flex-flow: row nowrap;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.css-2,
+[data-css-2] {
   color: #8ad30e;
   margin-left: 8px;
 }
 
-.glamor-1::before,
-[data-glamor-1]::before {
+.css-2::before,
+[data-css-2]::before {
   content: " : ";
   color: #808080;
 }
 
-.glamor-3,
-[data-glamor-3] {
+.css-4,
+[data-css-4] {
   position: relative;
   z-index: 2;
   color: #35c5fc;
@@ -57,24 +57,24 @@ exports[`<EvaluationSummary /> shows the correct snapshot tree for the <Evaluati
 }
 
 <div
-  className="glamor-4"
+  className="css-0"
 >
   <h2
-    className="glamor-2"
+    className="css-1"
   >
     <span
-      className="glamor-0"
+      className="css-nil"
     >
       Evaluation Summary Term
     </span>
     <span
-      className="glamor-1"
+      className="css-2"
     >
       100
     </span>
   </h2>
   <a
-    className="glamor-3"
+    className="css-4"
     fontSize={18}
     href="/to-evaluation-summary"
     onClick={[Function]}

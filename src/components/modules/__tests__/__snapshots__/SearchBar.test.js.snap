@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SearchBar /> shows the correct snapshot tree for the <SearchBar> module (no value) 1`] = `
-.glamor-5,
-[data-glamor-5] {
+.css-0,
+[data-css-0] {
   position: relative;
   max-width: 1392px;
   margin-right: auto;
@@ -13,14 +13,14 @@ exports[`<SearchBar /> shows the correct snapshot tree for the <SearchBar> modul
   margin-bottom: 40px;
 }
 
-.glamor-4,
-[data-glamor-4] {
+.css-1,
+[data-css-1] {
   position: relative;
   background-color: #fff;
 }
 
-.glamor-3,
-[data-glamor-3] {
+.css-2,
+[data-css-2] {
   position: relative;
   display: -webkit-box;
   display: -moz-box;
@@ -34,15 +34,15 @@ exports[`<SearchBar /> shows the correct snapshot tree for the <SearchBar> modul
   -webkit-align-items: center;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.css-3,
+[data-css-3] {
   position: absolute;
   top: 12px;
   left: 0;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.css-4,
+[data-css-4] {
   width: 100%;
   margin: 0;
   padding: 8px;
@@ -59,24 +59,24 @@ exports[`<SearchBar /> shows the correct snapshot tree for the <SearchBar> modul
 }
 
 <div
-  className="glamor-5"
+  className="css-0"
 >
   <form
     acceptCharset="UTF-8"
     action="/searchbar-test"
-    className="glamor-4"
+    className="css-1"
     method="get"
     onSubmit={[Function]}
   >
     <label
-      className="glamor-3"
+      className="css-2"
       htmlFor="forId"
     >
       <span
-        className="glamor-1"
+        className="css-3"
       >
         <svg
-          className="glamor-0"
+          className="css-nil"
           height={32}
           viewBox="0 0 28 28"
           width={32}
@@ -115,7 +115,7 @@ exports[`<SearchBar /> shows the correct snapshot tree for the <SearchBar> modul
         autoCapitalize="off"
         autoComplete="off"
         autoCorrect="off"
-        className="glamor-2"
+        className="css-4"
         id="forId"
         onChange={[Function]}
         placeholder="Search Applicants"
@@ -128,8 +128,8 @@ exports[`<SearchBar /> shows the correct snapshot tree for the <SearchBar> modul
 `;
 
 exports[`<SearchBar /> shows the correct snapshot tree for the <SearchBar> module (with value) 1`] = `
-.glamor-5,
-[data-glamor-5] {
+.css-0,
+[data-css-0] {
   position: relative;
   max-width: 1392px;
   margin-right: auto;
@@ -140,14 +140,14 @@ exports[`<SearchBar /> shows the correct snapshot tree for the <SearchBar> modul
   margin-bottom: 40px;
 }
 
-.glamor-4,
-[data-glamor-4] {
+.css-1,
+[data-css-1] {
   position: relative;
   background-color: #fff;
 }
 
-.glamor-3,
-[data-glamor-3] {
+.css-2,
+[data-css-2] {
   position: relative;
   display: -webkit-box;
   display: -moz-box;
@@ -161,15 +161,15 @@ exports[`<SearchBar /> shows the correct snapshot tree for the <SearchBar> modul
   -webkit-align-items: center;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.css-3,
+[data-css-3] {
   position: absolute;
   top: 12px;
   left: 0;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.css-4,
+[data-css-4] {
   width: 100%;
   margin: 0;
   padding: 8px;
@@ -186,24 +186,24 @@ exports[`<SearchBar /> shows the correct snapshot tree for the <SearchBar> modul
 }
 
 <div
-  className="glamor-5"
+  className="css-0"
 >
   <form
     acceptCharset="UTF-8"
     action="/searchbar-test-2"
-    className="glamor-4"
+    className="css-1"
     method="get"
     onSubmit={[Function]}
   >
     <label
-      className="glamor-3"
+      className="css-2"
       htmlFor="forId2"
     >
       <span
-        className="glamor-1"
+        className="css-3"
       >
         <svg
-          className="glamor-0"
+          className="css-nil"
           height={32}
           viewBox="0 0 28 28"
           width={32}
@@ -242,7 +242,7 @@ exports[`<SearchBar /> shows the correct snapshot tree for the <SearchBar> modul
         autoCapitalize="off"
         autoComplete="off"
         autoCorrect="off"
-        className="glamor-2"
+        className="css-4"
         id="forId2"
         onChange={[Function]}
         placeholder="Search Applicants"

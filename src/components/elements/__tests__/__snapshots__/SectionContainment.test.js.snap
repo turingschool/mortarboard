@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SectionContainment /> shows the correct snapshot tree for the <SectionContainment> element 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.css-0,
+[data-css-0] {
   position: relative;
   max-width: 960px;
   margin-right: auto;
@@ -12,13 +12,13 @@ exports[`<SectionContainment /> shows the correct snapshot tree for the <Section
 }
 
 <section
-  className="glamor-0"
+  className="css-0"
 />
 `;
 
 exports[`<SectionContainment /> shows the correct snapshot tree for the <SectionContainment> element with options 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.css-0,
+[data-css-0] {
   position: relative;
   max-width: 960px;
   margin-right: auto;
@@ -32,6 +32,6 @@ exports[`<SectionContainment /> shows the correct snapshot tree for the <Section
 }
 
 <section
-  className="glamor-0"
+  className="css-0"
 />
 `;

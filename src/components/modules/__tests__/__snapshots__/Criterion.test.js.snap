@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Criterion /> shows the correct snapshot tree for the <Criterion> module 1`] = `
-.glamor-2,
-[data-glamor-2] {
+.css-0,
+[data-css-0] {
   position: relative;
   min-height: 48px;
   font-size: 28px;
@@ -13,25 +13,25 @@ exports[`<Criterion /> shows the correct snapshot tree for the <Criterion> modul
   cursor: pointer;
 }
 
-.glamor-2::-webkit-details-marker,
-[data-glamor-2]::-webkit-details-marker {
+.css-0::-webkit-details-marker,
+[data-css-0]::-webkit-details-marker {
   display: none;
 }
 
-.glamor-2:first-of-type,
-[data-glamor-2]:first-of-type {
+.css-0:first-of-type,
+[data-css-0]:first-of-type {
   list-style-type: none;
 }
 
-.glamor-2 > svg,
-[data-glamor-2] > svg {
+.css-0 > svg,
+[data-css-0] > svg {
   position: absolute;
   top: 8px;
   right: 0;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.css-3,
+[data-css-3] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -43,30 +43,30 @@ exports[`<Criterion /> shows the correct snapshot tree for the <Criterion> modul
   -webkit-justify-content: space-between;
 }
 
-.glamor-0 > span + span,
-[data-glamor-0] > span + span {
+.css-3 > span + span,
+[data-css-3] > span + span {
   color: #35c5fc;
 }
 
-.glamor-22,
-[data-glamor-22] {
+.css-4,
+[data-css-4] {
   position: relative;
   padding-top: 44px;
   padding-bottom: 48px;
 }
 
-.glamor-7,
-[data-glamor-7] {
+.css-5,
+[data-css-5] {
   width: 256px;
 }
 
-.glamor-6,
-[data-glamor-6] {
+.css-6,
+[data-css-6] {
   position: relative;
 }
 
-.glamor-3,
-[data-glamor-3] {
+.css-7,
+[data-css-7] {
   -webkit-appearance: button;
   -webkit-border-radius: 0;
   -webkit-box-shadow: none;
@@ -92,14 +92,14 @@ exports[`<Criterion /> shows the correct snapshot tree for the <Criterion> modul
   white-space: nowrap;
 }
 
-.glamor-3:focus,
-[data-glamor-3]:focus {
+.css-7:focus,
+[data-css-7]:focus {
   border-color: #999;
   outline: 0;
 }
 
-.glamor-5,
-[data-glamor-5] {
+.css-9,
+[data-css-9] {
   position: absolute;
   top: calc(50% - 8px);
   right: 32px;
@@ -107,8 +107,8 @@ exports[`<Criterion /> shows the correct snapshot tree for the <Criterion> modul
   pointer-events: none;
 }
 
-.glamor-11,
-[data-glamor-11] {
+.css-10,
+[data-css-10] {
   list-style: none;
   margin: 0;
   padding-top: 0;
@@ -118,15 +118,15 @@ exports[`<Criterion /> shows the correct snapshot tree for the <Criterion> modul
   color: #4d4d4d;
 }
 
-.glamor-8,
-[data-glamor-8] {
+.css-11,
+[data-css-11] {
   font-size: 16px;
   margin: 0;
   margin-bottom: 24px;
 }
 
-.glamor-21,
-[data-glamor-21] {
+.css-12,
+[data-css-12] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -149,40 +149,40 @@ exports[`<Criterion /> shows the correct snapshot tree for the <Criterion> modul
   -webkit-align-items: flex-start;
 }
 
-.glamor-14,
-[data-glamor-14] {
+.css-13,
+[data-css-13] {
   padding-right: 32px;
 }
 
-.glamor-12,
-[data-glamor-12] {
+.css-14,
+[data-css-14] {
   margin-bottom: 14px;
   font-size: 28px;
   font-weight: 200;
 }
 
-.glamor-13,
-[data-glamor-13] {
+.css-15,
+[data-css-15] {
   margin-left: 0;
 }
 
 @media (min-width: 48em) {
-  .glamor-7,
-  [data-glamor-7] {
+  .css-5,
+  [data-css-5] {
     position: absolute;
     right: 0;
   }
 }
 
 <details
-  className="glamor-1"
+  className="css-nil"
   open={undefined}
 >
   <summary
-    className="glamor-2"
+    className="css-0"
   >
     <div
-      className="glamor-0"
+      className="css-3"
     >
       <span>
         Problem Solving
@@ -192,7 +192,7 @@ exports[`<Criterion /> shows the correct snapshot tree for the <Criterion> modul
       </span>
     </div>
     <svg
-      className="glamor-1"
+      className="css-nil"
       height={28}
       viewBox="0 0 28 28"
       width={28}
@@ -218,18 +218,18 @@ exports[`<Criterion /> shows the correct snapshot tree for the <Criterion> modul
     </svg>
   </summary>
   <div
-    className="glamor-22"
+    className="css-4"
   >
     <div
-      className="glamor-7"
+      className="css-5"
     >
       <label
-        className="glamor-6"
+        className="css-6"
         htmlFor="problemSolving"
       >
         <select
           aria-label="Score"
-          className="glamor-3"
+          className="css-7"
           id="problemSolving"
           name="problemSolving"
           onChange={[Function]}
@@ -262,10 +262,10 @@ exports[`<Criterion /> shows the correct snapshot tree for the <Criterion> modul
           </option>
         </select>
         <div
-          className="glamor-5"
+          className="css-9"
         >
           <svg
-            className="glamor-1"
+            className="css-nil"
             height={12}
             viewBox="0 0 21 12"
             width={21}
@@ -287,65 +287,65 @@ exports[`<Criterion /> shows the correct snapshot tree for the <Criterion> modul
       </label>
     </div>
     <ol
-      className="glamor-11"
+      className="css-10"
     >
       <li
-        className="glamor-8"
+        className="css-11"
       >
         Problem Solving Question 1
       </li>
       <li
-        className="glamor-8"
+        className="css-11"
       >
         Problem Solving Question 2
       </li>
       <li
-        className="glamor-8"
+        className="css-11"
       >
         Problem Solving Question 3
       </li>
     </ol>
     <dl
-      className="glamor-21"
+      className="css-12"
     >
       <div
-        className="glamor-14"
+        className="css-13"
       >
         <dt
-          className="glamor-12"
+          className="css-14"
         >
           2
         </dt>
         <dd
-          className="glamor-13"
+          className="css-15"
         >
           Problem Solving Option 3
         </dd>
       </div>
       <div
-        className="glamor-14"
+        className="css-13"
       >
         <dt
-          className="glamor-12"
+          className="css-14"
         >
           1
         </dt>
         <dd
-          className="glamor-13"
+          className="css-15"
         >
           Problem Solving Option 2
         </dd>
       </div>
       <div
-        className="glamor-14"
+        className="css-13"
       >
         <dt
-          className="glamor-12"
+          className="css-14"
         >
           0
         </dt>
         <dd
-          className="glamor-13"
+          className="css-15"
         >
           Problem Solving Option 1
         </dd>

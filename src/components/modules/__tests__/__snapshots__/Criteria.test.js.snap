@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 1`] = `
-.glamor-49,
-[data-glamor-49] {
+.css-0,
+[data-css-0] {
   position: relative;
   max-width: 960px;
   margin-right: auto;
@@ -11,8 +11,8 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
   padding-left: 16px;
 }
 
-.glamor-48,
-[data-glamor-48] {
+.css-1,
+[data-css-1] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -26,13 +26,13 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
   -webkit-flex-direction: column;
 }
 
-.glamor-48 > *,
-[data-glamor-48] > * {
+.css-1 > *,
+[data-css-1] > * {
   margin-top: 48px;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.css-2,
+[data-css-2] {
   position: relative;
   min-height: 48px;
   font-size: 28px;
@@ -43,25 +43,25 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
   cursor: pointer;
 }
 
-.glamor-2::-webkit-details-marker,
-[data-glamor-2]::-webkit-details-marker {
+.css-2::-webkit-details-marker,
+[data-css-2]::-webkit-details-marker {
   display: none;
 }
 
-.glamor-2:first-of-type,
-[data-glamor-2]:first-of-type {
+.css-2:first-of-type,
+[data-css-2]:first-of-type {
   list-style-type: none;
 }
 
-.glamor-2 > svg,
-[data-glamor-2] > svg {
+.css-2 > svg,
+[data-css-2] > svg {
   position: absolute;
   top: 8px;
   right: 0;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.css-5,
+[data-css-5] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -73,30 +73,30 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
   -webkit-justify-content: space-between;
 }
 
-.glamor-0 > span + span,
-[data-glamor-0] > span + span {
+.css-5 > span + span,
+[data-css-5] > span + span {
   color: #35c5fc;
 }
 
-.glamor-22,
-[data-glamor-22] {
+.css-6,
+[data-css-6] {
   position: relative;
   padding-top: 44px;
   padding-bottom: 48px;
 }
 
-.glamor-7,
-[data-glamor-7] {
+.css-7,
+[data-css-7] {
   width: 256px;
 }
 
-.glamor-6,
-[data-glamor-6] {
+.css-8,
+[data-css-8] {
   position: relative;
 }
 
-.glamor-3,
-[data-glamor-3] {
+.css-9,
+[data-css-9] {
   -webkit-appearance: button;
   -webkit-border-radius: 0;
   -webkit-box-shadow: none;
@@ -122,14 +122,14 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
   white-space: nowrap;
 }
 
-.glamor-3:focus,
-[data-glamor-3]:focus {
+.css-9:focus,
+[data-css-9]:focus {
   border-color: #999;
   outline: 0;
 }
 
-.glamor-5,
-[data-glamor-5] {
+.css-11,
+[data-css-11] {
   position: absolute;
   top: calc(50% - 8px);
   right: 32px;
@@ -137,8 +137,8 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
   pointer-events: none;
 }
 
-.glamor-11,
-[data-glamor-11] {
+.css-12,
+[data-css-12] {
   list-style: none;
   margin: 0;
   padding-top: 0;
@@ -148,15 +148,15 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
   color: #4d4d4d;
 }
 
-.glamor-8,
-[data-glamor-8] {
+.css-13,
+[data-css-13] {
   font-size: 16px;
   margin: 0;
   margin-bottom: 24px;
 }
 
-.glamor-21,
-[data-glamor-21] {
+.css-14,
+[data-css-14] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -179,46 +179,46 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
   -webkit-align-items: flex-start;
 }
 
-.glamor-14,
-[data-glamor-14] {
+.css-15,
+[data-css-15] {
   padding-right: 32px;
 }
 
-.glamor-12,
-[data-glamor-12] {
+.css-16,
+[data-css-16] {
   margin-bottom: 14px;
   font-size: 28px;
   font-weight: 200;
 }
 
-.glamor-13,
-[data-glamor-13] {
+.css-17,
+[data-css-17] {
   margin-left: 0;
 }
 
 @media (min-width: 48em) {
-  .glamor-7,
-  [data-glamor-7] {
+  .css-7,
+  [data-css-7] {
     position: absolute;
     right: 0;
   }
 }
 
 <section
-  className="glamor-49"
+  className="css-0"
 >
   <section
-    className="glamor-48"
+    className="css-1"
   >
     <details
-      className="glamor-1"
+      className="css-nil"
       open={undefined}
     >
       <summary
-        className="glamor-2"
+        className="css-2"
       >
         <div
-          className="glamor-0"
+          className="css-5"
         >
           <span>
             Problem Solving
@@ -228,7 +228,7 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
           </span>
         </div>
         <svg
-          className="glamor-1"
+          className="css-nil"
           height={28}
           viewBox="0 0 28 28"
           width={28}
@@ -254,18 +254,18 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
         </svg>
       </summary>
       <div
-        className="glamor-22"
+        className="css-6"
       >
         <div
-          className="glamor-7"
+          className="css-7"
         >
           <label
-            className="glamor-6"
+            className="css-8"
             htmlFor="problemSolving"
           >
             <select
               aria-label="Score"
-              className="glamor-3"
+              className="css-9"
               id="problemSolving"
               name="problemSolving"
               onChange={
@@ -302,10 +302,10 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
               </option>
             </select>
             <div
-              className="glamor-5"
+              className="css-11"
             >
               <svg
-                className="glamor-1"
+                className="css-nil"
                 height={12}
                 viewBox="0 0 21 12"
                 width={21}
@@ -327,65 +327,65 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
           </label>
         </div>
         <ol
-          className="glamor-11"
+          className="css-12"
         >
           <li
-            className="glamor-8"
+            className="css-13"
           >
             Problem Solving Question 1
           </li>
           <li
-            className="glamor-8"
+            className="css-13"
           >
             Problem Solving Question 2
           </li>
           <li
-            className="glamor-8"
+            className="css-13"
           >
             Problem Solving Question 3
           </li>
         </ol>
         <dl
-          className="glamor-21"
+          className="css-14"
         >
           <div
-            className="glamor-14"
+            className="css-15"
           >
             <dt
-              className="glamor-12"
+              className="css-16"
             >
               2
             </dt>
             <dd
-              className="glamor-13"
+              className="css-17"
             >
               Problem Solving Option 3
             </dd>
           </div>
           <div
-            className="glamor-14"
+            className="css-15"
           >
             <dt
-              className="glamor-12"
+              className="css-16"
             >
               1
             </dt>
             <dd
-              className="glamor-13"
+              className="css-17"
             >
               Problem Solving Option 2
             </dd>
           </div>
           <div
-            className="glamor-14"
+            className="css-15"
           >
             <dt
-              className="glamor-12"
+              className="css-16"
             >
               0
             </dt>
             <dd
-              className="glamor-13"
+              className="css-17"
             >
               Problem Solving Option 1
             </dd>
@@ -394,14 +394,14 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
       </div>
     </details>
     <details
-      className="glamor-1"
+      className="css-nil"
       open={undefined}
     >
       <summary
-        className="glamor-2"
+        className="css-2"
       >
         <div
-          className="glamor-0"
+          className="css-5"
         >
           <span>
             Self Reflection
@@ -411,7 +411,7 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
           </span>
         </div>
         <svg
-          className="glamor-1"
+          className="css-nil"
           height={28}
           viewBox="0 0 28 28"
           width={28}
@@ -437,18 +437,18 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
         </svg>
       </summary>
       <div
-        className="glamor-22"
+        className="css-6"
       >
         <div
-          className="glamor-7"
+          className="css-7"
         >
           <label
-            className="glamor-6"
+            className="css-8"
             htmlFor="selfReflection"
           >
             <select
               aria-label="Score"
-              className="glamor-3"
+              className="css-9"
               id="selfReflection"
               name="selfReflection"
               onChange={
@@ -485,10 +485,10 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
               </option>
             </select>
             <div
-              className="glamor-5"
+              className="css-11"
             >
               <svg
-                className="glamor-1"
+                className="css-nil"
                 height={12}
                 viewBox="0 0 21 12"
                 width={21}
@@ -510,65 +510,65 @@ exports[`<Criteria /> shows the correct snapshot tree for the <Criteria> module 
           </label>
         </div>
         <ol
-          className="glamor-11"
+          className="css-12"
         >
           <li
-            className="glamor-8"
+            className="css-13"
           >
             Self Reflection Question 1
           </li>
           <li
-            className="glamor-8"
+            className="css-13"
           >
             Self Reflection Question 2
           </li>
           <li
-            className="glamor-8"
+            className="css-13"
           >
             Self Reflection Question 3
           </li>
         </ol>
         <dl
-          className="glamor-21"
+          className="css-14"
         >
           <div
-            className="glamor-14"
+            className="css-15"
           >
             <dt
-              className="glamor-12"
+              className="css-16"
             >
               2
             </dt>
             <dd
-              className="glamor-13"
+              className="css-17"
             >
               Self Reflection Option 3
             </dd>
           </div>
           <div
-            className="glamor-14"
+            className="css-15"
           >
             <dt
-              className="glamor-12"
+              className="css-16"
             >
               1
             </dt>
             <dd
-              className="glamor-13"
+              className="css-17"
             >
               Self Reflection Option 2
             </dd>
           </div>
           <div
-            className="glamor-14"
+            className="css-15"
           >
             <dt
-              className="glamor-12"
+              className="css-16"
             >
               0
             </dt>
             <dd
-              className="glamor-13"
+              className="css-17"
             >
               Self Reflection Option 1
             </dd>

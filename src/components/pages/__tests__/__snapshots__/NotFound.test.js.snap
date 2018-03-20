@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`/404 shows the correct snapshot tree for the /404 page 1`] = `
-.glamor-1,
-[data-glamor-1] {
+.css-0,
+[data-css-0] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -17,18 +17,18 @@ exports[`/404 shows the correct snapshot tree for the /404 page 1`] = `
   -webkit-align-items: center;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.css-1,
+[data-css-1] {
   font-size: 48px;
   font-weight: 200;
   color: #808080;
 }
 
 <div
-  className="glamor-1"
+  className="css-0"
 >
   <h1
-    className="glamor-0"
+    className="css-1"
   >
     Not Found
   </h1>

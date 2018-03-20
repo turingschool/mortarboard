@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<NavBar /> shows the correct snapshot tree for the <NavBar> module 1`] = `
-.glamor-8,
-[data-glamor-8] {
+.css-0,
+[data-css-0] {
   height: 112px;
   background-color: #fff;
 }
 
-.glamor-7,
-[data-glamor-7] {
+.css-1,
+[data-css-1] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -28,8 +28,8 @@ exports[`<NavBar /> shows the correct snapshot tree for the <NavBar> module 1`] 
   -webkit-align-items: center;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.css-2,
+[data-css-2] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -41,20 +41,20 @@ exports[`<NavBar /> shows the correct snapshot tree for the <NavBar> module 1`] 
   -webkit-align-items: center;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.css-3,
+[data-css-3] {
   color: #999;
 }
 
-.glamor-4,
-[data-glamor-4] {
+.css-4,
+[data-css-4] {
   font-size: 14px;
   color: #808080;
   margin-right: 40px;
 }
 
-.glamor-3,
-[data-glamor-3] {
+.css-5,
+[data-css-5] {
   position: relative;
   z-index: 2;
   color: #35c5fc;
@@ -65,21 +65,21 @@ exports[`<NavBar /> shows the correct snapshot tree for the <NavBar> module 1`] 
 }
 
 <nav
-  className="glamor-8"
+  className="css-0"
 >
   <div
-    className="glamor-7"
+    className="css-1"
   >
     <div
-      className="glamor-2"
+      className="css-2"
     >
       <button
-        className="glamor-1"
+        className="css-3"
         onClick={[Function]}
         role="button"
       >
         <svg
-          className="glamor-0"
+          className="css-nil"
           height={24}
           viewBox="0 0 16 30"
           width={12}
@@ -100,10 +100,10 @@ exports[`<NavBar /> shows the correct snapshot tree for the <NavBar> module 1`] 
       </button>
     </div>
     <div
-      className="glamor-2"
+      className="css-2"
     >
       <span
-        className="glamor-4"
+        className="css-4"
       >
         <span>
           <span
@@ -118,7 +118,7 @@ exports[`<NavBar /> shows the correct snapshot tree for the <NavBar> module 1`] 
            / 
         </span>
         <a
-          className="glamor-3"
+          className="css-5"
           href="/login"
           onClick={[Function]}
         >
@@ -126,7 +126,7 @@ exports[`<NavBar /> shows the correct snapshot tree for the <NavBar> module 1`] 
         </a>
       </span>
       <a
-        className="glamor-0"
+        className="css-nil"
         href="/"
         onClick={[Function]}
       >

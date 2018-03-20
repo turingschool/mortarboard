@@ -37,5 +37,4 @@ export default LinkComponent
 // -------------------------------------
 
 const RouterLink = glamorous(Link)()
-
 const ExternalLink = glamorous.a()

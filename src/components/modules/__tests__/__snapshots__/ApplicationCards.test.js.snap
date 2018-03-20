@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationCards> module 1`] = `
-.glamor-37,
-[data-glamor-37] {
+.css-0,
+[data-css-0] {
   position: relative;
   max-width: 1392px;
   margin-right: auto;
@@ -12,8 +12,8 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
   padding-left: 8px;
 }
 
-.glamor-36,
-[data-glamor-36] {
+.css-1,
+[data-css-1] {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 16px;
@@ -21,13 +21,13 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
   -ms-grid-gap: 16px;
 }
 
-.glamor-36> *,
-[data-glamor-36]> * {
+.css-1> *,
+[data-css-1]> * {
   min-width: 100%;
 }
 
-.glamor-17,
-[data-glamor-17] {
+.css-2,
+[data-css-2] {
   position: relative;
   min-width: 320px;
   height: 400px;
@@ -35,14 +35,14 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
-.glamor-0,
-[data-glamor-0] {
+.css-3,
+[data-css-3] {
   height: 4px;
   background-color: #4d4d4d;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.css-4,
+[data-css-4] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -59,8 +59,8 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
   -webkit-flex-direction: column;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.css-5,
+[data-css-5] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -76,16 +76,16 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
   -webkit-flex-direction: column;
 }
 
-.glamor-15,
-[data-glamor-15] {
+.css-6,
+[data-css-6] {
   margin-top: 24px;
   padding-right: 24px;
   padding-left: 24px;
   color: #4d4d4d;
 }
 
-.glamor-6,
-[data-glamor-6] {
+.css-7,
+[data-css-7] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -100,16 +100,16 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
   -webkit-flex-direction: column;
 }
 
-.glamor-3,
-[data-glamor-3] {
+.css-8,
+[data-css-8] {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   color: currentColor;
 }
 
-.glamor-5,
-[data-glamor-5] {
+.css-9,
+[data-css-9] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -124,8 +124,8 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
   -webkit-align-items: center;
 }
 
-.glamor-4,
-[data-glamor-4] {
+.css-10,
+[data-css-10] {
   position: relative;
   z-index: 2;
   color: #35c5fc;
@@ -135,8 +135,8 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
   -moz-transition: color 200ms;
 }
 
-.glamor-14,
-[data-glamor-14] {
+.css-11,
+[data-css-11] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -150,16 +150,16 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
   -webkit-flex-direction: column;
 }
 
-.glamor-11,
-[data-glamor-11] {
+.css-12,
+[data-css-12] {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   color: #999;
 }
 
-.glamor-13,
-[data-glamor-13] {
+.css-13,
+[data-css-13] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -176,13 +176,13 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
   -webkit-align-items: center;
 }
 
-.glamor-12,
-[data-glamor-12] {
+.css-14,
+[data-css-14] {
   margin-right: 16px;
 }
 
-.glamor-16,
-[data-glamor-16] {
+.css-15,
+[data-css-15] {
   position: absolute;
   top: 0;
   right: 0;
@@ -193,51 +193,51 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
 }
 
 @media (min-width: 41em) {
-  .glamor-36,
-  [data-glamor-36] {
+  .css-1,
+  [data-css-1] {
     grid-template-columns: 1fr 1fr;
     -ms-grid-template-columns: 1fr 1fr;
   }
 
-  .glamor-36> *,
-  [data-glamor-36]> * {
+  .css-1> *,
+  [data-css-1]> * {
     min-width: 320px;
   }
 }
 
 @media (min-width: 62em) {
-  .glamor-36,
-  [data-glamor-36] {
+  .css-1,
+  [data-css-1] {
     grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 @media (min-width: 83em) {
-  .glamor-36,
-  [data-glamor-36] {
+  .css-1,
+  [data-css-1] {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     -ms-grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
 <div
-  className="glamor-37"
+  className="css-0"
 >
   <section
-    className="glamor-36"
+    className="css-1"
   >
     <div
-      className="glamor-17"
+      className="css-2"
     >
       <div
-        className="glamor-0"
+        className="css-3"
       />
       <header
-        className="glamor-2"
+        className="css-4"
       >
         <h2
-          className="glamor-1"
+          className="css-5"
         >
           <span>
             Kenny
@@ -249,21 +249,21 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
         </h2>
       </header>
       <div
-        className="glamor-15"
+        className="css-6"
       >
         <dl
-          className="glamor-6"
+          className="css-7"
         >
           <dt
-            className="glamor-3"
+            className="css-8"
           >
             Email Address
           </dt>
           <dd
-            className="glamor-5"
+            className="css-9"
           >
             <a
-              className="glamor-4"
+              className="css-10"
               href="mailto:kenny.bania@example.com"
               rel="noopener noreferrer"
               target="_blank"
@@ -273,18 +273,18 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
           </dd>
         </dl>
         <dl
-          className="glamor-6"
+          className="css-7"
         >
           <dt
-            className="glamor-3"
+            className="css-8"
           >
             GitHub
           </dt>
           <dd
-            className="glamor-5"
+            className="css-9"
           >
             <a
-              className="glamor-4"
+              className="css-10"
               href="https://github.com/kennyBania"
               rel="noopener noreferrer"
               target="_blank"
@@ -294,18 +294,18 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
           </dd>
         </dl>
         <dl
-          className="glamor-14"
+          className="css-11"
         >
           <dt
-            className="glamor-11"
+            className="css-12"
           >
             Application Status
           </dt>
           <dd
-            className="glamor-13"
+            className="css-13"
           >
             <svg
-              className="glamor-12"
+              className="css-14"
               height={32}
               viewBox="0 0 24 24"
               width={32}
@@ -323,22 +323,22 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
         </dl>
       </div>
       <a
-        className="glamor-16"
+        className="css-15"
         href="/application/1"
         onClick={[Function]}
       />
     </div>
     <div
-      className="glamor-17"
+      className="css-2"
     >
       <div
-        className="glamor-0"
+        className="css-3"
       />
       <header
-        className="glamor-2"
+        className="css-4"
       >
         <h2
-          className="glamor-1"
+          className="css-5"
         >
           <span>
             Robert
@@ -350,21 +350,21 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
         </h2>
       </header>
       <div
-        className="glamor-15"
+        className="css-6"
       >
         <dl
-          className="glamor-6"
+          className="css-7"
         >
           <dt
-            className="glamor-3"
+            className="css-8"
           >
             Email Address
           </dt>
           <dd
-            className="glamor-5"
+            className="css-9"
           >
             <a
-              className="glamor-4"
+              className="css-10"
               href="mailto:kenny.bania@example.com"
               rel="noopener noreferrer"
               target="_blank"
@@ -374,18 +374,18 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
           </dd>
         </dl>
         <dl
-          className="glamor-6"
+          className="css-7"
         >
           <dt
-            className="glamor-3"
+            className="css-8"
           >
             GitHub
           </dt>
           <dd
-            className="glamor-5"
+            className="css-9"
           >
             <a
-              className="glamor-4"
+              className="css-10"
               href="https://github.com/robertSacamano"
               rel="noopener noreferrer"
               target="_blank"
@@ -395,18 +395,18 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
           </dd>
         </dl>
         <dl
-          className="glamor-14"
+          className="css-11"
         >
           <dt
-            className="glamor-11"
+            className="css-12"
           >
             Application Status
           </dt>
           <dd
-            className="glamor-13"
+            className="css-13"
           >
             <svg
-              className="glamor-12"
+              className="css-14"
               height={32}
               viewBox="0 0 24 24"
               width={32}
@@ -424,7 +424,7 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
         </dl>
       </div>
       <a
-        className="glamor-16"
+        className="css-15"
         href="/application/22"
         onClick={[Function]}
       />

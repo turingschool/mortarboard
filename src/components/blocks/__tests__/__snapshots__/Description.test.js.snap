@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Description /> shows the correct snapshot tree for the <Description> block 1`] = `
-.glamor-2,
-[data-glamor-2] {
+.css-0,
+[data-css-0] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -17,16 +17,16 @@ exports[`<Description /> shows the correct snapshot tree for the <Description> b
   -webkit-flex-direction: column;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.css-1,
+[data-css-1] {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   color: currentColor;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.css-2,
+[data-css-2] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -42,15 +42,15 @@ exports[`<Description /> shows the correct snapshot tree for the <Description> b
 }
 
 <dl
-  className="glamor-2"
+  className="css-0"
 >
   <dt
-    className="glamor-0"
+    className="css-1"
   >
     Term
   </dt>
   <dd
-    className="glamor-1"
+    className="css-2"
   >
     <span>
       Definition
@@ -60,8 +60,8 @@ exports[`<Description /> shows the correct snapshot tree for the <Description> b
 `;
 
 exports[`<Description /> shows the correct snapshot tree for the <Description> block as a row 1`] = `
-.glamor-1,
-[data-glamor-1] {
+.css-0,
+[data-css-0] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -76,8 +76,8 @@ exports[`<Description /> shows the correct snapshot tree for the <Description> b
   -webkit-align-items: center;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.css-1,
+[data-css-1] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -94,8 +94,8 @@ exports[`<Description /> shows the correct snapshot tree for the <Description> b
   -webkit-flex-flow: row nowrap;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.css-2,
+[data-css-2] {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -104,15 +104,15 @@ exports[`<Description /> shows the correct snapshot tree for the <Description> b
 }
 
 <dl
-  className="glamor-2"
+  className="css-1"
 >
   <dt
-    className="glamor-0"
+    className="css-2"
   >
     Term Row
   </dt>
   <dd
-    className="glamor-1"
+    className="css-0"
   >
     <span>
       Definition Row
