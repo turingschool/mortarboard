@@ -17,7 +17,6 @@ const normalizedApplicant = applicant => compose(
 
 const normalizeProps = application => compose(
   assoc('statusLabel', deriveStatusLabel(application)),
-  assoc('createdAt', '??? createdAt'),
   assoc('applicant', normalizedApplicant(application.applicant)),
 )(application)
 

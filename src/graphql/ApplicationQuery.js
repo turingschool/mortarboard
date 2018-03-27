@@ -14,7 +14,7 @@ export default gql`
       applicant {
         id
         birth_date
-        # createdAt
+        created_at
         email
         facebook_id
         github_id
