@@ -33,10 +33,11 @@ export default pure(({ applicant, id }: Props) => (
       <Description term="Email Address">
         <TextLink href={`mailto:${applicant.email}`}>{applicant.email}</TextLink>
       </Description>
-      <Description term="GitHub">
-        <TextLink href={`https://github.com/${applicant.github}`}>
-          {`github.com/${applicant.github}`}
-        </TextLink>
+      <Description term="Login">
+        { applicant.loginLink != null ?
+          <TextLink href={applicant.loginLink}>{applicant.login}</TextLink> :
+          <span>{applicant.login}</span>
+        }
       </Description>
       <Status mt={24}>
         {applicant.status}

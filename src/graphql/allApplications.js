@@ -14,7 +14,9 @@ export default gql`
       applicant {
         id
         email
+        facebook_id
         github_id
+        login
         name
         # status
       }

@@ -2,19 +2,19 @@
 import { camelizeKeys } from 'humps'
 import { graphql } from 'react-apollo'
 import { withRouter } from 'react-router-dom'
-import { assoc, compose, defaultTo, map, omit, prop } from 'ramda'
+import { assoc, compose, defaultTo, map, omit } from 'ramda'
 import { branch, mapProps, renderComponent } from 'recompose'
 import { nool } from '../lib/utils'
 import allApplicationsQuery from '../graphql/allApplications'
 import ApplicationCards, { ComponentLoader } from '../components/modules/ApplicationCards'
-import { deriveFirstName, deriveLastName } from '../types/Applicant'
+import { deriveFirstName, deriveLastName, deriveLoginLink } from '../types/Applicant'
 
 const normalizedApplicant = applicant => compose(
   assoc('action', { id: 1, label: '??? Action', name: 'Action name ???' }),
   assoc('status', '??? status'),
-  assoc('github', `${prop('githubId', applicant)} ??? username`),
   assoc('firstName', deriveFirstName(applicant)),
   assoc('lastName', deriveLastName(applicant)),
+  assoc('loginLink', deriveLoginLink(applicant)),
 )(applicant)
 
 const normalizedApplications = compose(

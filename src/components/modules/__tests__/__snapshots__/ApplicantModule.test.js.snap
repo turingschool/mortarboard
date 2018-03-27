@@ -303,12 +303,19 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       <dt
         className="css-9"
       >
-        GitHub
+        Login
       </dt>
       <dd
         className="css-10"
       >
-        kennyBania
+        <a
+          className="css-11"
+          href="https://github.com/kennyBania"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          kennyBania
+        </a>
       </dd>
     </dl>
     <dl
@@ -357,7 +364,7 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       >
         <a
           className="css-11"
-          href="https://www.resume.com"
+          href="uploads/asset/kennyBania.pdf"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -769,12 +776,19 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       <dt
         className="css-9"
       >
-        GitHub
+        Login
       </dt>
       <dd
         className="css-10"
       >
-        kennyBania
+        <a
+          className="css-11"
+          href="https://github.com/kennyBania"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          kennyBania
+        </a>
       </dd>
     </dl>
     <dl
@@ -837,7 +851,7 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       >
         <a
           className="css-11"
-          href="https://www.resume.com"
+          href="uploads/asset/kennyBania.pdf"
           rel="noopener noreferrer"
           target="_blank"
         >

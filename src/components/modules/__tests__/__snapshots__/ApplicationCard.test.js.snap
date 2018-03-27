@@ -218,7 +218,7 @@ exports[`<ApplicationCard /> shows the correct snapshot tree for the <ApplicantC
       <dt
         className="css-6"
       >
-        GitHub
+        Login
       </dt>
       <dd
         className="css-7"
@@ -229,7 +229,7 @@ exports[`<ApplicationCard /> shows the correct snapshot tree for the <ApplicantC
           rel="noopener noreferrer"
           target="_blank"
         >
-          github.com/kennyBania
+          kennyBania
         </a>
       </dd>
     </dl>

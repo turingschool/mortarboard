@@ -278,7 +278,7 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
           <dt
             className="css-8"
           >
-            GitHub
+            Login
           </dt>
           <dd
             className="css-9"
@@ -289,7 +289,7 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
               rel="noopener noreferrer"
               target="_blank"
             >
-              github.com/kennyBania
+              kennyBania
             </a>
           </dd>
         </dl>
@@ -379,7 +379,7 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
           <dt
             className="css-8"
           >
-            GitHub
+            Login
           </dt>
           <dd
             className="css-9"
@@ -390,7 +390,7 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
               rel="noopener noreferrer"
               target="_blank"
             >
-              github.com/robertSacamano
+              robertSacamano
             </a>
           </dd>
         </dl>

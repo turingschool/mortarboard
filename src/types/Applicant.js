@@ -1,19 +1,22 @@
 // @flow
 import { camelize } from 'humps'
-import { compose, prop, split, head, last } from 'ramda'
+import { compose, head, last, prop, split } from 'ramda'
+import { isNotNil } from '../lib/utils'
 import type { Action } from './Action'
 import type { Application } from './Application'
 
 export default undefined
 
 export type Applicant = {
+  id: ID,
   action: ?Action,
   applications: Array<Application>,
   birthDate: ?string,
   createdAt: DateTime,
   email: string,
-  github: string,
-  id: ID,
+  githubId: string,
+  facebookId: string,
+  login: string,
   name: string,
   referredBy: ?string,
   resume: ?string,
@@ -23,6 +26,7 @@ export type Applicant = {
   // derived data...
   firstName: string,
   lastName: string,
+  loginLink: ?string,
 }
 
 // -------------------------------------
@@ -40,12 +44,22 @@ export const deriveLastName = compose(
   prop('name'),
 )
 
+export const deriveLoginLink = (applicant: Applicant) => {
+  if (isNotNil(applicant.githubId)) {
+    return `https://github.com/${applicant.login}`
+  } else if (isNotNil(applicant.facebookId)) {
+    return `https://facebook.com/${applicant.login}`
+  }
+  return null
+}
+
 // -------------------------------------
 // For testing content
 export const stub = (props: Applicant) => {
   const firstName = (props != null && props.firstName) || 'Kenny'
   const lastName = (props != null && props.lastName) || 'Bania'
-  const camel = camelize(`${firstName} ${lastName}`)
+  const name = `${firstName} ${lastName}`
+  const camel = camelize(name)
   const applicant = {
     id: camel,
     action: null,
@@ -53,14 +67,19 @@ export const stub = (props: Applicant) => {
     birthDate: '06/06/2006',
     createdAt: '2010-10-31T12:12:12.000Z',
     email: 'kenny.bania@example.com',
-    firstName: 'Kenny',
-    github: camel,
-    lastName,
+    githubId: '1000',
+    facebookId: null,
+    login: camel,
+    name,
     referredBy: 'Simon Taranto',
-    resume: 'https://www.resume.com',
+    resume: `uploads/asset/${camel}.pdf`,
     startDate: null,
     status: 'pending',
     updatedAt: '2010-12-24T24:24:24.000Z',
+    // derived data...
+    firstName,
+    lastName,
+    loginLink: `https://github.com/${camel}`,
   }
   return {
     ...applicant,

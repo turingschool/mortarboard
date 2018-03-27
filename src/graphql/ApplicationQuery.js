@@ -16,7 +16,9 @@ export default gql`
         birth_date
         # createdAt
         email
+        facebook_id
         github_id
+        login
         name
         referred_by
         # resume

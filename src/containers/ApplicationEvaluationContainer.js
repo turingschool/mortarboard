@@ -9,8 +9,9 @@ const applicantWhitelist = [
   'birthDate',
   'email',
   'firstName',
-  'github',
   'lastName',
+  'login',
+  'loginLink',
   'resume',
 ]
 

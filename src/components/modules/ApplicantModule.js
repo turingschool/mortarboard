@@ -83,9 +83,12 @@ const ApplicantModule = ({
         {applicant.birthDate}
       </Description>
       }
-      { isNotNil(applicant.github) &&
-        <Description term="GitHub">
-          {applicant.github}
+      { isNotNil(applicant.login) &&
+        <Description term="Login">
+          { applicant.loginLink != null ?
+            <TextLink href={applicant.loginLink}>{applicant.login}</TextLink> :
+            <span>{applicant.login}</span>
+          }
         </Description>
       }
       { isNotNil(applicant.referredBy) &&
