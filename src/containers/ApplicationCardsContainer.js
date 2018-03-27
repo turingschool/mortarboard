@@ -8,16 +8,17 @@ import { nool } from '../lib/utils'
 import allApplicationsQuery from '../graphql/allApplications'
 import ApplicationCards, { ComponentLoader } from '../components/modules/ApplicationCards'
 import { deriveFirstName, deriveLastName, deriveLoginLink } from '../types/Applicant'
+import { deriveStatusLabel } from '../types/Application'
 
 const normalizedApplicant = applicant => compose(
   assoc('action', { id: 1, label: '??? Action', name: 'Action name ???' }),
-  assoc('status', '??? status'),
   assoc('firstName', deriveFirstName(applicant)),
   assoc('lastName', deriveLastName(applicant)),
   assoc('loginLink', deriveLoginLink(applicant)),
 )(applicant)
 
 const normalizedApplications = compose(
+  map(application => assoc('statusLabel', deriveStatusLabel(application), application)),
   map(application => assoc('applicant', normalizedApplicant(application.applicant), application)),
   camelizeKeys,
   defaultTo(nool),

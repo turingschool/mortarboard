@@ -168,7 +168,7 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
   align-items: center;
   margin-top: 16px;
   margin-left: 0;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
   color: #4d4d4d;
@@ -178,7 +178,7 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
 
 .css-14,
 [data-css-14] {
-  margin-right: 16px;
+  margin-right: 8px;
 }
 
 .css-15,
@@ -318,7 +318,7 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
                 />
               </g>
             </svg>
-            pending
+            Pending
           </dd>
         </dl>
       </div>
@@ -419,7 +419,7 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
                 />
               </g>
             </svg>
-            pending
+            Pending
           </dd>
         </dl>
       </div>

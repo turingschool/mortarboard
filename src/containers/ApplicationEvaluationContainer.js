@@ -1,6 +1,6 @@
 // @flow
 import { withRouter } from 'react-router-dom'
-import { assoc, compose, pick } from 'ramda'
+import { assoc, compose, dissoc, pick } from 'ramda'
 import { branch, mapProps, onlyUpdateForKeys, renderComponent } from 'recompose'
 import ApplicantModule, { ComponentLoader } from '../components/modules/ApplicantModule'
 import withApplication from './withApplication'
@@ -15,14 +15,13 @@ const applicantWhitelist = [
   'resume',
 ]
 
-/* eslint-disable function-paren-newline */
 const normalizedApplication = application => compose(
+  dissoc('statusLevel'),
+  dissoc('status'),
   assoc('applicant', pick(applicantWhitelist, application.applicant)),
 )(application)
-/* eslint-enable function-paren-newline */
 
 const withProps = mapProps(props => ({
-  // application: props.applicant ? pick(applicantWhitelist, props.applicant) : null,
   application: props.application ? normalizedApplication(props.application) : null,
   isLoading: props.isLoading,
   match: props.match,

@@ -65,7 +65,7 @@ const withProps = mapProps(props => ({
   // evaluatorList: deriveEvaluatorList(props.applicant),
 }))
 
-const keyWhitelist = ['application', 'isLoading', 'isModalOpen', 'recommendationValue']
+const keyWhitelist = ['application', 'isLoading', 'isModalOpen', 'recommendationValue', 'statusLabel']
 const withUpdateForKeys = component => compose(onlyUpdateForKeys(keyWhitelist))(component)
 
 export default compose(

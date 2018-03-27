@@ -41,7 +41,14 @@ type Props = {
 }
 
 const ApplicantModule = ({
-  application: { applicant, scoreLogicEvaluation, scoreOnlineLogicTest, scoreValuesEvaluation },
+  application: {
+    applicant,
+    scoreLogicEvaluation,
+    scoreOnlineLogicTest,
+    scoreValuesEvaluation,
+    status,
+    statusLabel,
+  },
   evaluatorList,
   handleCloseModal,
   handleOpenConfirm,
@@ -59,20 +66,22 @@ const ApplicantModule = ({
   statusValue,
 }: Props) => (
   <div>
-    { isNotNil(applicant.status) &&
+    { isNotNil(status) &&
       <StatusBar />
     }
     <SectionContainment>
-      <Header>
-        <Heading>
-          {`${applicant.firstName} ${applicant.lastName}`}
-        </Heading>
-        { isNotNil(applicant.status) &&
-          <Status align="flex-end" onClick={handleOpenSendStatus}>
-            {applicant.status}
-          </Status>
-        }
-      </Header>
+      { isNotNil(status) &&
+        <Header>
+          <Heading>
+            {`${applicant.firstName} ${applicant.lastName}`}
+          </Heading>
+          { isNotNil(statusLabel) &&
+            <Status align="flex-end" onClick={handleOpenSendStatus}>
+              {statusLabel}
+            </Status>
+          }
+        </Header>
+      }
       { isNotNil(applicant.email) &&
         <Description term="Email Address">
           <TextLink href={`mailto:${applicant.email}`}>{applicant.email}</TextLink>

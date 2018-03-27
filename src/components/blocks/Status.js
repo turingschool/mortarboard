@@ -16,7 +16,7 @@ const Status = ({ children, onClick, ...props }: Props) => (
   <Dl {...props}>
     <Dt>Application Status</Dt>
     <Dd>
-      <RocketIcon marginRight={16} />
+      <RocketIcon marginRight={8} />
       {children}
     </Dd>
     { isNotNil(onClick) &&
@@ -60,7 +60,7 @@ const Dd = glamorous.dd({
   alignItems: 'center',
   marginTop: 16,
   marginLeft: 0,
-  fontSize: 18,
+  fontSize: 14,
   fontWeight: 400,
   textTransform: 'uppercase',
   color: COLORS.GREY_4,

@@ -5,10 +5,10 @@ import { assoc, compose, defaultTo, path } from 'ramda'
 import { noob } from '../lib/utils'
 import ApplicationQuery from '../graphql/ApplicationQuery'
 import { deriveFirstName, deriveLastName, deriveLoginLink } from '../types/Applicant'
+import { deriveStatusLabel } from '../types/Application'
 
 const normalizedApplicant = applicant => compose(
   assoc('action', { id: 1, label: '??? Action', name: 'Action name ???' }),
-  assoc('status', '??? status'),
   assoc('resume', '??? resume'),
   assoc('firstName', deriveFirstName(applicant)),
   assoc('lastName', deriveLastName(applicant)),
@@ -16,6 +16,7 @@ const normalizedApplicant = applicant => compose(
 )(applicant)
 
 const normalizeProps = application => compose(
+  assoc('statusLabel', deriveStatusLabel(application)),
   assoc('createdAt', '??? createdAt'),
   assoc('applicant', normalizedApplicant(application.applicant)),
 )(application)

@@ -34,7 +34,7 @@ exports[`<Status /> shows the correct snapshot tree for the <Status> block (with
   align-items: center;
   margin-top: 16px;
   margin-left: 0;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
   color: #4d4d4d;
@@ -44,7 +44,7 @@ exports[`<Status /> shows the correct snapshot tree for the <Status> block (with
 
 .css-3,
 [data-css-3] {
-  margin-right: 16px;
+  margin-right: 8px;
 }
 
 .css-4,
@@ -134,7 +134,7 @@ exports[`<Status /> shows the correct snapshot tree for the <Status> block (with
   align-items: center;
   margin-top: 16px;
   margin-left: 0;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
   color: #4d4d4d;
@@ -144,7 +144,7 @@ exports[`<Status /> shows the correct snapshot tree for the <Status> block (with
 
 .css-3,
 [data-css-3] {
-  margin-right: 16px;
+  margin-right: 8px;
 }
 
 <dl

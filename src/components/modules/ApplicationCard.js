@@ -15,9 +15,10 @@ import type { Applicant } from '../../types/Applicant'
 type Props = {
   id: ID,
   applicant: Applicant,
+  status: string,
 }
 
-export default pure(({ applicant, id }: Props) => (
+export default pure(({ applicant, id, status }: Props) => (
   <Card>
     <StatusBar />
     <Header>
@@ -40,7 +41,7 @@ export default pure(({ applicant, id }: Props) => (
         }
       </Description>
       <Status mt={24}>
-        {applicant.status}
+        {status}
       </Status>
     </Descriptions>
     <HitLink to={`/application/${id}`} />

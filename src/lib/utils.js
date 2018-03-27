@@ -1,5 +1,19 @@
 // @flow
-import { __, addIndex, always, complement, either, gt, isEmpty, isNil, map } from 'ramda'
+import { __,
+  addIndex,
+  always,
+  complement,
+  compose,
+  either,
+  gt,
+  isEmpty,
+  isNil,
+  join,
+  map,
+  replace,
+  split,
+  toUpper,
+} from 'ramda'
 import { withProps } from 'recompose'
 
 // -------------------------------------
@@ -41,3 +55,11 @@ export const warn = withProps(props => (
   // eslint-disable-next-line no-console
   console.warn(props.displayName || '⚠️', props) && props
 ))
+
+// -------------------------------------
+// Strings
+export const capitalize = compose(
+  join(' '),
+  map(word => replace(/^./, toUpper, word)),
+  split(' '),
+)

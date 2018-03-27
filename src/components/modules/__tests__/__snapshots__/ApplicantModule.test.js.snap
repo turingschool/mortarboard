@@ -85,7 +85,7 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   align-items: center;
   margin-top: 16px;
   margin-left: 0;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
   color: #4d4d4d;
@@ -95,7 +95,7 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
 
 .css-7,
 [data-css-7] {
-  margin-right: 16px;
+  margin-right: 8px;
 }
 
 .css-8,
@@ -258,7 +258,7 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
               />
             </g>
           </svg>
-          pending
+          Pending
         </dd>
       </dl>
     </header>
@@ -535,7 +535,7 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   align-items: center;
   margin-top: 16px;
   margin-left: 0;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
   color: #4d4d4d;
@@ -545,7 +545,7 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
 
 .css-7,
 [data-css-7] {
-  margin-right: 16px;
+  margin-right: 8px;
 }
 
 .css-8,
@@ -720,7 +720,7 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
               />
             </g>
           </svg>
-          pending
+          Pending
         </dd>
         <dd
           className="css-6"

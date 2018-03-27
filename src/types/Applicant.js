@@ -21,7 +21,6 @@ export type Applicant = {
   referredBy: ?string,
   resume: ?string,
   startDate: ?DateTime,
-  status: ?string,
   updatedAt: DateTime,
   // derived data...
   firstName: string,
@@ -74,7 +73,6 @@ export const stub = (props: Applicant) => {
     referredBy: 'Simon Taranto',
     resume: `uploads/asset/${camel}.pdf`,
     startDate: null,
-    status: 'pending',
     updatedAt: '2010-12-24T24:24:24.000Z',
     // derived data...
     firstName,

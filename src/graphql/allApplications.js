@@ -1,7 +1,6 @@
 // @flow
 import gql from 'graphql-tag'
 
-// TODO: Probably want orderBy: createdAt_ASC
 export default gql`
   query allApplications {
     allApplications {
@@ -18,8 +17,8 @@ export default gql`
         github_id
         login
         name
-        # status
       }
+      status
     }
   }
 `

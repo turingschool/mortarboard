@@ -32,6 +32,7 @@ export default class extends React.PureComponent<Props> {
               applicant={application.applicant}
               id={application.id}
               key={application.id}
+              status={application.statusLabel}
             />
           ), allApplications)}
         </Cards>

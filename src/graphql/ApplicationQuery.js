@@ -22,7 +22,6 @@ export default gql`
         name
         referred_by
         # resume
-        # status
         # startDate
       }
       complete
@@ -33,6 +32,7 @@ export default gql`
       # scoreLogicEvaluation
       # scoreOnlineLogicTest
       # scoreValuesEvaluation
+      status
     }
   }
 `
