@@ -9,7 +9,6 @@ import { deriveStatusLabel } from '../types/Application'
 
 const normalizedApplicant = applicant => compose(
   assoc('action', { id: 1, label: '??? Action', name: 'Action name ???' }),
-  assoc('resume', '??? resume'),
   assoc('firstName', deriveFirstName(applicant)),
   assoc('lastName', deriveLastName(applicant)),
   assoc('loginLink', deriveLoginLink(applicant)),

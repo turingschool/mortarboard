@@ -364,7 +364,7 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       >
         <a
           className="css-11"
-          href="uploads/asset/kennyBania.pdf"
+          href="uploads/asset/application-resume.pdf"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -851,7 +851,7 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
       >
         <a
           className="css-11"
-          href="uploads/asset/kennyBania.pdf"
+          href="uploads/asset/application-resume.pdf"
           rel="noopener noreferrer"
           target="_blank"
         >

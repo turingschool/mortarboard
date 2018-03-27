@@ -21,16 +21,17 @@ export default gql`
         login
         name
         referred_by
-        # resume
         # startDate
       }
+      cohort
       complete
       # evaluators {
       #   id
       #   name
       # }
+      resume
       # scoreLogicEvaluation
-      # scoreOnlineLogicTest
+      scoreOnlineLogicTest
       # scoreValuesEvaluation
       status
     }

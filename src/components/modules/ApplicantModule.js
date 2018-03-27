@@ -43,6 +43,7 @@ type Props = {
 const ApplicantModule = ({
   application: {
     applicant,
+    resume,
     scoreLogicEvaluation,
     scoreOnlineLogicTest,
     scoreValuesEvaluation,
@@ -115,9 +116,9 @@ const ApplicantModule = ({
           {evaluatorList}
         </Description>
       }
-      { isNotNil(applicant.resume) &&
+      { isNotNil(resume) &&
         <Description term="Resume">
-          <TextLink href={`${String(applicant.resume)}`}>View PDF</TextLink>
+          <TextLink href={`${String(resume)}`}>View PDF</TextLink>
         </Description>
       }
     </SectionContainment>

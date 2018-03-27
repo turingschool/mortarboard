@@ -12,10 +12,10 @@ const applicantWhitelist = [
   'lastName',
   'login',
   'loginLink',
-  'resume',
 ]
 
 const normalizedApplication = application => compose(
+  dissoc('resume'),
   dissoc('statusLevel'),
   dissoc('status'),
   assoc('applicant', pick(applicantWhitelist, application.applicant)),
