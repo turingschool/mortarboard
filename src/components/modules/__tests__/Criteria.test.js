@@ -5,8 +5,8 @@ import { stub } from '../../../types/Criterion'
 import { noop } from '../../../lib/utils'
 
 const criteria = [
-  stub({ label: 'Problem Solving' }),
-  stub({ label: 'Self Reflection' }),
+  stub({ title: 'Problem Solving' }),
+  stub({ title: 'Self Reflection' }),
 ]
 
 describe('<Criteria />', () => {

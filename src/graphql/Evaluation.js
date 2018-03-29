@@ -2,17 +2,23 @@
 import gql from 'graphql-tag'
 
 export default gql`
-  query Evaluation($name: String!) {
-    Evaluation(name: $name) {
+  query evaluation($id: ID!) {
+    evaluation(id: $id) {
       id
-      name
+      # concerns: String
       criteria {
         id
-        label
-        name
+        notes
         options
         questions
+        score
+        title
       }
+      # red_flag: Boolean
+      # red_flag_comments: String
+      # slug: String!
+      # strengths: String
+      title
     }
   }
 `

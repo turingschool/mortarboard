@@ -22,13 +22,29 @@ export default gql`
         name
         referred_by
         # startDate
+        # avatar_url: String
+        # english_proficiency: Boolean
+        # finance: Boolean
+        # gravatar_id: String
+        # location: String
+        # mac_proficiency: Boolean
+        # obligations: Boolean
+        # organizational_issues: Boolean
+        # outside_obligations: Boolean
+        # promo_code: String
+        # recommendations: String
       }
-      cohort
-      complete
-      # evaluators {
+      # cohort
+      # complete
+      # evaluations {
       #   id
-      #   name
       # }
+      evaluators {
+        id
+        name
+        # email: String!
+        # login: String!
+      }
       resume
       # scoreLogicEvaluation
       scoreOnlineLogicTest
@@ -37,3 +53,4 @@ export default gql`
     }
   }
 `
+

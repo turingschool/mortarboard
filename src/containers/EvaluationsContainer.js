@@ -1,28 +1,33 @@
 // @flow
 import { graphql } from 'react-apollo'
 import { withRouter } from 'react-router-dom'
-import { compose, map, mergeAll, omit, pathOr, prop } from 'ramda'
+import { assoc, compose, map, mergeAll, omit, pathOr, propOr } from 'ramda'
 import { branch, mapProps, pure, renderComponent, withStateHandlers } from 'recompose'
-import { nool } from '../lib/utils'
+import { nool, log } from '../lib/utils'
 import EvaluationQuery from '../graphql/Evaluation'
 import Criteria, { ModuleLoader } from '../components/modules/Criteria'
+import { deriveName } from '../types/Criterion'
 
 const initialState = compose(
   mergeAll,
-  map(criterion => ({ [criterion.name]: null })),
+  map(criterion => ({ [criterion.title]: null })),
   pathOr(nool, ['criteria']),
+)
+
+const normalizedCriteria = compose(
+  map(criterion => assoc('name', deriveName(criterion), criterion)),
+  propOr(nool, 'criteria'),
 )
 
 const withData = graphql(EvaluationQuery, {
   options: ({ type }) => ({
     variables: {
-      name: type,
+      id: type,
     },
   }),
-  props: ({ data: { Evaluation, loading, refetch } }) => ({
-    criteria: prop('criteria', Evaluation),
+  props: ({ data: { evaluation, loading, refetch } }) => ({
+    criteria: normalizedCriteria(evaluation),
     isLoading: loading,
-    name: prop('name', Evaluation),
     refetch,
   }),
 })
@@ -55,4 +60,5 @@ export default compose(
   withLoader,
   withStateUpdates,
   pure,
+  log,
 )(Criteria)

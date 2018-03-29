@@ -26,7 +26,7 @@ export default pure(({ criterion, handleChange, isOpen, score }: Props) => (
   <Details open={isOpen}>
     <Summary>
       <SummaryFlex>
-        <span>{criterion.label}</span>
+        <span>{criterion.title}</span>
         <span>{score ? 'score' : ''}</span>
       </SummaryFlex>
       <ChevronXIcon />

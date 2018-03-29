@@ -8,10 +8,6 @@ export default () => (
   <div>
     <PageTitle>Logic Evaluation</PageTitle>
     <ApplicationEvaluationContainer />
-    { false &&
-      <EvaluationsContainer type="Logic" />
-    }
+    <EvaluationsContainer type="1" />
   </div>
 )
-
-// TODO: Disabled EvaluationsContainer till API is ready

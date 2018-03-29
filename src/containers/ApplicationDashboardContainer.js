@@ -1,6 +1,6 @@
 // @flow
 import { withRouter } from 'react-router-dom'
-import { __, always, compose, head, join, map, omit, pathOr, when, isEmpty } from 'ramda'
+import { __, always, compose, join, map, omit, pathOr, when, isEmpty } from 'ramda'
 import { branch, mapProps, onlyUpdateForKeys, renderComponent, withStateHandlers } from 'recompose'
 import { nool } from '../lib/utils'
 import withApplication from './withApplication'
@@ -9,10 +9,8 @@ import ApplicantModule, { ComponentLoader } from '../components/modules/Applican
 const deriveEvaluatorList = compose(
   join(', '),
   when(isEmpty(__), always(['N/A'])),
-  map(evaluator => `${evaluator.firstName} ${evaluator.lastName}`),
+  map(evaluator => evaluator.name),
   pathOr(nool, ['evaluators']),
-  head,
-  pathOr(nool, ['applications']),
 )
 
 const withLoader = branch(
@@ -61,8 +59,7 @@ const omits = ['history', 'location']
 const withProps = mapProps(props => ({
   ...omit(omits, props),
   hasScores: true,
-  evaluatorList: deriveEvaluatorList(pathOr(null, ['application', 'applicant'], props)),
-  // evaluatorList: deriveEvaluatorList(props.applicant),
+  evaluatorList: deriveEvaluatorList(props.application),
 }))
 
 const keyWhitelist = ['application', 'isLoading', 'isModalOpen', 'recommendationValue', 'statusLabel']

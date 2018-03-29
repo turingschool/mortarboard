@@ -21,7 +21,7 @@ export type Applicant = {
   referredBy: ?string,
   startDate: ?DateTime,
   updatedAt: DateTime,
-  // derived data...
+  // derived...
   firstName: string,
   lastName: string,
   loginLink: ?string,
