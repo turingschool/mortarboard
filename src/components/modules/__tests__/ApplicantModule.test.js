@@ -4,7 +4,6 @@ import { MemoryRouter } from 'react-router-dom'
 import ApplicantModule from '../ApplicantModule'
 import { noop } from '../../../lib/utils'
 import { stub as stubApplicant } from '../../../types/Applicant'
-import { stub as stubAction } from '../../../types/Action'
 import { stub as stubApplication } from '../../../types/Application'
 
 const match = {
@@ -30,7 +29,6 @@ describe('<ApplicantModule />', () => {
 
   it('shows the correct snapshot tree for the <ApplicantModule> module with data', () => {
     const application = stubApplication({
-      action: stubAction(),
       applicant: stubApplicant(),
     })
 

@@ -5,7 +5,6 @@ import { pure } from 'recompose'
 import { COLORS } from '../../constants/theme'
 import Description from '../blocks/Description'
 import Status from '../blocks/Status'
-import StatusActionLabel from '../blocks/StatusActionLabel'
 import Heading from '../elements/Heading'
 import HitLink from '../elements/HitLink'
 import StatusBar from '../elements/StatusBar'
@@ -28,9 +27,6 @@ export default pure(({ applicant, id, statusLabel, handleStatusMutation }: Props
         <span>{applicant.firstName} </span>
         <span>{applicant.lastName}</span>
       </Heading>
-      {applicant.action &&
-        <StatusActionLabel inCard status={applicant.action} />
-      }
     </Header>
     <Descriptions>
       <Description term="Email Address">

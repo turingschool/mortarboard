@@ -2,14 +2,12 @@
 import { camelize } from 'humps'
 import { compose, head, last, prop, split } from 'ramda'
 import { isNotNil } from '../lib/utils'
-import type { Action } from './Action'
 import type { Application } from './Application'
 
 export default undefined
 
 export type Applicant = {
   id: ID,
-  action: ?Action,
   applications: Array<Application>,
   birthDate: ?string,
   createdAt: DateTime,
@@ -60,7 +58,6 @@ export const stub = (props: Applicant) => {
   const camel = camelize(name)
   const applicant = {
     id: camel,
-    action: null,
     applications: [],
     birthDate: '06/06/2006',
     createdAt: '2010-10-31T12:12:12.000Z',

@@ -5,12 +5,6 @@ export default gql`
   query ApplicationQuery($id: ID!) {
     application(id: $id) {
       id
-      # action {
-      #   id
-      #   label
-      #   message
-      #   name
-      # }
       applicant {
         id
         birth_date

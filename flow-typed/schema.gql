@@ -1,14 +1,5 @@
-﻿type Action @model {
+﻿type Applicant @model {
   id: ID! @isUnique
-  applicants: [Applicant!]! @relation(name: "ApplicantOnAction")
-  label: String!
-  message: String!
-  name: String! @isUnique
-}
-
-type Applicant @model {
-  id: ID! @isUnique
-  action: Action @relation(name: "ApplicantOnAction")
   applications: [Application!]! @relation(name: "ApplicationOnApplicant")
   birthDate: String
   createdAt: DateTime!

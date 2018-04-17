@@ -686,6 +686,42 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -moz-transition: color 200ms;
 }
 
+.css-19,
+[data-css-19] {
+  position: relative;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+}
+
+.css-20,
+[data-css-20] {
+  text-align: center;
+  min-width: 240px;
+  height: 48px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #4d4d4d;
+  margin-top: 32px;
+}
+
 <div>
   <div
     className="css-0"
@@ -932,6 +968,31 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
         Re-Score Evaluation
       </a>
     </div>
+  </section>
+  <section
+    className="css-19"
+  >
+    <button
+      className="css-20"
+      onClick={[Function]}
+      role="button"
+    >
+      Submit Evaluation
+    </button>
+    <button
+      className="css-20"
+      onClick={[Function]}
+      role="button"
+    >
+      Send recommendation
+    </button>
+    <button
+      className="css-20"
+      onClick={[Function]}
+      role="button"
+    >
+      Send status email
+    </button>
   </section>
 </div>
 `;

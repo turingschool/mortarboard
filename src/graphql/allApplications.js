@@ -5,11 +5,6 @@ export default gql`
   query allApplications {
     allApplications {
       id
-      # action {
-      #   id
-      #   label
-      #   name
-      # }
       applicant {
         id
         email

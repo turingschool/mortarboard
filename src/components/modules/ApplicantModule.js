@@ -12,7 +12,6 @@ import DescriptionBase from '../blocks/Description'
 import EvaluationSummary from '../blocks/EvaluationSummary'
 import Loader from '../blocks/Loader'
 import Modal from '../blocks/Modal'
-import StatusActionLabel from '../blocks/StatusActionLabel'
 import Status from '../blocks/Status'
 import Button from '../elements/Button'
 import Heading from '../elements/Heading'
@@ -148,16 +147,9 @@ const ApplicantModule = ({
         />
       </SectionContainment>
     }
-    {applicant.action &&
-      <SectionContainment mt={72}>
-        <StatusActionLabel status={applicant.action} />
-        <StatusActionMessage>{applicant.action.message}</StatusActionMessage>
-      </SectionContainment>
-    }
     {(handleOpenConfirm != null ||
       handleOpenSendRecommendation != null ||
       handleOpenSendStatus != null) &&
-      applicant.action &&
       <Actions>
         { isNotNil(handleOpenConfirm) &&
           <Button box centered primary mt={32} onClick={handleOpenConfirm}>
@@ -237,12 +229,6 @@ const Header = glamorous.header({
   justifyContent: 'space-between',
   alignItems: 'center',
   minHeight: 128,
-})
-
-const StatusActionMessage = glamorous.div({
-  fontSize: 14,
-  color: COLORS.GREY_8,
-  marginTop: 8,
 })
 
 const Actions = glamorous(SectionContainment)({

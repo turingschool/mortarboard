@@ -11,7 +11,6 @@ import { deriveFirstName, deriveLastName, deriveLoginLink } from '../types/Appli
 import { deriveStatusLabel, deriveIsStatusMutatable } from '../types/Application'
 
 const normalizedApplicant = applicant => compose(
-  assoc('action', { id: 1, label: '??? Action', name: 'Action name ???' }),
   assoc('firstName', deriveFirstName(applicant)),
   assoc('lastName', deriveLastName(applicant)),
   assoc('loginLink', deriveLoginLink(applicant)),
