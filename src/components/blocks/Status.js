@@ -3,29 +3,30 @@ import React, { type Node } from 'react'
 import glamorous from 'glamorous'
 import { alignItems, space } from 'styled-system'
 import { isNotNil } from '../../lib/utils'
-import TextButton from '../elements/TextButton'
+import Button from '../elements/Button'
 import { RocketIcon } from '../elements/Icons'
 import { COLORS } from '../../constants/theme'
 
 type Props = {
+  id: string,
   children: Node,
-  onClick?: ?() => {},
+  onClick?: ?() => void,
 }
 
-const Status = ({ children, onClick, ...props }: Props) => (
+const Status = ({ id, children, onClick, ...props }: Props) => (
   <Dl {...props}>
     <Dt>Application Status</Dt>
     <Dd>
-      <RocketIcon marginRight={8} />
-      {children}
+      { isNotNil(onClick) ?
+        <Button box centered primary onClick={onClick} data-id={id}>
+          {children}
+        </Button> :
+        <Text>
+          <RocketIcon marginRight={8} />
+          {children}
+        </Text>
+      }
     </Dd>
-    { isNotNil(onClick) &&
-      <Dd>
-        <TextButton fontSize={16} onClick={onClick}>
-          Change Status
-        </TextButton>
-      </Dd>
-    }
   </Dl>
 )
 
@@ -39,6 +40,8 @@ export default Status
 
 const Dl = glamorous.dl(
   {
+    position: 'relative',
+    zIndex: 2,
     display: 'flex',
     flexDirection: 'column',
     marginTop: 8,
@@ -56,10 +59,14 @@ const Dt = glamorous.dt({
 })
 
 const Dd = glamorous.dd({
+  marginTop: 8,
+  marginLeft: 0,
+})
+
+const Text = glamorous.span({
   display: 'flex',
   alignItems: 'center',
-  marginTop: 16,
-  marginLeft: 0,
+  marginTop: 8,
   fontSize: 14,
   fontWeight: 400,
   textTransform: 'uppercase',

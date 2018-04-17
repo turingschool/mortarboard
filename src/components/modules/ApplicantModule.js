@@ -27,8 +27,9 @@ type Props = {
   handleCloseModal?: () => {},
   handleOpenConfirm?: () => {},
   handleOpenSendRecommendation?: () => {},
-  handleOpenSendStatus?: () => {},
+  handleOpenSendStatus?: () => void,
   handleRecommendationSelect: () => {},
+  handleStatusMutation: () => void,
   handleStatusSelect: () => {},
   hasScores?: boolean,
   isConfirmDialog?: boolean,
@@ -42,7 +43,9 @@ type Props = {
 
 const ApplicantModule = ({
   application: {
+    id,
     applicant,
+    isStatusMutatable,
     resume,
     scoreLogicEvaluation,
     scoreOnlineLogicTest,
@@ -52,6 +55,7 @@ const ApplicantModule = ({
   },
   evaluatorList,
   handleCloseModal,
+  handleStatusMutation,
   handleOpenConfirm,
   handleOpenSendRecommendation,
   handleOpenSendStatus,
@@ -77,7 +81,11 @@ const ApplicantModule = ({
             {`${applicant.firstName} ${applicant.lastName}`}
           </Heading>
           { isNotNil(statusLabel) &&
-            <Status align="flex-end" onClick={handleOpenSendStatus}>
+            <Status
+              id={id}
+              align="flex-end"
+              onClick={isStatusMutatable ? handleStatusMutation : null}
+            >
               {statusLabel}
             </Status>
           }

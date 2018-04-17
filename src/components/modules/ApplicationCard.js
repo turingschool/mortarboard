@@ -15,10 +15,12 @@ import type { Applicant } from '../../types/Applicant'
 type Props = {
   id: ID,
   applicant: Applicant,
+  handleStatusMutation: () => void,
   status: string,
+  statusLabel: string,
 }
 
-export default pure(({ applicant, id, status }: Props) => (
+export default pure(({ applicant, id, statusLabel, handleStatusMutation }: Props) => (
   <Card>
     <StatusBar />
     <Header>
@@ -40,8 +42,8 @@ export default pure(({ applicant, id, status }: Props) => (
           <span>{applicant.login}</span>
         }
       </Description>
-      <Status mt={24}>
-        {status}
+      <Status id={id} mt={24} onClick={handleStatusMutation}>
+        {statusLabel}
       </Status>
     </Descriptions>
     <HitLink to={`/application/${id}`} />
@@ -53,7 +55,7 @@ export default pure(({ applicant, id, status }: Props) => (
 const Card = glamorous.div({
   position: 'relative',
   minWidth: 320,
-  height: 400,
+  height: 408,
   border: '1px solid rgba(0, 0, 0, 0.2)',
   boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.2)',
 })

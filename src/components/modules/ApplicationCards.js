@@ -12,6 +12,7 @@ type Props = {
   children: Node,
   allApplications: Array<Application>,
   refetch: () => {},
+  handleStatusMutation: () => void,
   location: Location,
 }
 
@@ -23,7 +24,7 @@ export default class extends React.PureComponent<Props> {
   }
 
   render() {
-    const { allApplications, children } = this.props
+    const { allApplications, children, handleStatusMutation } = this.props
     return (
       <AppContainment>
         <Cards>
@@ -31,8 +32,10 @@ export default class extends React.PureComponent<Props> {
             <ApplicationCard
               applicant={application.applicant}
               id={application.id}
+              handleStatusMutation={application.isStatusMutatable && handleStatusMutation}
               key={application.id}
-              status={application.statusLabel}
+              status={application.status}
+              statusLabel={application.statusLabel}
             />
           ), allApplications)}
         </Cards>

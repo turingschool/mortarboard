@@ -1,7 +1,7 @@
 // @flow
 import { withRouter } from 'react-router-dom'
 import { __, always, compose, join, map, omit, pathOr, when, isEmpty } from 'ramda'
-import { branch, mapProps, onlyUpdateForKeys, renderComponent, withStateHandlers } from 'recompose'
+import { branch, mapProps, onlyUpdateForKeys, renderComponent, withHandlers, withStateHandlers } from 'recompose'
 import { nool } from '../lib/utils'
 import withApplication from './withApplication'
 import ApplicantModule, { ComponentLoader } from '../components/modules/ApplicantModule'
@@ -17,6 +17,13 @@ const withLoader = branch(
   props => props.isLoading,
   renderComponent(ComponentLoader),
 )
+
+const withEventHandlers = withHandlers({
+  handleStatusMutation: props => (e) => {
+    // eslint-disable-next-line
+    console.log(props, e.target.dataset.id)
+  },
+})
 
 const withStateEvents = withStateHandlers(
   () => ({
@@ -70,6 +77,7 @@ export default compose(
   withApplication,
   withLoader,
   withStateEvents,
+  withEventHandlers,
   withProps,
   withUpdateForKeys,
 )(ApplicantModule)

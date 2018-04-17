@@ -5,7 +5,7 @@ import { assoc, compose, defaultTo, path } from 'ramda'
 import { noob } from '../lib/utils'
 import ApplicationQuery from '../graphql/ApplicationQuery'
 import { deriveFirstName, deriveLastName, deriveLoginLink } from '../types/Applicant'
-import { deriveStatusLabel } from '../types/Application'
+import { deriveStatusLabel, deriveIsStatusMutatable } from '../types/Application'
 
 const normalizedApplicant = applicant => compose(
   assoc('action', { id: 1, label: '??? Action', name: 'Action name ???' }),
@@ -15,6 +15,7 @@ const normalizedApplicant = applicant => compose(
 )(applicant)
 
 const normalizeProps = application => compose(
+  assoc('isStatusMutatable', deriveIsStatusMutatable(application)),
   assoc('statusLabel', deriveStatusLabel(application)),
   assoc('applicant', normalizedApplicant(application.applicant)),
 )(application)

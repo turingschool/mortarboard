@@ -3,12 +3,12 @@ import { camelizeKeys } from 'humps'
 import { graphql } from 'react-apollo'
 import { withRouter } from 'react-router-dom'
 import { assoc, compose, defaultTo, map, omit } from 'ramda'
-import { branch, mapProps, renderComponent } from 'recompose'
+import { branch, mapProps, renderComponent, withHandlers } from 'recompose'
 import { nool } from '../lib/utils'
 import allApplicationsQuery from '../graphql/allApplications'
 import ApplicationCards, { ComponentLoader } from '../components/modules/ApplicationCards'
 import { deriveFirstName, deriveLastName, deriveLoginLink } from '../types/Applicant'
-import { deriveStatusLabel } from '../types/Application'
+import { deriveStatusLabel, deriveIsStatusMutatable } from '../types/Application'
 
 const normalizedApplicant = applicant => compose(
   assoc('action', { id: 1, label: '??? Action', name: 'Action name ???' }),
@@ -18,6 +18,7 @@ const normalizedApplicant = applicant => compose(
 )(applicant)
 
 const normalizedApplications = compose(
+  map(application => assoc('isStatusMutatable', deriveIsStatusMutatable(application), application)),
   map(application => assoc('statusLabel', deriveStatusLabel(application), application)),
   map(application => assoc('applicant', normalizedApplicant(application.applicant), application)),
   camelizeKeys,
@@ -30,6 +31,13 @@ const withData = graphql(allApplicationsQuery, {
     isLoading: loading,
     refetch,
   }),
+})
+
+const withEventHandlers = withHandlers({
+  handleStatusMutation: props => (e) => {
+    // eslint-disable-next-line
+    console.log(props, e.target.dataset.id)
+  },
 })
 
 const omits = ['history', 'match']
@@ -47,4 +55,5 @@ export default compose(
   withData,
   omitProps,
   withLoader,
+  withEventHandlers,
 )(ApplicationCards)
