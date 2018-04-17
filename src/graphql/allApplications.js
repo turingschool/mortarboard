@@ -13,6 +13,9 @@ export default gql`
         login
         name
       }
+      # scoreLogicEvaluation # Blows up in GraphiQL
+      scoreOnlineLogicTest
+      # scoreValuesEvaluation # Blows up in GraphiQL
       status
     }
   }

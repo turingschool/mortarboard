@@ -414,21 +414,16 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
         <span
           className="css-nil"
         >
-          Logic Evaluation
-        </span>
-        <span
-          className="css-16"
-        >
-          20
+          Evaluation 1
         </span>
       </h2>
       <a
         className="css-18"
         fontSize={18}
-        href="/match/url/logic-evaluation"
+        href="/match/url/evaluation/1"
         onClick={[Function]}
       >
-        Re-Score Evaluation
+        Score Evaluation
       </a>
     </div>
     <div
@@ -440,21 +435,16 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
         <span
           className="css-nil"
         >
-          Values Evaluation
-        </span>
-        <span
-          className="css-16"
-        >
-          20
+          Evaluation 2
         </span>
       </h2>
       <a
         className="css-18"
         fontSize={18}
-        href="/match/url/values-evaluation"
+        href="/match/url/evaluation/2"
         onClick={[Function]}
       >
-        Re-Score Evaluation
+        Score Evaluation
       </a>
     </div>
   </section>
@@ -677,18 +667,6 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
 .css-18,
 [data-css-18] {
   position: relative;
-  z-index: 2;
-  color: #35c5fc;
-  text-decoration: none;
-  transition: color 200ms;
-  font-size: 18px;
-  -webkit-transition: color 200ms;
-  -moz-transition: color 200ms;
-}
-
-.css-19,
-[data-css-19] {
-  position: relative;
   max-width: 960px;
   margin-right: auto;
   margin-left: auto;
@@ -708,8 +686,8 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   -webkit-align-items: flex-end;
 }
 
-.css-20,
-[data-css-20] {
+.css-19,
+[data-css-19] {
   text-align: center;
   min-width: 240px;
   height: 48px;
@@ -916,82 +894,23 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
         </span>
       </h2>
     </div>
-    <div
-      className="css-14"
-    >
-      <h2
-        className="css-15"
-      >
-        <span
-          className="css-nil"
-        >
-          Logic Evaluation
-        </span>
-        <span
-          className="css-16"
-        >
-          20
-        </span>
-      </h2>
-      <a
-        className="css-18"
-        fontSize={18}
-        href="/match/url/logic-evaluation"
-        onClick={[Function]}
-      >
-        Re-Score Evaluation
-      </a>
-    </div>
-    <div
-      className="css-14"
-    >
-      <h2
-        className="css-15"
-      >
-        <span
-          className="css-nil"
-        >
-          Values Evaluation
-        </span>
-        <span
-          className="css-16"
-        >
-          20
-        </span>
-      </h2>
-      <a
-        className="css-18"
-        fontSize={18}
-        href="/match/url/values-evaluation"
-        onClick={[Function]}
-      >
-        Re-Score Evaluation
-      </a>
-    </div>
   </section>
   <section
-    className="css-19"
+    className="css-18"
   >
     <button
-      className="css-20"
-      onClick={[Function]}
-      role="button"
-    >
-      Submit Evaluation
-    </button>
-    <button
-      className="css-20"
-      onClick={[Function]}
-      role="button"
-    >
-      Send recommendation
-    </button>
-    <button
-      className="css-20"
+      className="css-19"
       onClick={[Function]}
       role="button"
     >
       Send status email
+    </button>
+    <button
+      className="css-19"
+      onClick={[Function]}
+      role="button"
+    >
+      Submit Evaluation
     </button>
   </section>
 </div>

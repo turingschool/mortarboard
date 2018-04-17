@@ -1,8 +1,9 @@
 // @flow
 import { withRouter } from 'react-router-dom'
-import { __, always, compose, join, map, omit, pathOr, when, isEmpty } from 'ramda'
+import { __, always, compose, isEmpty, join, map, omit, pathOr, prop, when } from 'ramda'
 import { branch, mapProps, onlyUpdateForKeys, renderComponent, withHandlers, withStateHandlers } from 'recompose'
 import { nool } from '../lib/utils'
+import { needsSendStatus, needsSubmitEvaluation } from '../types/Application'
 import withApplication from './withApplication'
 import ApplicantModule, { ComponentLoader } from '../components/modules/ApplicantModule'
 
@@ -11,6 +12,22 @@ const deriveEvaluatorList = compose(
   when(isEmpty(__), always(['N/A'])),
   map(evaluator => evaluator.name),
   pathOr(nool, ['evaluators']),
+)
+
+const canSendStatus = compose(
+  isSendStatus => (isSendStatus === true ? false : null),
+  needsSendStatus,
+  prop('application'),
+)
+
+const canSubmitEvaluation = compose(
+  isSubmitEvaluation => (isSubmitEvaluation === true ? false : null),
+  needsSubmitEvaluation,
+  prop('application'),
+)
+
+const getNextDialogCloseState = bool => (
+  bool === true ? false : bool
 )
 
 const withLoader = branch(
@@ -26,35 +43,25 @@ const withEventHandlers = withHandlers({
 })
 
 const withStateEvents = withStateHandlers(
-  () => ({
+  props => ({
     isModalOpen: false,
-    isConfirmDialog: false,
-    isSendRecommendationDialog: false,
-    isSendStatusDialog: false,
-    recommendationValue: '',
+    isSendStatusDialog: canSendStatus(props),
+    isSubmitEvaluationDialog: canSubmitEvaluation(props),
     statusValue: '',
   }),
   {
-    handleCloseModal: () => () => ({
+    handleCloseModal: ({ isSendStatusDialog, isSubmitEvaluationDialog }) => () => ({
       isModalOpen: false,
-      isConfirmDialog: false,
-      isSendRecommendationDialog: false,
-      isSendStatusDialog: false,
-    }),
-    handleOpenConfirm: () => () => ({
-      isModalOpen: true,
-      isConfirmDialog: true,
-    }),
-    handleOpenSendRecommendation: () => () => ({
-      isModalOpen: true,
-      isSendRecommendationDialog: true,
+      isSendStatusDialog: getNextDialogCloseState(isSendStatusDialog),
+      isSubmitEvaluationDialog: getNextDialogCloseState(isSubmitEvaluationDialog),
     }),
     handleOpenSendStatus: () => () => ({
       isModalOpen: true,
       isSendStatusDialog: true,
     }),
-    handleRecommendationSelect: () => e => ({
-      recommendationValue: e.target.value,
+    handleOpenSubmitEvaluation: () => () => ({
+      isModalOpen: true,
+      isSubmitEvaluationDialog: true,
     }),
     handleStatusSelect: () => e => ({
       statusValue: e.target.value,
@@ -65,11 +72,11 @@ const withStateEvents = withStateHandlers(
 const omits = ['history', 'location']
 const withProps = mapProps(props => ({
   ...omit(omits, props),
-  hasScores: true,
   evaluatorList: deriveEvaluatorList(props.application),
+  showScores: true,
 }))
 
-const keyWhitelist = ['application', 'isLoading', 'isModalOpen', 'recommendationValue', 'statusLabel']
+const keyWhitelist = ['application', 'isLoading', 'isModalOpen', 'statusLabel']
 const withUpdateForKeys = component => compose(onlyUpdateForKeys(keyWhitelist))(component)
 
 export default compose(

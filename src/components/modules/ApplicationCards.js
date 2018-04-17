@@ -32,7 +32,7 @@ export default class extends React.PureComponent<Props> {
             <ApplicationCard
               applicant={application.applicant}
               id={application.id}
-              handleStatusMutation={application.isStatusMutatable && handleStatusMutation}
+              handleStatusMutation={application.isStatusMutatable ? handleStatusMutation : null}
               key={application.id}
               status={application.status}
               statusLabel={application.statusLabel}

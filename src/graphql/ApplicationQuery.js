@@ -30,9 +30,10 @@ export default gql`
       }
       # cohort
       # complete
-      # evaluations {
-      #   id
-      # }
+      evaluations {
+        id
+        title
+      }
       evaluators {
         id
         name

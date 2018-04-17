@@ -3,10 +3,10 @@ import React from 'react'
 import glamorous from 'glamorous'
 import TimeAgo from 'react-timeago'
 import type { Match } from 'react-router-dom'
+import { map } from 'ramda'
 import { isNotNil } from '../../lib/utils'
 import { COLORS } from '../../constants/theme'
 import ConfirmDialog from '../modules/ConfirmDialog'
-import SendRecommendationDialog from '../modules/SendRecommendationDialog'
 import SendStatusDialog from '../modules/SendStatusDialog'
 import DescriptionBase from '../blocks/Description'
 import EvaluationSummary from '../blocks/EvaluationSummary'
@@ -24,19 +24,15 @@ type Props = {
   application: Application,
   evaluatorList?: string,
   handleCloseModal?: () => {},
-  handleOpenConfirm?: () => {},
-  handleOpenSendRecommendation?: () => {},
   handleOpenSendStatus?: () => void,
-  handleRecommendationSelect: () => {},
+  handleOpenSubmitEvaluation?: () => {},
   handleStatusMutation: () => void,
   handleStatusSelect: () => {},
-  hasScores?: boolean,
-  isConfirmDialog?: boolean,
   isModalOpen?: boolean,
-  isSendRecommendationDialog?: boolean,
   isSendStatusDialog?: boolean,
+  isSubmitEvaluationDialog?: boolean,
   match: Match,
-  recommendationValue: string,
+  showScores?: boolean,
   statusValue: string,
 }
 
@@ -44,29 +40,26 @@ const ApplicantModule = ({
   application: {
     id,
     applicant,
+    evaluations,
     isStatusMutatable,
     resume,
-    scoreLogicEvaluation,
+    // scoreLogicEvaluation,
     scoreOnlineLogicTest,
-    scoreValuesEvaluation,
+    // scoreValuesEvaluation,
     status,
     statusLabel,
   },
   evaluatorList,
   handleCloseModal,
-  handleStatusMutation,
-  handleOpenConfirm,
-  handleOpenSendRecommendation,
   handleOpenSendStatus,
-  handleRecommendationSelect,
+  handleOpenSubmitEvaluation,
+  handleStatusMutation,
   handleStatusSelect,
-  hasScores,
-  isConfirmDialog,
   isModalOpen,
-  isSendRecommendationDialog,
   isSendStatusDialog,
+  isSubmitEvaluationDialog,
   match,
-  recommendationValue,
+  showScores,
   statusValue,
 }: Props) => (
   <div>
@@ -129,41 +122,31 @@ const ApplicantModule = ({
         </Description>
       }
     </SectionContainment>
-    { hasScores === true &&
+    { showScores === true &&
       <SectionContainment mt={72}>
         <EvaluationSummary
           score={scoreOnlineLogicTest}
           term="Online Logic Test"
         />
-        <EvaluationSummary
-          score={scoreLogicEvaluation}
-          term="Logic Evaluation"
-          to={`${match.url}/logic-evaluation`}
-        />
-        <EvaluationSummary
-          score={scoreValuesEvaluation}
-          term="Values Evaluation"
-          to={`${match.url}/values-evaluation`}
-        />
+        { map(evaluation => (
+          <EvaluationSummary
+            key={evaluation.id}
+            term={evaluation.title}
+            to={`${match.url}/evaluation/${evaluation.id}`}
+          />
+        ), evaluations)}
       </SectionContainment>
     }
-    {(handleOpenConfirm != null ||
-      handleOpenSendRecommendation != null ||
-      handleOpenSendStatus != null) &&
+    {(isNotNil(handleOpenSendStatus) || isNotNil(handleOpenSubmitEvaluation)) &&
       <Actions>
-        { isNotNil(handleOpenConfirm) &&
-          <Button box centered primary mt={32} onClick={handleOpenConfirm}>
-            Submit Evaluation
-          </Button>
-        }
-        { isNotNil(handleOpenSendRecommendation) &&
-          <Button box centered primary mt={32} onClick={handleOpenSendRecommendation}>
-            Send recommendation
-          </Button>
-        }
-        { isNotNil(handleOpenSendStatus) &&
+        { isNotNil(handleOpenSendStatus) && isNotNil(isSendStatusDialog) &&
           <Button box centered primary mt={32} onClick={handleOpenSendStatus}>
             Send status email
+          </Button>
+        }
+        { isNotNil(handleOpenSubmitEvaluation) && isNotNil(isSubmitEvaluationDialog) &&
+          <Button box centered primary mt={32} onClick={handleOpenSubmitEvaluation}>
+            Submit Evaluation
           </Button>
         }
       </Actions>
@@ -173,26 +156,18 @@ const ApplicantModule = ({
         isOpen={isModalOpen}
         onRequestClose={handleCloseModal}
       >
-        { isConfirmDialog === true &&
-          <ConfirmDialog
-            handleCancel={handleCloseModal}
-            handleConfirm={handleCloseModal}
-          />
-        }
-        { isSendRecommendationDialog === true &&
-          <SendRecommendationDialog
-            handleCancel={handleCloseModal}
-            handleChange={handleRecommendationSelect}
-            handleConfirm={handleCloseModal}
-            recommendationValue={recommendationValue}
-          />
-        }
         { isSendStatusDialog === true &&
           <SendStatusDialog
             handleCancel={handleCloseModal}
             handleChange={handleStatusSelect}
             handleConfirm={handleCloseModal}
             statusValue={statusValue}
+          />
+        }
+        { isSubmitEvaluationDialog === true &&
+          <ConfirmDialog
+            handleCancel={handleCloseModal}
+            handleConfirm={handleCloseModal}
           />
         }
       </Modal>
@@ -203,14 +178,12 @@ const ApplicantModule = ({
 ApplicantModule.defaultProps = {
   evaluatorList: null,
   handleCloseModal: null,
-  handleOpenConfirm: null,
-  handleOpenSendRecommendation: null,
   handleOpenSendStatus: null,
-  hasScores: false,
-  isConfirmDialog: false,
+  handleOpenSubmitEvaluation: null,
   isModalOpen: null,
-  isSendRecommendationDialog: false,
   isSendStatusDialog: false,
+  isSubmitEvaluationDialog: false,
+  showScores: false,
 }
 
 export default ApplicantModule

@@ -2,12 +2,12 @@
 import React from 'react'
 import ApplicationEvaluationContainer from '../../containers/ApplicationEvaluationContainer'
 import EvaluationsContainer from '../../containers/EvaluationsContainer'
-import PageTitle from '../blocks/PageTitle'
+import EvaluationTitle from '../../containers/EvaluationTitle'
 
 export default () => (
   <div>
-    <PageTitle>Values Evaluation</PageTitle>
+    <EvaluationTitle />
     <ApplicationEvaluationContainer />
-    <EvaluationsContainer type="1" />
+    <EvaluationsContainer />
   </div>
 )

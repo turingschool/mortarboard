@@ -5,20 +5,27 @@ import ApplicantModule from '../ApplicantModule'
 import { noop } from '../../../lib/utils'
 import { stub as stubApplicant } from '../../../types/Applicant'
 import { stub as stubApplication } from '../../../types/Application'
+import { stub as stubEvaluation } from '../../../types/Evaluation'
 
 const match = {
   url: '/match/url',
 }
+
+const evaluations = [
+  stubEvaluation(),
+  stubEvaluation({ id: '2' }),
+]
 
 describe('<ApplicantModule />', () => {
   it('shows the correct snapshot tree for the <ApplicantModule> module', () => {
     const component = (
       <MemoryRouter>
         <ApplicantModule
+          showScores
           application={stubApplication({
             applicant: stubApplicant(),
+            evaluations,
           })}
-          hasScores
           match={match}
         />
       </MemoryRouter>
@@ -35,18 +42,15 @@ describe('<ApplicantModule />', () => {
     const component = (
       <MemoryRouter>
         <ApplicantModule
+          showScores
           application={application}
           evaluatorList="Evaluator 1, Evaluator 2"
           match={match}
           handleCloseModal={noop}
-          handleOpenConfirm={noop}
-          handleOpenSendRecommendation={noop}
           handleOpenSendStatus={noop}
-          handleRecommendationSelect={noop}
+          handleOpenSubmitEvaluation={noop}
           handleStatusSelect={noop}
-          hasScores
-          isConfirmDialog
-          recommendationValue="Recommendation Value"
+          isSubmitEvaluationDialog
           statusValue="status value"
         />
       </MemoryRouter>
