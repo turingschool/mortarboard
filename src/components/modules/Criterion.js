@@ -123,11 +123,9 @@ const Scoring = glamorous.div({
 
 const Questions = glamorous.ol({
   listStyle: 'none',
+  maxWidth: 'calc(100% - 256px)',
   margin: 0,
-  paddingTop: 0,
-  paddingRight: 0,
-  paddingBottom: 38,
-  paddingLeft: 48,
+  padding: '0 32px 38px 0',
   color: COLORS.GREY_4,
 })
 
@@ -135,6 +133,7 @@ const Question = glamorous.li({
   fontSize: 16,
   margin: 0,
   marginBottom: 24,
+  padding: 0,
 })
 
 const OptionDl = glamorous.dl({
