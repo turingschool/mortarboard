@@ -3,7 +3,7 @@ import { camelizeKeys } from 'humps'
 import { graphql } from 'react-apollo'
 import { withRouter } from 'react-router-dom'
 import { assoc, compose, defaultTo, map, omit } from 'ramda'
-import { branch, mapProps, renderComponent, withHandlers } from 'recompose'
+import { branch, mapProps, renderComponent } from 'recompose'
 import { nool } from '../lib/utils'
 import allApplicationsQuery from '../graphql/allApplications'
 import ApplicationCards, { ComponentLoader } from '../components/modules/ApplicationCards'
@@ -32,13 +32,6 @@ const withData = graphql(allApplicationsQuery, {
   }),
 })
 
-const withEventHandlers = withHandlers({
-  handleStatusMutation: props => (e) => {
-    // eslint-disable-next-line
-    console.log(props, e.target.dataset.id)
-  },
-})
-
 const omits = ['history', 'match']
 const omitProps = mapProps(props => ({
   ...omit(omits, props),
@@ -52,7 +45,6 @@ const withLoader = branch(
 export default compose(
   withRouter,
   withData,
-  omitProps,
   withLoader,
-  withEventHandlers,
+  omitProps,
 )(ApplicationCards)

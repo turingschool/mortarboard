@@ -51,8 +51,6 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
 
 .css-4,
 [data-css-4] {
-  position: relative;
-  z-index: 2;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -502,8 +500,6 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
 
 .css-4,
 [data-css-4] {
-  position: relative;
-  z-index: 2;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -898,13 +894,6 @@ exports[`<ApplicantModule /> shows the correct snapshot tree for the <ApplicantM
   <section
     className="css-18"
   >
-    <button
-      className="css-19"
-      onClick={[Function]}
-      role="button"
-    >
-      Send status email
-    </button>
     <button
       className="css-19"
       onClick={[Function]}

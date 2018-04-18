@@ -15,15 +15,10 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
 .css-1,
 [data-css-1] {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(304px, 1fr));
   grid-gap: 16px;
-  -ms-grid-template-columns: 1fr;
+  -ms-grid-template-columns: repeat(auto-fill, minmax(304px, 1fr));
   -ms-grid-gap: 16px;
-}
-
-.css-1> *,
-[data-css-1]> * {
-  min-width: 100%;
 }
 
 .css-2,
@@ -137,8 +132,6 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
 
 .css-11,
 [data-css-11] {
-  position: relative;
-  z-index: 2;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -197,35 +190,6 @@ exports[`<ApplicantCard /> shows the correct snapshot tree for the <ApplicationC
   left: 0;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0);
-}
-
-@media (min-width: 41em) {
-  .css-1,
-  [data-css-1] {
-    grid-template-columns: 1fr 1fr;
-    -ms-grid-template-columns: 1fr 1fr;
-  }
-
-  .css-1> *,
-  [data-css-1]> * {
-    min-width: 320px;
-  }
-}
-
-@media (min-width: 62em) {
-  .css-1,
-  [data-css-1] {
-    grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media (min-width: 83em) {
-  .css-1,
-  [data-css-1] {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    -ms-grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
 }
 
 <div

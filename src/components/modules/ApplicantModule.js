@@ -6,13 +6,11 @@ import type { Match } from 'react-router-dom'
 import { map } from 'ramda'
 import { isNotNil } from '../../lib/utils'
 import { COLORS } from '../../constants/theme'
-import ConfirmDialog from '../modules/ConfirmDialog'
-import SendStatusDialog from '../modules/SendStatusDialog'
 import DescriptionBase from '../blocks/Description'
 import EvaluationSummary from '../blocks/EvaluationSummary'
 import Loader from '../blocks/Loader'
-import Modal from '../blocks/Modal'
 import Status from '../blocks/Status'
+import StatusModal, { type StatusModalProps } from '../blocks/StatusModal'
 import Button from '../elements/Button'
 import Heading from '../elements/Heading'
 import SectionContainment from '../elements/SectionContainment'
@@ -23,18 +21,13 @@ import type { Application } from '../../types/Application'
 type Props = {
   application: Application,
   evaluatorList?: string,
-  handleCloseModal?: () => {},
   handleOpenSendStatus?: () => void,
   handleOpenSubmitEvaluation?: () => {},
   handleStatusMutation: () => void,
-  handleStatusSelect: () => {},
-  isModalOpen?: boolean,
-  isSendStatusDialog?: boolean,
-  isSubmitEvaluationDialog?: boolean,
+  isStatusMutatable: boolean,
   match: Match,
   showScores?: boolean,
-  statusValue: string,
-}
+} & StatusModalProps
 
 const ApplicantModule = ({
   application: {
@@ -152,39 +145,20 @@ const ApplicantModule = ({
       </Actions>
     }
     { isModalOpen != null && handleCloseModal != null &&
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={handleCloseModal}
-      >
-        { isSendStatusDialog === true &&
-          <SendStatusDialog
-            handleCancel={handleCloseModal}
-            handleChange={handleStatusSelect}
-            handleConfirm={handleCloseModal}
-            statusValue={statusValue}
-          />
-        }
-        { isSubmitEvaluationDialog === true &&
-          <ConfirmDialog
-            handleCancel={handleCloseModal}
-            handleConfirm={handleCloseModal}
-          />
-        }
-      </Modal>
+      <StatusModal
+        handleCancel={handleCloseModal}
+        handleChange={handleStatusSelect}
+        handleCloseModal={handleCloseModal}
+        handleConfirm={handleCloseModal}
+        handleStatusSelect={handleStatusSelect}
+        isModalOpen={isModalOpen}
+        isSendStatusDialog={isSendStatusDialog}
+        isSubmitEvaluationDialog={isSubmitEvaluationDialog}
+        statusValue={statusValue}
+      />
     }
   </div>
 )
-
-ApplicantModule.defaultProps = {
-  evaluatorList: null,
-  handleCloseModal: null,
-  handleOpenSendStatus: null,
-  handleOpenSubmitEvaluation: null,
-  isModalOpen: null,
-  isSendStatusDialog: false,
-  isSubmitEvaluationDialog: false,
-  showScores: false,
-}
 
 export default ApplicantModule
 export const ComponentLoader = () => (

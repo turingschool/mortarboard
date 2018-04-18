@@ -2,7 +2,7 @@
 import React, { type Node } from 'react'
 import glamorous from 'glamorous'
 import { alignItems, space } from 'styled-system'
-import { isNotNil } from '../../lib/utils'
+import { isNotNil, noob } from '../../lib/utils'
 import Button from '../elements/Button'
 import { RocketIcon } from '../elements/Icons'
 import { COLORS } from '../../constants/theme'
@@ -14,7 +14,7 @@ type Props = {
 }
 
 const Status = ({ id, children, onClick, ...props }: Props) => (
-  <Dl {...props}>
+  <Dl isButton={isNotNil(onClick)} {...props}>
     <Dt>Application Status</Dt>
     <Dd>
       { isNotNil(onClick) ?
@@ -38,10 +38,13 @@ export default Status
 
 // -------------------------------------
 
+const upperDeck = {
+  position: 'relative',
+  zIndex: 2,
+}
+
 const Dl = glamorous.dl(
   {
-    position: 'relative',
-    zIndex: 2,
     display: 'flex',
     flexDirection: 'column',
     marginTop: 8,
@@ -49,6 +52,9 @@ const Dl = glamorous.dl(
   },
   alignItems,
   space,
+  props => ({
+    ...(props.isButton ? upperDeck : noob),
+  }),
 )
 
 const Dt = glamorous.dt({

@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import glamorous from 'glamorous'
+import { compose } from 'ramda'
 import { pure } from 'recompose'
 import { COLORS } from '../../constants/theme'
 import Description from '../blocks/Description'
@@ -8,18 +9,27 @@ import Status from '../blocks/Status'
 import Heading from '../elements/Heading'
 import HitLink from '../elements/HitLink'
 import StatusBar from '../elements/StatusBar'
+import StatusModal, { type StatusModalProps } from '../blocks/StatusModal'
 import TextLink from '../elements/TextLink'
-import type { Applicant } from '../../types/Applicant'
+import type { Application } from '../../types/Application'
+import withStatusMutationEvents from '../../containers/withStatusMutationEvents'
 
 type Props = {
-  id: ID,
-  applicant: Applicant,
+  application: Application,
   handleStatusMutation: () => void,
-  status: string,
-  statusLabel: string,
-}
+  isStatusMutatable: boolean,
+} & StatusModalProps
 
-export default pure(({ applicant, id, statusLabel, handleStatusMutation }: Props) => (
+const ApplicantCard = ({
+  application: { id, applicant, isStatusMutatable, statusLabel },
+  handleCloseModal,
+  handleStatusSelect,
+  isModalOpen,
+  isSendStatusDialog,
+  isSubmitEvaluationDialog,
+  statusValue,
+  handleStatusMutation,
+}: Props) => (
   <Card>
     <StatusBar />
     <Header>
@@ -38,13 +48,35 @@ export default pure(({ applicant, id, statusLabel, handleStatusMutation }: Props
           <span>{applicant.login}</span>
         }
       </Description>
-      <Status id={id} mt={24} onClick={handleStatusMutation}>
+      <Status
+        id={id}
+        mt={24}
+        onClick={isStatusMutatable ? handleStatusMutation : null}
+      >
         {statusLabel}
       </Status>
     </Descriptions>
     <HitLink to={`/application/${id}`} />
+    { isModalOpen != null && handleCloseModal != null &&
+      <StatusModal
+        handleCancel={handleCloseModal}
+        handleChange={handleStatusSelect}
+        handleCloseModal={handleCloseModal}
+        handleConfirm={handleCloseModal}
+        handleStatusSelect={handleStatusSelect}
+        isModalOpen={isModalOpen}
+        isSendStatusDialog={isSendStatusDialog}
+        isSubmitEvaluationDialog={isSubmitEvaluationDialog}
+        statusValue={statusValue}
+      />
+    }
   </Card>
-))
+)
+
+export default compose(
+  withStatusMutationEvents,
+  pure,
+)(ApplicantCard)
 
 // -------------------------------------
 

@@ -110,11 +110,9 @@ exports[`<Criterion /> shows the correct snapshot tree for the <Criterion> modul
 .css-10,
 [data-css-10] {
   list-style: none;
+  max-width: calc(100% - 256px);
   margin: 0;
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 38px;
-  padding-left: 48px;
+  padding: 0 32px 38px 0;
   color: #4d4d4d;
 }
 
@@ -123,6 +121,7 @@ exports[`<Criterion /> shows the correct snapshot tree for the <Criterion> modul
   font-size: 16px;
   margin: 0;
   margin-bottom: 24px;
+  padding: 0;
 }
 
 .css-12,

@@ -12,7 +12,6 @@ type Props = {
   children: Node,
   allApplications: Array<Application>,
   refetch: () => {},
-  handleStatusMutation: () => void,
   location: Location,
 }
 
@@ -24,19 +23,12 @@ export default class extends React.PureComponent<Props> {
   }
 
   render() {
-    const { allApplications, children, handleStatusMutation } = this.props
+    const { allApplications, children } = this.props
     return (
       <AppContainment>
         <Cards>
           {map(application => (
-            <ApplicationCard
-              applicant={application.applicant}
-              id={application.id}
-              handleStatusMutation={application.isStatusMutatable ? handleStatusMutation : null}
-              key={application.id}
-              status={application.status}
-              statusLabel={application.statusLabel}
-            />
+            <ApplicationCard application={application} key={application.id} />
           ), allApplications)}
         </Cards>
         {children}
@@ -53,21 +45,6 @@ export const ComponentLoader = () => (
 
 const Cards = glamorous.section({
   display: 'grid',
-  gridTemplateColumns: '1fr',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(304px, 1fr))',
   gridGap: 16,
-  '> *': {
-    minWidth: '100%',
-  },
-  '@media (min-width: 41em)': {
-    gridTemplateColumns: '1fr 1fr',
-    '> *': {
-      minWidth: 320,
-    },
-  },
-  '@media (min-width: 62em)': {
-    gridTemplateColumns: '1fr 1fr 1fr',
-  },
-  '@media (min-width: 83em)': {
-    gridTemplateColumns: '1fr 1fr 1fr 1fr',
-  },
 })

@@ -112,8 +112,6 @@ exports[`<ApplicationCard /> shows the correct snapshot tree for the <ApplicantC
 
 .css-9,
 [data-css-9] {
-  position: relative;
-  z-index: 2;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -268,13 +266,14 @@ exports[`<ApplicationCard /> shows the correct snapshot tree for the <ApplicantC
               />
             </g>
           </svg>
+          Pending
         </span>
       </dd>
     </dl>
   </div>
   <a
     className="css-14"
-    href="/application/10"
+    href="/application/1"
     onClick={[Function]}
   />
 </div>
