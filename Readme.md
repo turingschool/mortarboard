@@ -47,7 +47,7 @@ Normal [Create React App scripts][cra_scripts] are now available:
 ```sh
 yarn build # Creates the prodution build
 yarn flow  # Runs the Flow type checker
-yarn lint  # Lints the project using eslint-config-muvehealth
+yarn lint  # Lints the project based on eslint-config-airbnb
 yarn start # Starts the development environment
 yarn test  # Runs the Jest test suite
 ```
@@ -78,6 +78,17 @@ yarn test
 Both S3 buckets use CloudFront as a CDN.
 
 :raising_hand_man: if you need access to S3 or CloudFront
+
+## WIP
+- [ ] Criterion: Display and handle scoring
+- [ ] ApplicationCards: Update UI
+- [ ] ApplicationDashboard: Add remaining Applicant stats
+- [ ] ApplicationDashboard: Cleanup UI
+- [ ] ApplicationDashboard: Add scores when available from the API
+- [ ] Add Search filter UI
+- [ ] Wire up search to routes
+- [ ] ApplicationDashboard: Handle mismatches?
+- [ ] Tech Debt pass
 
 <!-- Links -->
 [api]: https://github.com/turingschool/apply
